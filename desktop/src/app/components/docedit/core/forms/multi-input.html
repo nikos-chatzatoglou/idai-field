@@ -1,15 +1,19 @@
 <div *ngIf="fieldContainer[fieldName]">
     <div *ngFor="let entry of fieldContainer[fieldName]; let i = index">
         <div class="input-group mb-2">
-            <multi-language-text-field *ngIf="fieldLanguages"
-                                       [fieldData]="entry"
-                                       [languages]="fieldLanguages"
-                                       (onFieldDataChanged)="updateExistingEntry($event, i)">
+            <multi-language-text-field
+                *ngIf="fieldLanguages"
+                [fieldData]="entry"
+                [languages]="fieldLanguages"
+                (onFieldDataChanged)="updateExistingEntry($event, i)"
+            >
             </multi-language-text-field>
-            <button class="btn btn-danger delete-multi-input-entry"
-                    [class.with-language-tabs]="!hasNoConfiguredLanguages()"
-                    type="button"
-                    (click)="deleteEntry(entry)">
+            <button
+                class="btn btn-danger delete-multi-input-entry"
+                [class.with-language-tabs]="!hasNoConfiguredLanguages()"
+                type="button"
+                (click)="deleteEntry(entry)"
+            >
                 <span class="mdi mdi-delete"></span>
             </button>
         </div>
@@ -17,16 +21,20 @@
 </div>
 
 <div class="input-group mb-2">
-    <multi-language-text-field *ngIf="fieldLanguages"
-                               [fieldData]="newEntry"
-                               [languages]="fieldLanguages"
-                               (onFieldDataChanged)="updateNewEntry($event)">
+    <multi-language-text-field
+        *ngIf="fieldLanguages"
+        [fieldData]="newEntry"
+        [languages]="fieldLanguages"
+        (onFieldDataChanged)="updateNewEntry($event)"
+    >
     </multi-language-text-field>
-    <button class="btn btn-success add-multi-input-entry"
-            [class.with-language-tabs]="!hasNoConfiguredLanguages()"
-            [disabled]="!isValidEntry(newEntry)"
-            type="button"
-            (click)="addNewEntry()">
+    <button
+        class="btn btn-success add-multi-input-entry"
+        [class.with-language-tabs]="!hasNoConfiguredLanguages()"
+        [disabled]="!isValidEntry(newEntry)"
+        type="button"
+        (click)="addNewEntry()"
+    >
         <span class="mdi mdi-plus-circle"></span>
     </button>
 </div>
