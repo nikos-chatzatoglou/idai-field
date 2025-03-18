@@ -1,78 +1,79 @@
 #search-bar {
-  .input-group {
-    width: 100%;
-  }
-
-  ::placeholder{
-    color:#6e6e71;
-    font-size: 14px;
-  }
-
-  .search-bar-input {
-    height: 38px;
-    padding: 9px;
-    background-color: #d4d4d8;
-    border: 1px solid #D1D1D6;
-    border-radius: 12px  0% 0% 12px !important;
-  }
-
-  .mdi-filter {
-    position: relative;
-    right: 1px;
-    color: white;
-  }
-
-  #filter-button {
-    width: 50px;
-
-    .mdi {
-      position: relative;
-      right: 1px;
+    .input-group {
+        width: 100%;
     }
 
-    .arrow {
-      &::before,
-      &::after {
-        left: 16px;
-      }
-      &::after {
-        border-bottom-color: #eee;
-      }
+    ::placeholder {
+        color: #6e6e71;
+        font-size: 14px;
     }
-  }
+
+    .search-bar-input {
+        height: 38px;
+        padding: 9px;
+        background-color: #d4d4d8;
+        border: 1px solid #d1d1d6;
+        border-radius: 12px 0% 0% 12px !important;
+        z-index: 1;
+    }
+
+    .mdi-filter {
+        position: relative;
+        right: 1px;
+        color: white;
+    }
+
+    #filter-button {
+        width: 50px;
+
+        .mdi {
+            position: relative;
+            right: 1px;
+        }
+
+        .arrow {
+            &::before,
+            &::after {
+                left: 16px;
+            }
+            &::after {
+                border-bottom-color: #eee;
+            }
+        }
+    }
 }
 
 .popover-body {
-  .filtermenu {
-    min-width: 235px;
+    .filtermenu {
+        min-width: 235px;
 
-    .list-group {
-      max-height: calc(100vh - 350px) !important;
-      border-bottom-left-radius: 0.3rem;
-      border-bottom-right-radius: 0.3rem;
-    }
+        .list-group {
+            max-height: calc(100vh - 350px) !important;
+            border-bottom-left-radius: 0.3rem;
+            border-bottom-right-radius: 0.3rem;
+        }
 
-    .popover-custom-title {
-      background-color: #e3e3e3;
+        .popover-custom-title {
+            background-color: #e3e3e3;
+        }
     }
-  }
 }
 
 .search-bar-filter-popover {
-  .arrow {
-    right: 13px !important;
-  }
+    .arrow {
+        right: 13px !important;
+    }
 }
 
 .search-filter {
-  z-index: 3;
-  padding: 4px 1em;
-  border: none;
-  width: 50px;
-  height: 38px;
+    z-index: 3;
+    padding: 4px 1em;
+    border: none;
+    width: 50px;
+    height: 38px;
 
-  category-icon {
-    position: relative;
-    right: 4px;
-  }
+    category-icon {
+        position: relative;
+        right: 4px;
+    }
 }

@@ -28,9 +28,6 @@
     }
 
     .hierarchy-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         position: relative;
         top: -2px;
         right: -1px;
@@ -40,97 +37,151 @@
         color: #868e96;
         background-color: #fff;
 
+        span {
+            transition: color 0.25s ease;
+        }
+
         &:hover {
             color: color.adjust(#868e96, $lightness: -5%);
             background-color: color.adjust(
                 $list-item-hover-color,
                 $lightness: -5%
             );
-        }
 
-        &.move-into-button {
-            height: 33px;
-        }
+            span {
+                color: color.adjust(#868e96, $lightness: -5%);
 
-        &.jump-to-view-button {
-            .mdi {
-                position: relative;
-                right: 1px;
+                &.arrow-deactivated {
+                    color: color.adjust(lightgray, $lightness: -20%);
+                }
             }
         }
 
-        .mdi {
-            line-height: 1;
+        &:focus {
+            border: none;
+            color: #868e96;
+        }
+
+        .label-field {
+            padding: 6px 5px 0 10px;
+
+            .category-label {
+                position: relative;
+                top: 2px;
+                font-size: 14px;
+                display: inline-block;
+            }
+        }
+
+        .input-field {
+            padding: 4px 5px 0 2px;
+        }
+
+        .hierarchy-button {
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            top: -2px;
+            right: -1px;
+            padding: 2px 2px 2px 4px;
+            width: 44px;
+            height: 33px;
+            color: #868e96;
+            background-color: #fff;
+
+            &:hover {
+                color: color.adjust(#868e96, $lightness: -5%);
+                background-color: color.adjust(
+                    $list-item-hover-color,
+                    $lightness: -5%
+                );
+            }
+
+            &.move-into-button {
+                height: 33px;
+            }
+
+            &.jump-to-view-button {
+                .mdi {
+                    position: relative;
+                    right: 1px;
+                }
+            }
+
+            .mdi {
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
-    }
 
-    .dropdown-input-field {
-        padding: 0;
-    }
+        .dropdown-input-field {
+            padding: 0;
+        }
 
-    input.form-control {
-        position: relative;
-        top: 1px;
-        border: 0;
-    }
-
-    .ng-select {
-        width: 100%;
-        font-size: 14px;
-        color: #495057;
-        outline: none;
-
-        .ng-select-container {
-            height: 41px !important;
+        input.form-control {
+            position: relative;
+            top: 1px;
             border: 0;
+        }
 
-            .ng-value {
-                z-index: 1;
+        .ng-select {
+            width: 100%;
+            font-size: 14px;
+            color: #495057;
+            outline: none;
+
+            .ng-select-container {
+                height: 41px !important;
+                border: 0;
+
+                .ng-value {
+                    z-index: 1;
+                }
+
+                input {
+                    position: relative;
+                    top: 6px;
+                    z-index: 2;
+                }
+            }
+        }
+
+        .list-action-buttons {
+            border-radius: 0;
+
+            .mdi-delete {
+                color: #dc3545;
             }
 
-            input {
-                position: relative;
-                top: 6px;
-                z-index: 2;
+            .btn-small:hover {
+                background-color: color.adjust(
+                    $list-item-hover-color,
+                    $lightness: -5%
+                );
+            }
+
+            .list-edit-button,
+            .list-move-button,
+            .list-delete-button {
+                border-radius: 32px !important;
+            }
+
+            .hidden-option {
+                opacity: 0;
             }
         }
     }
 
-    .list-action-buttons {
-        border-radius: 0;
-
-        .mdi-delete {
-            color: #dc3545;
+    .ng-dropdown-panel.row-select-panel {
+        &.ng-select-top {
+            margin-bottom: 1px !important;
         }
 
-        .btn-small:hover {
-            background-color: color.adjust(
-                $list-item-hover-color,
-                $lightness: -5%
-            );
+        &.ng-select-bottom {
+            margin-top: 1px !important;
         }
-
-        .list-edit-button,
-        .list-move-button,
-        .list-delete-button {
-            border-radius: 32px !important;
-        }
-
-        .hidden-option {
-            opacity: 0;
-        }
-    }
-}
-
-.ng-dropdown-panel.row-select-panel {
-    &.ng-select-top {
-        margin-bottom: 1px !important;
-    }
-
-    &.ng-select-bottom {
-        margin-top: 1px !important;
     }
 }

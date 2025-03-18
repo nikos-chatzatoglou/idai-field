@@ -1,7 +1,7 @@
 {
   "name": "idai-field-client",
   "description": "Field Desktop",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "main": "electron/main.js",
   "license": "Apache-2.0",
   "author": "German Archaeological Institute / Head Office of the GBV Common Library Network",
@@ -151,7 +151,6 @@
     "pouchdb-browser": "9.0.0",
     "pouchdb-load": "1.4.6",
     "pouchdb-replication-stream": "1.2.9",
-    "pouchdb-server": "4.2.0",
     "qr-scanner": "^1.4.2",
     "qrcode": "^1.5.3",
     "querystring-es3": "^0.2.1",
@@ -173,7 +172,7 @@
     "@angular/cli": "19.0.6",
     "@angular/compiler-cli": "19.0.5",
     "@electron/notarize": "2.5.0",
-    "@mapbox/geojsonhint": "3.1.0",
+    "@mapbox/geojsonhint": "3.3.0",
     "@playwright/test": "1.44.1",
     "@types/geojson": "0.0.32",
     "@types/jasmine": "~3.5.0",
@@ -201,7 +200,6 @@
     "node-gyp": "^10.1.0",
     "npm-run-all": "4.1.5",
     "parameterize": "^1.0.0",
-    "pouchdb-adapter-memory": "8.0.1",
     "pouchdb-node": "9.0.0",
     "replace-in-file": "^6.1.0",
     "rimraf": "2.6.2",
@@ -209,8 +207,7 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~5.6.3",
-    "wait-on": "5.0.0",
-    "yargs": "12.0.2"
+    "wait-on": "8.0.2"
   },
   "browser": {
     "zlib": false,
