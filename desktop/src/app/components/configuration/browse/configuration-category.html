@@ -68,14 +68,16 @@
                 <div *cdkDragPlaceholder class="group-drag-placeholder"></div>
             </li>
         </ul>
-        <div id="add-group-button"
-            class="circular-button green-button"
-            [class.with-description]="description"
-            (click)="addGroup()"
-            ngbTooltip="Gruppe hinzufügen"
-            i18n-ngbTooltip="@@configuration.addGroup"
-            container="body">
-            <span class="mdi mdi-plus"></span>
+        <div class="add-button-container">
+            <button id="add-group-button"
+                class="add-button"
+                [class.with-description]="description"
+                (click)="addGroup()"
+                ngbTooltip="Gruppe hinzufügen"
+                i18n-ngbTooltip="@@configuration.addGroup">
+                <span class="mdi mdi-plus"></span>
+                <span i18n="@@configuration.addGroupButton">Add Group</span>
+            </button>
         </div>
     </div>
 
@@ -109,13 +111,16 @@
                 <div *cdkDragPlaceholder class="field-drag-placeholder"></div>
             </div>
         </div>
-        <div id="add-field-button"
-             class="circular-button green-button"
-             [class.with-description]="description"
-             (click)="addField()"
-             ngbTooltip="Feld hinzufügen"
-             i18n-ngbTooltip="@@configuration.addField">
-            <span class="mdi mdi-plus"></span>
+        <div class="add-button-container">
+            <button id="add-field-button"
+                 class="add-button"
+                 [class.with-description]="description"
+                 (click)="addField()"
+                 ngbTooltip="Feld hinzufügen"
+                 i18n-ngbTooltip="@@configuration.addField">
+                <span class="mdi mdi-plus"></span>
+                <span i18n="@@configuration.addFieldButton">Add Field</span>
+            </button>
         </div>
     </div>
 </div>
