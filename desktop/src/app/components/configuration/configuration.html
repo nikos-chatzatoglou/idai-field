@@ -96,12 +96,13 @@
                                     (onEditCategory)="editCategory($event)"
                                     (onCreateSubcategory)="addSubcategory($event)"
                                     (onOrderChanged)="applyOrderChange($event)"></category-picker>
-                    <div id="add-supercategory-button" class="circular-button green-button"
+                    <button id="add-supercategory-button" class="add-button"
                         (click)="addSupercategory()"
                         ngbTooltip="Oberkategorie hinzufügen"
                         i18n-ngbTooltip="@@configuration.addSupercategory">
                         <span class="mdi mdi-plus"></span>
-                    </div>
+                        <span i18n="@@configuration.addCategoryButton">Add Category</span>
+                    </button>
                 </div>
             </div>
 

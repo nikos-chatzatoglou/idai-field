@@ -1,6 +1,8 @@
-<multi-language-text-field *ngIf="fieldLanguages"
-                           [fieldData]="fieldContainer[fieldName]"
-                           [languages]="fieldLanguages"
-                           [multiLine]="multiLine"
-                           (onFieldDataChanged)="update($event)">
+<multi-language-text-field
+    *ngIf="fieldLanguages"
+    [fieldData]="fieldContainer[fieldName]"
+    [languages]="fieldLanguages"
+    [multiLine]="multiLine"
+    (onFieldDataChanged)="update($event)"
+>
 </multi-language-text-field>

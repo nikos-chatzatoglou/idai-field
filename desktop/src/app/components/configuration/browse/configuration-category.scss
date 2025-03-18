@@ -1,9 +1,21 @@
+// Archaeological color palette
+$arch-dark-olive: #334019;
+$arch-light-olive: #bec1a3;
+$arch-bronze: #a67a3c;
+$arch-light-sage: #caccb8;
+$arch-terracotta: #881600;
+$arch-light-gray: #eeeeee;
+
 configuration-category {
     user-select: none;
 
     .category-header {
         position: relative;
         top: 1px;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        overflow: hidden;
         height: 45px;
 
         &.with-description {
@@ -12,32 +24,40 @@ configuration-category {
 
         .header {
             height: 45px;
-            border-bottom: 1px solid #ccc;
-            background-color: #ededed;
+            border-bottom: 1px solid $arch-light-olive;
+            background-color: $arch-light-sage;
 
             &.header-left {
-                padding: 7px;
+                padding: 7px 12px;
+                display: flex;
+                align-items: center;
             }
 
             &.header-right {
                 padding-top: 10px;
-                padding-right: 8px;
+                padding-right: 12px;
             }
 
             category-icon {
                 position: relative;
                 bottom: 2px;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
 
             h6 {
                 position: relative;
-                top: 0.3em;
                 max-width: 450px;
-                margin: 0 8px;
+                margin: 0 12px;
                 font-size: 1.1em;
+                font-weight: 500;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                color: $arch-dark-olive;
             }
 
             .category-name {
@@ -46,22 +66,39 @@ configuration-category {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                color: rgba($arch-dark-olive, 0.7);
+                font-family: "Roboto Mono", monospace;
+                font-size: 0.85em;
             }
 
             .mdi-script-text-outline {
                 position: relative;
                 top: 1px;
                 margin-right: 6px;
-                color: #414952;
+                color: $arch-dark-olive;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: $arch-terracotta;
+                }
             }
 
             #form-info {
                 position: relative;
                 bottom: 6px;
                 margin-left: 14px;
+                border-radius: 4px;
+                padding: 2px 6px;
+                background-color: rgba($arch-light-olive, 0.3);
+                transition: background-color 0.2s ease;
+
+                &:hover {
+                    background-color: rgba($arch-light-olive, 0.5);
+                }
 
                 &.abstract-category {
                     bottom: 0;
+                    font-style: italic;
                 }
             }
         }
@@ -70,20 +107,33 @@ configuration-category {
             height: 56px;
             padding: 1rem;
             overflow-y: auto;
+            background-color: lighten($arch-light-sage, 5%);
+            border-bottom: 1px solid $arch-light-olive;
+            color: $arch-dark-olive;
+            font-size: 0.9em;
+            line-height: 1.4;
         }
 
         .custom-category .header {
             background-color: $custom-highlight-color;
+            background-image: linear-gradient(
+                to bottom,
+                lighten($custom-highlight-color, 5%),
+                $custom-highlight-color
+            );
         }
     }
 
     .groups {
         padding: 0;
         height: calc(100vh - 140px);
+        border-right: 1px solid $arch-light-olive;
+        background-color: $arch-light-sage;
+        position: relative;
 
         ul {
             width: 100%;
-            height: 100%;
+            height: calc(100% - 50px);
             padding: 0;
             list-style: none;
             overflow: auto;
@@ -91,150 +141,164 @@ configuration-category {
             .group-button {
                 width: 100%;
                 height: 45px;
-                padding: 7px;
+                padding: 7px 12px;
                 border: dotted 3px transparent;
                 border-radius: 0;
-                color: #212529;
-                background-color: white;
-                transition: background-color 0.25s ease, border 0.25s ease;
+                color: $arch-dark-olive;
+                background-color: lighten($arch-light-sage, 5%);
+                transition: all 0.25s ease;
+                display: flex;
+                align-items: center;
 
                 &:hover,
                 &.active {
-                    background-color: $list-item-hover-color !important;
-                    transition: background-color 0.5s ease, border 0.5s ease;
+                    background-color: $arch-light-olive;
+                    border-left: 3px solid $arch-dark-olive;
+                    font-weight: 500;
                 }
 
-                &.drop-target:hover {
-                    background-color: #ccc !important;
-                    border: dotted 3px #999;
+                &.drop-target {
+                    background-color: rgba($arch-bronze, 0.2);
+                    border: dotted 3px $arch-bronze;
                 }
 
                 .mdi-drag {
-                    position: absolute;
-                    color: #848484;
+                    color: $arch-dark-olive;
+                    margin-right: 8px;
                     cursor: grab;
+                    transition: color 0.2s ease;
+
+                    &:hover {
+                        color: $arch-terracotta;
+                    }
                 }
 
                 .group-label {
-                    position: absolute;
-                    top: 9px;
-                    left: 33px;
-                    width: calc(100% - 35px);
+                    white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    white-space: nowrap;
+
+                    .custom-marking {
+                        color: $arch-terracotta;
+                        font-weight: bold;
+                    }
                 }
             }
+
+            .group-drag-preview {
+                height: 45px;
+                padding: 7px 12px;
+                opacity: 0.9;
+                background-color: $arch-light-olive;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                color: $arch-dark-olive;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+
+                .custom-marking {
+                    color: $arch-terracotta;
+                    font-weight: bold;
+                }
+            }
+
+            .group-drag-placeholder {
+                height: 45px;
+                background-color: rgba($arch-light-olive, 0.5);
+                border: dashed 1px $arch-dark-olive;
+                transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+
+        .add-button-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: $arch-dark-olive;
+            display: flex;
+            justify-content: center;
         }
     }
 
     .content {
         height: calc(100vh - 140px);
         padding: 0;
+        overflow-y: auto;
+        position: relative;
+        background-color: lighten($arch-light-sage, 8%);
 
         &.shortened {
-            height: calc(100vh - 201px);
+            height: calc(100vh - 196px);
         }
 
         .fields-container {
-            height: 100%;
-            overflow-y: auto;
-            overflow-x: hidden;
+            min-height: 100%;
+            padding: 8px 8px 58px 8px;
+            background-color: lighten($arch-light-sage, 8%);
+        }
 
-            .field-element:first-of-type .card {
-                margin-top: 0;
-            }
+        .add-button-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: $arch-dark-olive;
+            display: flex;
+            justify-content: center;
+        }
+
+        .field-drag-placeholder {
+            margin-top: 1px;
+            margin-bottom: 1px;
+            background-color: rgba($arch-light-olive, 0.5);
+            border: dashed 1px $arch-dark-olive;
+            border-radius: 4px;
+            height: 55px;
+            transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
         }
     }
 
-    .configuration-category {
-        position: relative;
-        top: 1px;
+    .add-button {
+        background-color: $arch-dark-olive;
+        color: white;
+        border: none;
+        border-radius: 0;
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        height: 50px;
+        width: 100%;
+
+        &:hover {
+            background-color: $arch-terracotta;
+        }
+
+        .mdi {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        &.with-description {
+            position: relative;
+            margin-bottom: 0;
+        }
     }
 
-    .category-editor {
-        background-color: #eee;
-    }
-
-    #add-field-button,
-    #add-group-button {
-        left: 50%;
-        z-index: 1001;
-    }
-
+    #add-group-button,
     #add-field-button {
-        transform: translate(-20px, -45px);
-        padding: 2px 0 0 1px;
-
-        &.with-description {
-            transform: translate(-20px, -40px);
-        }
-    }
-
-    #add-group-button {
-        position: absolute;
-        bottom: 6px;
-        padding-top: 2px;
-        padding-right: 1px;
-        transform: translate(-20px, 0);
-
-        &.with-description {
-            bottom: 62px;
-        }
-    }
-
-    .field-drag-placeholder,
-    .group-drag-placeholder {
-        background: #ccc;
-        border: dotted 3px #999;
-        transition: transform 350ms cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    .field-drag-placeholder {
-        min-height: 55px;
-        margin-top: 0;
-        margin-bottom: 0;
-        position: relative;
-        z-index: 1 !important;
-    }
-
-    .group-drag-placeholder {
-        min-height: 45px;
-        margin-top: 0;
-        margin-bottom: 0;
-        position: relative;
-        z-index: 1 !important;
-    }
-
-    .group-button .field-drag-placeholder {
-        display: none;
-    }
-
-    .cdk-drag-animating {
-        transition: transform 350ms cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    .fields-container.cdk-drop-list-dragging
-        .field-element:not(.cdk-drag-placeholder),
-    .groups-container.cdk-drop-list-dragging
-        .group-element:not(.cdk-drag-placeholder) {
-        transition: transform 350ms cubic-bezier(0, 0, 0.2, 1);
+        width: 100%;
     }
 }
 
-.group-drag-preview {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    border: none;
-    color: #212529;
-    background-color: #fff;
-    border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
-    font-family: "InterVariable";
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.5;
-    box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2),
-        0 9px 11px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 3px rgba(0, 0, 0, 0.12);
+.row.configuration-category {
+    position: relative;
 }

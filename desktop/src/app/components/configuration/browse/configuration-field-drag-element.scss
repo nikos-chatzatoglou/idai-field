@@ -1,40 +1,57 @@
+// Archaeological color palette
+$arch-dark-olive: #334019;
+$arch-light-olive: #bec1a3;
+$arch-bronze: #a67a3c;
+$arch-light-sage: #caccb8;
+$arch-terracotta: #881600;
+$arch-light-gray: #eeeeee;
+
 .field-drag-element {
-  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2),
-              0 9px 11px 2px rgba(0, 0, 0, 0.14),
-              0 3px 14px 3px rgba(0, 0, 0, 0.12);
-
-  font-size: 15px;
-
-  .card-header {
-    background-color: #fff;
-    border: none;
+    min-height: 55px;
+    max-width: 500px;
+    padding: 12px 20px;
+    background-color: $arch-light-sage;
+    border-radius: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    border: 1px solid $arch-light-olive;
 
     b {
-      font-weight: 500;
+        font-weight: 500;
+        margin-right: 8px;
+        color: $arch-dark-olive;
     }
 
-    &.parent-element {
-      .category-icon {
-        position: relative;
-        top: 2px;
-        right: 2px;
+    code {
+        color: $arch-bronze;
+        font-family: "Roboto Mono", monospace;
+        font-size: 0.85em;
+        background-color: rgba($arch-light-olive, 0.3);
+        padding: 2px 4px;
+        border-radius: 0;
+    }
+
+    .category-icon {
         margin-left: 12px;
-      }
+        margin-right: 4px;
+    }
 
-      b, code {
+    .field-type {
+        margin-left: auto;
+        color: rgba($arch-dark-olive, 0.7);
+        font-size: 0.85em;
+    }
+
+    &.hidden-field {
+        opacity: 0.7;
+        color: rgba($arch-dark-olive, 0.5);
+        background-color: rgba($arch-light-sage, 0.5);
         font-style: italic;
-        font-weight: normal;
-      }
-    }
 
-    &.hidden-element {
-      b, code {
-        color: #ccc;
-      }
+        b,
+        code {
+            color: rgba($arch-dark-olive, 0.5);
+        }
     }
-
-    &.custom-element {
-      background-color: $custom-highlight-color;
-    }
-  }
 }
