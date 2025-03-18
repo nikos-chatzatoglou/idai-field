@@ -157,11 +157,18 @@ body,
     background-color: color.adjust(#727b84, $saturation: 10%);
     background-color: color.adjust(#6c757d, $saturation: 10%);
 }
-
+.btn-success {
+    background-color: #334019;
+    border-color: #334019;
+}
+.btn-success:hover {
+    background-color: color.adjust(#334019, $lightness: 10%);
+    border-color: color.adjust(#334019, $lightness: 10%);
+}
 .btn-success:disabled,
 .btn-success.disabled {
-    background-color: color.adjust(#6ca378, $lightness: -10%);
-    border-color: color.adjust(#6ca378, $lightness: -10%);
+    background-color: color.adjust(#334019, $lightness: -10%);
+    border-color: color.adjust(#334019, $lightness: -10%);
     cursor: not-allowed;
 }
 
