@@ -26,7 +26,7 @@
     >
         <span
             [class.arrow-deactivated]="viewFacade.getChildrenCount(document) === 0"
-            class="mdi mdi-chevron-right mdi-24px 0sidebar-list-button-group-inner center-icon"
+            class="mdi mdi-information-outline mdi-24px"
         >
         </span>
     </div>
@@ -42,7 +42,7 @@
         (click)="jumpToResourceFromOverviewToOperation(); $event.stopPropagation();"
         (mousedown)="arrowTopRightForSearchmodeTooltip.close()"
     >
-        <span class="mdi mdi-chevron-right mdi-24px"></span>
+        <span  class="mdi mdi-information-outline mdi-24px"></span>
     </div>
 
     <div
@@ -56,7 +56,7 @@
         (click)="jumpToResourceInSameView(); $event.stopPropagation();"
         (mousedown)="arrowUpTooltip.close()"
     >
-        <span class="mdi mdi-chevron-up mdi-24px"></span>
+        <span  class="mdi mdi-information-outline mdi-24px"></span>
     </div>
 
     <div
@@ -70,7 +70,6 @@
         (click)="jumpToView(); $event.stopPropagation();"
         (mousedown)="arrowTopRightTooltip.close()"
     >
-        <!-- <span class="arrow-top-right mdi-18px"></span> -->
-        <span class="mdi mdi-pan-top-right mdi-24px"></span>
+        <span class="mdi mdi-information-outline mdi-24px"></span>
     </div>
 </div>

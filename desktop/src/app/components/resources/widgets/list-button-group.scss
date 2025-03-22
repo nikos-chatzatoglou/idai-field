@@ -7,24 +7,27 @@ $button-width: 24px;
   height: $item-height;
   color: gray;
   display: flex;
+  background-color: #a4ac91 !important;
 
   .btn {
     border: 0;
     border-radius: 0;
-    color: $activated-color;
+    color: #ffffff;
     width: $button-width;
     height: $item-height;
     padding-left: 0;
     padding-right: 0;
     padding-top: 17px;
     transition: background-color .25s ease;
+    background-color: #a4ac91 !important;
 
     span {
       transition: color .25s ease;
+      background-color: #a4ac91 !important;
     }
 
     &:hover {
-      background-color: color.adjust($list-item-hover-color, $lightness: -5%) !important;
+        background-color: #a4ac91 !important;
 
       .arrow-deactivated {
         color: color.adjust($activated-color, $lightness: -1%) !important;

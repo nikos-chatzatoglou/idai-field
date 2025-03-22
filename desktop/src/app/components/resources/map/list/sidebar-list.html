@@ -32,7 +32,7 @@
     </ng-container>
     <!-- Render Flat List if not in Extended Search Mode -->
     <ng-template #flatList>
-        <ul #sidebar id="sidebar" class="resources-listing"
+        <ul #sidebar id="sidebar" class="category-items"
             tabindex="0" (scroll)="contextMenu.close()" (keydown)="onKeyDown($event)">
             <li *cdkVirtualFor="let document of viewFacade.getDocuments(); trackBy: trackDocument"
                 class="resources-listing-item resources-listing-item-wide"
@@ -41,13 +41,16 @@
                 [class.has-warnings]="document.warnings"
                 [class.selected]="selectedDocument?.resource.id === document.resource.id"
                 [class.additional-selected]="resourcesComponent.additionalSelectedDocuments?.includes(document)"
-                [id]="'resource-' + document.resource.identifier">
-                <document-teaser (click)="select(document, $event)"
-                                 (contextmenu)="select(document, $event, false)"
-                                 (dblclick)="editDocument(document)"
-                                 [document]="document"></document-teaser>
-                <list-button-group [document]="document"></list-button-group>
-            </li>
+                [id]="'resource-' + document.resource.identifier"
+                style="border-bottom: 1px solid #909090;">
+<div class="document-teaser">
+    <document-teaser (click)="select(document, $event)"
+    (contextmenu)="select(document, $event, false)"
+    (dblclick)="editDocument(document)"
+    [document]="document"></document-teaser>
+<list-button-group [document]="document"></list-button-group>
+</div>
+</li>
             <li *ngIf="resourcesComponent.isDocumentLimitExceeded()">
                 <div id="document-limit-info" (click)="resourcesComponent.removeLimit()"
                      ngbTooltip="Die Darstellung von sehr großen Suchergebnissen kann je nach Gerät und Anzahl der Treffer sehr lange dauern. Daher wurde die aktuelle Darstellung zunächst auf {{viewFacade.getDocuments().length}} Ressourcen begrenzt. Klicken Sie hier, um das gesamte Ergebnis zu laden."
