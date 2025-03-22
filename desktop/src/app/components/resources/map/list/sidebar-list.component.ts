@@ -12,6 +12,7 @@ import { MenuContext } from '../../../../services/menu-context';
 import { Menus } from '../../../../services/menus';
 import { ComponentHelpers } from '../../../component-helpers';
 import { WarningsService } from '../../../../services/warnings/warnings-service';
+import { ResourcesState } from '../../view/state/resources-state';
 
 
 @Component({
@@ -40,6 +41,7 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
 
     private lastSelectedDocument: FieldDocument|undefined;
 
+    private resourcesState: ResourcesState;
 
     constructor(private navigationService: NavigationService,
                 private warningsService: WarningsService,
@@ -63,6 +65,9 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
         });
     }
 
+    public isInExtendedSearchMode(): boolean {
+        return this.viewFacade.isInExtendedSearchMode();
+    }
 
     ngAfterViewInit() {
         this.sidebarElement.nativeElement.focus();
