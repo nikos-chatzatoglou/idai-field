@@ -1,51 +1,126 @@
+// Archaeological color palette
+$arch-dark-olive: #334019;
+$arch-light-olive: #bec1a3;
+$arch-bronze: #a67a3c;
+$arch-light-sage: #caccb8;
+$arch-terracotta: #881600;
+$arch-light-gray: #eeeeee;
+
 hierarchical-relations-info {
-  .btn {
-    position: relative;
-    bottom: 7px;
+    display: inline-block;
+    margin-left: 12px;
 
-    &.no-categories {
-      @extend .disabled;
-      pointer-events: initial !important;
-    }
+    .badge {
+        background-color: rgba($arch-light-olive, 0.3);
+        color: $arch-dark-olive;
+        border-radius: 0;
+        padding: 4px 8px;
+        font-weight: normal;
+        transition: all 0.2s ease;
+        border: 1px solid rgba($arch-dark-olive, 0.2);
 
-    span {
-      position: relative;
-      top: 1px;
-    }
-  }
-
-  #hierarchical-relations-info-popover {
-
-    .popover-custom-title {
-      font-size: 14px;
-
-      &.no-categories {
-        background-color: white;
-      }
-    }
-
-    ul {
-      max-height: calc(100vh - 250px);
-      margin: 0;
-      padding: 3px;
-      overflow-y: auto;
-
-      li {
-        display: block;
-        list-style: none;
-        padding: 5px;
-
-        .category-icon {
-          position: relative;
-          top: 3px;
+        &:hover {
+            background-color: rgba($arch-light-olive, 0.5);
         }
 
-        .hierarchical-relation-category-label {
-          position: relative;
-          bottom: 1px;
-          left: 6px;
+        &.lies-within {
+            background-color: rgba($arch-bronze, 0.2);
+            border-color: rgba($arch-bronze, 0.3);
+            color: darken($arch-bronze, 10%);
+
+            &:hover {
+                background-color: rgba($arch-bronze, 0.3);
+            }
         }
-      }
+
+        &.includes {
+            background-color: rgba($arch-dark-olive, 0.2);
+            border-color: rgba($arch-dark-olive, 0.3);
+            color: $arch-dark-olive;
+
+            &:hover {
+                background-color: rgba($arch-dark-olive, 0.3);
+            }
+        }
+
+        .mode-label {
+            margin-right: 8px;
+            font-weight: 500;
+        }
+
+        .mdi {
+            position: relative;
+            top: 1px;
+            margin-right: 3px;
+        }
+
+        .category-label {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
     }
-  }
+
+    .btn {
+        position: relative;
+        bottom: 7px;
+
+        &.no-categories {
+            pointer-events: initial !important;
+            opacity: 0.7;
+        }
+
+        span {
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    #hierarchical-relations-info-popover {
+        .popover-custom-title {
+            font-size: 14px;
+            background-color: $arch-light-sage;
+            color: $arch-dark-olive;
+            padding: 8px;
+            border-bottom: 1px solid $arch-light-olive;
+
+            &.no-categories {
+                background-color: $arch-light-gray;
+            }
+        }
+
+        ul {
+            max-height: calc(100vh - 250px);
+            margin: 0;
+            padding: 3px;
+            overflow-y: auto;
+            background-color: $arch-light-gray;
+
+            li {
+                display: block;
+                list-style: none;
+                padding: 8px;
+                border-bottom: 1px solid rgba($arch-light-olive, 0.2);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .category-icon {
+                    position: relative;
+                    top: 3px;
+                }
+
+                .hierarchical-relation-category-label {
+                    position: relative;
+                    bottom: 1px;
+                    left: 6px;
+                    color: $arch-dark-olive;
+                }
+            }
+        }
+    }
 }

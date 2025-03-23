@@ -1,44 +1,98 @@
-<div #multiLanguageTextField (keydown)="onKeyDown($event)">
-    <ul #tabs *ngIf="hasTabs()" class="nav nav-tabs" [class.focused]="focused">
-        <li *ngFor="let language of tabLanguages"
-            [class]="'nav-item language-tab language-tab-' + language.code"
-            (click)="selectLanguage(language)">
-            <a class="nav-link" 
-            [class.active]="language.code === selectedLanguage"
-            [class.filled-in]="isFilledIn(language.code)"
-            (focus)="focused = true">{{language.label}}</a>
-        </li>
-        <li *ngIf="additionalLanguages?.length > 0" class="nav-item additional-languages-dropdown"
-            ngbDropdown placement="bottom-right" role="group"
-            (openChange)="onAdditionalLanguagesDropdownMenuToggled($event)">
-            <a class="nav-link"
-               [class.active]="shownAdditionalLanguage.code === selectedLanguage || additionalLanguagesDropdownOpened"
-               [class.filled-in]="isFilledIn(shownAdditionalLanguage.code)" ngbDropdownToggle>
-                    {{shownAdditionalLanguage.label}}
-            </a>
-            <div class="additional-languages-dropdown-menu dropdown-menu" ngbDropdownMenu>
-                <div class="additional-languages-dropdown-list">
-                    <button *ngFor="let language of additionalLanguages"
+<div
+    #multiLanguageTextField
+    class="multi-language-field-container"
+    (keydown)="onKeyDown($event)"
+>
+    <div
+        #tabs
+        *ngIf="hasTabs()"
+        class="language-selector"
+        [class.focused]="focused"
+    >
+        <div class="language-selector-tabs">
+            <button
+                *ngFor="let language of tabLanguages"
+                type="button"
+                class="language-tab"
+                [class.active]="language.code === selectedLanguage"
+                [class.filled-in]="isFilledIn(language.code)"
+                (click)="selectLanguage(language)"
+                (focus)="focused = true"
+            >
+                <span class="language-code">{{language.label}}</span>
+                <span
+                    *ngIf="isFilledIn(language.code)"
+                    class="has-content-indicator"
+                ></span>
+            </button>
+
+            <div
+                *ngIf="additionalLanguages?.length > 0"
+                class="additional-languages"
+                ngbDropdown
+                placement="bottom-right"
+                role="group"
+                (openChange)="onAdditionalLanguagesDropdownMenuToggled($event)"
+            >
+                <button
+                    type="button"
+                    class="language-tab dropdown-toggle"
+                    [class.active]="shownAdditionalLanguage.code === selectedLanguage || additionalLanguagesDropdownOpened"
+                    [class.filled-in]="isFilledIn(shownAdditionalLanguage.code)"
+                    ngbDropdownToggle
+                >
+                    <div class="dropdown-content-wrapper">
+                        <span class="language-code"
+                            >{{shownAdditionalLanguage.label}}</span
+                        >
+                        <span
+                            *ngIf="isFilledIn(shownAdditionalLanguage.code)"
+                            class="has-content-indicator"
+                        ></span>
+                    </div>
+                </button>
+                <div class="additional-languages-menu" ngbDropdownMenu>
+                    <div class="additional-languages-list">
+                        <button
+                            *ngFor="let language of additionalLanguages"
+                            type="button"
                             class="dropdown-item"
-                            (click)="selectLanguage(language)">
+                            (click)="selectLanguage(language)"
+                        >
                             {{language.label}}
-                    </button>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </li>
-    </ul>
-    <input *ngIf="!multiLine" #inputField [(ngModel)]="selectedText"
-        [class.focused]="focused"
-        [class.with-tabs]="hasTabs()"
-        (input)="onChanges($event.target.value)"
-        (focus)="focused = true"
-        (blur)="onBlur()"
-        class="form-control">
-    <textarea *ngIf="multiLine" #inputField [(ngModel)]="selectedText"
-        [class.focused]="focused"
-        [class.with-tabs]="hasTabs()"
-        (input)="onChanges($event.target.value)"
-        (focus)="focused = true"
-        (blur)="onBlur()"
-        class="form-control"></textarea>
+        </div>
+    </div>
+
+    <div class="input-container" [class.with-tabs]="hasTabs()">
+        <input
+            *ngIf="!multiLine"
+            #inputField
+            [(ngModel)]="selectedText"
+            [class.focused]="focused"
+            (input)="onChanges($event.target.value)"
+            (focus)="focused = true"
+            (blur)="onBlur()"
+            class="form-control"
+            placeholder="Enter text..."
+        />
+        <textarea
+            *ngIf="multiLine"
+            #inputField
+            [(ngModel)]="selectedText"
+            [class.focused]="focused"
+            (input)="onChanges($event.target.value)"
+            (focus)="focused = true"
+            (blur)="onBlur()"
+            class="form-control"
+            placeholder="Enter text..."
+        ></textarea>
+
+        <div *ngIf="hasTabs()" class="current-language-indicator">
+            <span class="language-label">{{getSelectedLanguageLabel()}}</span>
+        </div>
+    </div>
 </div>
