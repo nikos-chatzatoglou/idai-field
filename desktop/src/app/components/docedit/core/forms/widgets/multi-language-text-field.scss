@@ -1,3 +1,13 @@
+// Import application variables
+@use "sass:color";
+
+$cal-poly-green: #334019;
+$primary-button-color: #a67a3c;
+$sage: #bec1a3;
+$dark-red: #881600;
+$light-sage: lighten($sage, 10%);
+$border-radius: 2rem;
+$input-border-radius: 0.25rem;
 $default-border-color: #dee2e6;
 $focused-border-color: #9bacc7;
 
@@ -54,6 +64,8 @@ multi-language-text-field {
         border-color: $default-border-color !important;
       }
     }
+  }
+}
 
 multi-language-text-field {
     display: block;
