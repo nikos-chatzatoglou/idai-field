@@ -1,200 +1,346 @@
-@use 'sass:color';
+@use "sass:color";
 
-@import './browse/configuration-category';
-@import './browse/configuration-field';
-@import './browse/configuration-field-drag-element';
-@import './browse/hierarchical-relations-info';
-@import './editor/configuration-editor-modal';
-@import './editor/field/field-editor-modal';
-@import './editor/field/subfield-editor-modal';
-@import './editor/field/widgets/input-type-selector';
-@import './editor/field/widgets/valuelist-selector';
-@import './editor/field/widgets/subfields-section';
-@import './editor/category/category-editor-modal';
-@import './editor/valuelist/valuelist-editor-modal';
-@import './editor/valuelist/value-editor-modal';
-@import './editor/widgets/multi-language-input';
-@import './editor/widgets/references-input';
-@import './delete/delete-modal';
-@import './add/listing';
-@import './add/preview';
-@import './add/category/add-category-modal';
-@import './add/category/swap-category-form-modal';
-@import './add/category/category-listing';
-@import './add/category/category-preview';
-@import './add/field/add-field-modal';
-@import './add/field/field-listing';
-@import './add/field/field-preview';
-@import './add/group/add-group-modal';
-@import './add/group/group-listing';
-@import './add/valuelist/add-valuelist-modal';
-@import './add/valuelist/manage-valuelists-modal';
-@import './add/valuelist/valuelist-listing';
-@import './add/valuelist/valuelist-preview';
-@import './add/valuelist/valuelist-search-bar';
-@import './add/valuelist/extend-valuelist-modal';
-@import './widgets/valuelist-view';
-@import './notifications/configuration-change-notification-modal';
-@import './conflicts/configuration-conflicts-modal';
-@import './import/import-configuration-modal';
-@import './save/save-modal';
+@import "./browse/configuration-category";
+@import "./browse/configuration-field";
+@import "./browse/configuration-field-drag-element";
+@import "./browse/hierarchical-relations-info";
+@import "./editor/configuration-editor-modal";
+@import "./editor/field/field-editor-modal";
+@import "./editor/field/subfield-editor-modal";
+@import "./editor/field/widgets/input-type-selector";
+@import "./editor/field/widgets/valuelist-selector";
+@import "./editor/field/widgets/subfields-section";
+@import "./editor/category/category-editor-modal";
+@import "./editor/valuelist/valuelist-editor-modal";
+@import "./editor/valuelist/value-editor-modal";
+@import "./editor/widgets/multi-language-input";
+@import "./editor/widgets/references-input";
+@import "./delete/delete-modal";
+@import "./add/listing";
+@import "./add/preview";
+@import "./add/category/add-category-modal";
+@import "./add/category/swap-category-form-modal";
+@import "./add/category/category-listing";
+@import "./add/category/category-preview";
+@import "./add/field/add-field-modal";
+@import "./add/field/field-listing";
+@import "./add/field/field-preview";
+@import "./add/group/add-group-modal";
+@import "./add/group/group-listing";
+@import "./add/valuelist/add-valuelist-modal";
+@import "./add/valuelist/manage-valuelists-modal";
+@import "./add/valuelist/valuelist-listing";
+@import "./add/valuelist/valuelist-preview";
+@import "./add/valuelist/valuelist-search-bar";
+@import "./add/valuelist/extend-valuelist-modal";
+@import "./widgets/valuelist-view";
+@import "./notifications/configuration-change-notification-modal";
+@import "./conflicts/configuration-conflicts-modal";
+@import "./import/import-configuration-modal";
+@import "./save/save-modal";
+
+// Archaeological color palette
+$arch-dark-olive: #334019;
+$arch-light-olive: #bec1a3;
+$arch-bronze: #a67a3c;
+$arch-light-sage: #caccb8;
+$arch-terracotta: #881600;
+$arch-light-gray: #eeeeee;
 
 #configuration-loading-icon-container {
-  width: 100%;
-  height: calc(100vh - 45px);
+    width: 100%;
+    height: calc(100vh - 45px);
 
-  .spinner {
-    position: absolute;
-    top: calc(50% - 45px);
-    left: calc(50% - 20px);
-  }
+    .spinner {
+        position: absolute;
+        top: calc(50% - 45px);
+        left: calc(50% - 20px);
+    }
 }
 
-
 .project-configuration {
-  &.dragging {
-    cursor: grabbing !important;
+    background-color: lighten($arch-light-sage, 8%) !important;
+
+    &.dragging {
+        cursor: grabbing !important;
+
+        .mdi-drag {
+            cursor: grabbing !important;
+        }
+    }
 
     .mdi-drag {
-      cursor: grabbing !important;
-    }
-  }
-
-  .mdi-drag {
-    font-size: 18px;
-  }
-
-  #project-configuration-content {
-    font-size: 15px;
-
-    &.no-selected-category {
-      background-color: white;
-    }
-  }
-
-  code {
-    font-size: 14px;
-  }
-
-  #configuration-toolbar {
-    height: $toolbar-height;
-
-    #categories-filter {
-      position: relative;
-      top: 5px;
-      left: 6px;
-      width: 100px;
-      padding-left: 0;
-      padding-right: 0;
-
-      #categories-filter-button {
-        position: relative;
-        top: 1px;
-      }
-
-      .categories-filter-selection-button {
-        max-width: 50vw;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        cursor: default;
-      }
-
-      #categories-filter-selection-menu {
-        padding: 0;
-
-        #categories-filter-selection-buttons {
-          max-height: calc(100vh - 350px);
-          overflow-y: auto;
-
-          button:first-child {
-            margin-top: 7px;
-          }
-
-          button:last-child {
-            margin-bottom: 7px;
-          }
-        }
-      }
+        font-size: 18px;
     }
 
-    #save-button {
-      position: relative;
-      top: 6px;
-      left: 6px;
-      float: right;
+    #project-configuration-content {
+        font-size: 15px;
+        background-color: lighten($arch-light-sage, 8%);
+
+        &.no-selected-category {
+            background-color: lighten($arch-light-sage, 8%);
+        }
     }
-  }
 
-  .sidebar {
-    height: calc(100vh - #{$navbar-height + $toolbar-height});
-    padding: 0;
-    margin: 0;
-    background-color: $sidebar-bg-color;
+    code {
+        font-size: 14px;
+        background-color: rgba($arch-light-olive, 0.3);
+        color: $arch-dark-olive;
+    }
 
-    #category-picker-container {
-      height: 100%;
-      overflow-y: auto;
-      overflow-x: hidden;
+    #configuration-toolbar {
+        height: $toolbar-height;
+        background-color: $arch-dark-olive;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-      category-picker {
-        .category-picker.dragging {
-          .list-group-item:not(.selected-category) .category-item:hover {
-            background-color: #fff !important;
-          }
-
-          .custom-category:not(.selected-category) {
-            .category-item:hover {
-              background-color: $custom-highlight-color !important;
-            }
-          }
-        }
-        .category-picker:not(.dragging) {
-          .category-item:hover {
-            background-color: $list-item-hover-color !important;
-            transition: background-color .5s ease;
-          }
-
-          .custom-category {
-            .category-item:hover {
-              background-color: color.adjust($custom-highlight-color, $lightness: -5%) !important;
-            }
-          }
-        }
-
-        .category-item {
-          transition: background-color .25s ease;
-        }
-
-        .selected-category .category-item {
-          background-color: $list-item-hover-color !important;
-          transition: background-color .5s ease;
-        }
-
-        .custom-category {
-          &.selected-category .category-item {
-            background-color: color.adjust($custom-highlight-color, $lightness: -5%) !important;
-          }
-        }
-
-        .list-group-item {
-          height: 45px;
-          border-top: 1px solid #f8f9fa !important;
-
-          .category-label {
+        #categories-filter {
             position: relative;
-            bottom: 1px;
-          }
+            top: 5px;
+            left: 6px;
+            width: 500px;
+            padding-left: 0;
+            padding-right: 0;
+
+            #categories-filter-button {
+                position: relative;
+                top: 1px;
+                border-color: $arch-light-sage;
+                color: $arch-light-sage;
+
+                &:hover {
+                    background-color: rgba($arch-light-sage, 0.1);
+                }
+            }
+
+            .categories-filter-selection-button {
+                max-width: 50vw;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                cursor: default;
+
+                &:hover {
+                    background-color: rgba($arch-light-olive, 0.1);
+                }
+            }
+
+            #categories-filter-selection-menu {
+                padding: 0;
+                border-color: $arch-light-olive;
+                background-color: lighten($arch-light-sage, 8%);
+
+                #categories-filter-selection-buttons {
+                    max-height: calc(100vh - 350px);
+                    overflow-y: auto;
+
+                    button {
+                        color: $arch-dark-olive;
+                        background-color: lighten($arch-light-sage, 8%);
+
+                        &:hover {
+                            background-color: $arch-light-olive;
+                        }
+                    }
+
+                    button:first-child {
+                        margin-top: 7px;
+                    }
+
+                    button:last-child {
+                        margin-bottom: 7px;
+                    }
+
+                    .dropdown-divider {
+                        border-top-color: $arch-light-olive;
+                    }
+                }
+            }
         }
-      }
+
+        #save-button {
+            position: relative;
+            top: 6px;
+            left: 6px;
+            float: right;
+            background-color: $arch-bronze;
+            border-color: $arch-bronze;
+
+            &:hover {
+                background-color: darken($arch-bronze, 5%);
+                border-color: darken($arch-bronze, 5%);
+            }
+
+            &.disabled {
+                background-color: rgba($arch-bronze, 0.7);
+                border-color: rgba($arch-bronze, 0.7);
+            }
+        }
     }
 
-    #add-supercategory-button {
-      position: absolute;
-      bottom: 3px;
-      padding-top: 2px;
-      transform: translate(-20px, 0);
-      left: 50%;
-      z-index: 1001;
+    .sidebar {
+        height: calc(100vh - #{$navbar-height + $toolbar-height});
+        padding: 0;
+        margin: 0;
+        background-color: $arch-light-sage;
+        border-right: 1px solid $arch-light-olive;
+        position: relative;
+
+        #category-picker-container {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-bottom: 50px;
+
+            category-picker {
+                .category-picker.dragging {
+                    .list-group-item:not(.selected-category)
+                        .category-item:hover {
+                        background-color: $arch-light-sage !important;
+                    }
+
+                    .custom-category:not(.selected-category) {
+                        .category-item:hover {
+                            background-color: $custom-highlight-color !important;
+                        }
+                    }
+                }
+
+                .category-picker {
+                    border-radius: 0;
+                    background-color: $arch-light-sage;
+
+                    &:not(.dragging) {
+                        .category-item:hover {
+                            background-color: darken(
+                                $arch-light-sage,
+                                5%
+                            ) !important;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        .custom-category {
+                            .category-item:hover {
+                                background-color: color.adjust(
+                                    $custom-highlight-color,
+                                    $lightness: -5%
+                                ) !important;
+                            }
+                        }
+                    }
+                }
+
+                .category-item {
+                    transition: background-color 0.25s ease;
+                    padding: 12px 0 12px 20px;
+                }
+
+                .selected-category .category-item {
+                    background-color: $arch-light-olive !important;
+                    border-left: 3px solid $arch-dark-olive;
+                    transition: background-color 0.3s ease;
+                }
+
+                .custom-category {
+                    &.selected-category .category-item {
+                        background-color: color.adjust(
+                            $custom-highlight-color,
+                            $lightness: -5%
+                        ) !important;
+                    }
+                }
+
+                .list-group-item {
+                    height: 50px;
+                    border-top: 1px solid rgba($arch-dark-olive, 0.1) !important;
+                    border-left: 3px solid transparent;
+                    background-color: $arch-light-sage;
+
+                    &:hover {
+                        border-left: 3px solid $arch-dark-olive;
+                    }
+
+                    .category-label {
+                        position: relative;
+                        font-size: 14px;
+                        color: $arch-dark-olive;
+                        margin-left: 40px;
+                    }
+
+                    .mdi-drag {
+                        color: $arch-dark-olive;
+                        transition: color 0.2s ease;
+
+                        &:hover {
+                            color: $arch-terracotta;
+                        }
+                    }
+
+                    &.abstract-category {
+                        font-style: italic;
+                        color: rgba($arch-dark-olive, 0.7);
+                    }
+
+                    &.child-category {
+                        padding-left: 10px;
+
+                        .category-item {
+                            padding-left: 30px;
+                        }
+                    }
+                }
+
+                .category-drag-placeholder {
+                    height: 50px;
+                    background-color: rgba($arch-light-olive, 0.5);
+                    border: dashed 1px $arch-dark-olive;
+                    border-radius: 0;
+                }
+            }
+        }
+
+        #add-supercategory-button {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $arch-dark-olive;
+            color: white;
+            border: none;
+            border-radius: 0;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            height: 50px;
+
+            &:hover {
+                background-color: $arch-terracotta;
+            }
+
+            .mdi {
+                margin-right: 8px;
+                font-size: 16px;
+            }
+        }
     }
-  }
+}
+
+.dropdown-item {
+    color: $arch-dark-olive !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $arch-light-olive !important;
+        color: $arch-dark-olive !important;
+    }
+}
+
+// Additional style to ensure the background is consistent
+body .dropdown-menu {
+    background-color: lighten($arch-light-sage, 8%) !important;
 }

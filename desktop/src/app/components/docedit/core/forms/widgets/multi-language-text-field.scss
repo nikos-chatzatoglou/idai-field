@@ -55,46 +55,181 @@ multi-language-text-field {
       }
     }
 
-    .additional-languages-dropdown {
-      height: 33px !important;
-    }
+multi-language-text-field {
+    display: block;
+    margin-bottom: 10px;
 
-    .additional-languages-dropdown-menu {
-      top: -2px !important;
-      border-top: none;
-      border-color: $focused-border-color;
+    .multi-language-field-container {
+        position: relative;
+        transition: all 0.2s ease;
 
-      .additional-languages-dropdown-list {
-        button {
-          font-size: 14px;
-          cursor: default;
+        // Language selector tabs
+        .language-selector {
+            position: relative;
+            margin-bottom: 8px;
+
+            .language-selector-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                border-bottom: none;
+
+                .language-tab {
+                    background-color: $light-sage;
+                    border: 1px solid $sage;
+                    border-radius: $border-radius;
+                    padding: 4px 12px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: $cal-poly-green;
+                    cursor: default !important;
+                    transition: background-color 0.3s ease, transform 0.2s ease;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    box-shadow: none !important;
+                    height: 30px;
+                    position: relative;
+
+                    &:hover {
+                        background-color: $sage;
+                        transform: translateY(-1px);
+                    }
+
+                    &.active {
+                        background-color: $cal-poly-green;
+                        color: white;
+                        border-color: $cal-poly-green;
+                        font-weight: normal;
+                    }
+
+                    &.filled-in:not(.active) {
+                        border-color: $primary-button-color;
+                        font-weight: 600;
+
+                        .has-content-indicator {
+                            display: block;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background-color: $primary-button-color;
+                        }
+                    }
+
+                    &.dropdown-toggle {
+                        padding-right: 25px;
+                        min-width: 100px;
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .dropdown-content-wrapper {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                            margin-right: 4px;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            border-width: 4px;
+                            border-style: solid;
+                            border-color: currentColor transparent transparent
+                                transparent;
+                        }
+                    }
+                }
+
+                .additional-languages {
+                    display: flex;
+
+                    .additional-languages-menu {
+                        border-radius: $input-border-radius;
+                        box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.18);
+                        border: 1px solid $sage;
+                        padding: 6px 0;
+                        min-width: 120px;
+                        margin-top: 5px;
+
+                        .additional-languages-list {
+                            max-height: 200px;
+                            overflow-y: auto;
+
+                            .dropdown-item {
+                                font-size: 13px;
+                                padding: 8px 16px;
+                                color: #000;
+                                cursor: default;
+                                user-select: none;
+
+                                &:hover {
+                                    background-color: $light-sage;
+                                }
+
+                                &:active {
+                                    background-color: darken($light-sage, 5%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
-    }
-  }
 
-  .nav-tabs.focused {
-    border-color: $focused-border-color !important;
+        // Input container
+        .input-container {
+            position: relative;
 
-    a.active {
-      border-top-color: $focused-border-color !important;
-      border-left-color: $focused-border-color !important;
-      border-right-color: $focused-border-color !important;
-      z-index: 1000;
-    }
+            .form-control {
+                border-radius: $input-border-radius;
+                border: 1px solid $sage;
+                padding: 8px 12px;
+                font-size: 14px;
+                transition: all 0.2s ease;
+                height: auto;
+                min-height: 38px;
 
-    a:hover:not(.active) {
-      height: 33px;
-    }
-  }
+                &:focus {
+                    border-color: $primary-button-color;
+                    box-shadow: 0 0 0 2px rgba($primary-button-color, 0.2);
+                    outline: none;
+                }
 
-  .nav-tabs:not(.focused) {
-    a:active {
-      border-color: $default-border-color !important;
-    }
+                &.focused {
+                    border-color: $primary-button-color;
+                    box-shadow: 0 0 0 2px rgba($primary-button-color, 0.2);
+                }
+            }
 
-    a:hover:not(.active) {
-      border-bottom: 1px $default-border-color solid !important;
+            textarea.form-control {
+                min-height: 80px;
+                resize: vertical;
+            }
+
+            // Current language indicator
+            .current-language-indicator {
+                position: absolute;
+                right: 10px;
+                bottom: 8px;
+                background-color: $light-sage;
+                border-radius: 12px;
+                padding: 2px 8px;
+                font-size: 11px;
+                color: $cal-poly-green;
+                pointer-events: none;
+                opacity: 0.9;
+                line-height: 1.3;
+
+                .language-label {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
-  }
 }

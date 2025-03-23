@@ -4,6 +4,8 @@ $cal-poly-green: #334019ff;
 $sage: #bec1a3ff;
 $dark-red: #881600ff;
 $greenbgr: #334019;
+$redbgr: #881600;
+$lightgraybgr: #eeeeee;
 
 .btn {
     cursor: default !important;
@@ -55,27 +57,27 @@ $greenbgr: #334019;
 }
 
 .lightgray-button:hover {
-    background-color: $sage;
+    background-color: $lightgraybgr;
 }
 
 .green-button {
-    background-color: $cal-poly-green;
+    background-color: $greenbgr;
     color: #fff;
     font-weight: normal;
 }
 
 .green-button:hover {
-    background-color: color.adjust($cal-poly-green, $lightness: 5%);
+    background-color: color.adjust($greenbgr, $lightness: 5%);
 }
 
 .red-button {
-    background-color: $dark-red;
+    background-color: $redbgr;
     color: #fff;
     font-weight: normal;
 }
 
 .red-button:hover {
-    background-color: color.adjust($dark-red, $lightness: 35%);
+    background-color: color.adjust($redbgr, $lightness: 35%);
 }
 
 .nav-link {
@@ -106,7 +108,7 @@ category-switcher-button {
 }
 
 .category-button {
-    background-color: $dark-red;
+    background-color: rgb(143, 48, 48);
 
     .plus-sign-circle,
     .menu-down-sign-circle {
@@ -126,7 +128,7 @@ category-switcher-button {
     }
 
     .plus-sign-circle {
-        background-color: $cal-poly-green;
+        background-color: $greenbgr;
 
         .mdi {
             top: -1px;
@@ -157,13 +159,9 @@ category-switcher-button {
 
 .btn-outline-primary:active,
 .btn-outline-primary:focus {
-    color: var(
-        --cal-poly-green
-    ) !important; /* Set text color to Cal Poly Green */
-    background-color: var(--sage) !important; /* Set background to Sage */
-    border-color: var(
-        --cal-poly-green
-    ) !important; /* Set border to Cal Poly Green */
+    color: #5572a1 !important;
+    background-color: #fff !important;
+    border-color: #5572a1 !important;
 }
 
 .btn-outline-primary:active {

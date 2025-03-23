@@ -1,105 +1,188 @@
-@use 'sass:color';
+@use "sass:color";
+
+// Archaeological color palette
+$arch-dark-olive: #334019;
+$arch-light-olive: #bec1a3;
+$arch-bronze: #a67a3c;
+$arch-light-sage: #caccb8;
+$arch-terracotta: #881600;
+$arch-light-gray: #eeeeee;
 
 configuration-field {
-  .card {
-    margin-top: 1px;
-    margin-bottom: 1px;
+    .card {
+        margin: 8px 0;
+        border-radius: 0;
+        overflow: hidden;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+        transition: all 0.2s ease;
+        border: 1px solid rgba($arch-light-olive, 0.5);
 
-    .card-header {
-      min-height: 55px;
-      padding: 12px 20px;
-      background-color: #fff;
-      border: none;
-      transition: background-color .25s ease;
+        &:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+        }
 
-      &.opened,
-      &:hover:not(.parent-element) {
-        background-color: $list-item-hover-color;
-        transition: background-color .5s ease;
-      }
+        .card-header {
+            min-height: 55px;
+            padding: 12px 20px;
+            background-color: lighten($arch-light-sage, 5%);
+            border: none;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
 
-      &.parent-element {
+            &.opened,
+            &:hover:not(.parent-element) {
+                background-color: $arch-light-olive;
+                transition: background-color 0.3s ease;
+            }
+
+            &.parent-element {
+                background-color: rgba($arch-light-olive, 0.5);
+
+                b,
+                code {
+                    font-style: italic;
+                    font-weight: normal;
+                }
+            }
+
+            .mdi-drag {
+                color: $arch-dark-olive;
+                margin-right: 10px;
+                cursor: grab;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: $arch-terracotta;
+                }
+            }
+
+            .category-icon {
+                position: relative;
+                margin-left: 12px;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            b {
+                font-weight: 500;
+                margin-right: 8px;
+                color: $arch-dark-olive;
+            }
+
+            code {
+                color: $arch-bronze;
+                font-family: "Roboto Mono", monospace;
+                font-size: 0.85em;
+                background-color: rgba($arch-light-sage, 0.3);
+                padding: 2px 4px;
+                border-radius: 0;
+            }
+
+            .mdi-alert-circle-outline {
+                color: $arch-terracotta;
+                margin-left: 8px;
+            }
+
+            .field-type {
+                margin-left: auto;
+                color: rgba($arch-dark-olive, 0.7);
+                font-size: 0.85em;
+                display: flex;
+                align-items: center;
+
+                .field-info-icon {
+                    margin-right: 6px;
+                    color: rgba($arch-dark-olive, 0.7);
+                }
+
+                &.relation {
+                    color: $arch-bronze;
+
+                    .field-info-icon {
+                        color: $arch-bronze;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0;
+
+            .field-info {
+                border-top: 1px solid rgba($arch-light-olive, 0.5);
+                background-color: rgba($arch-light-sage, 0.2);
+                padding: 15px 20px;
+                font-size: 0.9em;
+                color: $arch-dark-olive;
+                line-height: 1.5;
+
+                code {
+                    background-color: rgba($arch-light-olive, 0.3);
+                    color: $arch-dark-olive;
+                    padding: 2px 4px;
+                    border-radius: 0;
+                    font-size: 0.9em;
+                    font-family: "Roboto Mono", monospace;
+                }
+
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    margin-bottom: 0;
+
+                    li {
+                        margin-bottom: 5px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .badge {
+                            font-weight: normal;
+                            padding: 4px 8px;
+                            border-radius: 0;
+                            margin-right: 5px;
+                            background-color: $arch-light-olive;
+                            color: $arch-dark-olive;
+                        }
+
+                        .value-list-item {
+                            display: inline-block;
+                            background-color: rgba($arch-light-olive, 0.3);
+                            border-radius: 0;
+                            padding: 2px 8px;
+                            margin: 2px 5px 2px 0;
+                            font-size: 0.9em;
+                            color: $arch-dark-olive;
+                        }
+                    }
+                }
+
+                .field-description {
+                    margin-bottom: 15px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid rgba($arch-light-olive, 0.3);
+                }
+            }
+        }
+    }
+
+    .hidden-field .card-header {
+        color: rgba($arch-dark-olive, 0.5);
+        font-style: italic;
+        background-color: rgba($arch-light-sage, 0.1);
+
         b,
         code {
-          font-style: italic;
-          font-weight: normal;
+            color: rgba($arch-dark-olive, 0.5);
         }
-      }
-
-      .mdi-drag {
-        color: #848484;
-        position: relative;
-        top: 3px;
-        right: 6px;
-        cursor: grab;
-      }
-
-      .category-icon {
-        position: relative;
-        top: 2px;
-        right: 2px;
-        margin-left: 12px;
-      }
-
-      b,
-      code,
-      .mdi-alert-circle-outline {
-        position: relative;
-        top: 2px;
-      }
     }
 
-    .card-body {
-      padding-top: 0;
-      background-color: $list-item-hover-color;
-
-      .list-group {
-        color: initial;
-      }
+    .custom-field .card-header {
+        border-left: 3px solid $arch-terracotta;
     }
-
-    b {
-      font-weight: 500;
-    }
-
-    &.custom {
-      .card-header {
-        background-color: $custom-highlight-color !important;
-      }
-
-      .card-header.opened,
-      .card-header:hover:not(.parent-element),
-      .card-body {
-          background-color: color.adjust($custom-highlight-color, $lightness: -5%) !important;
-      }
-    }
-
-    .oneliner-colon {
-      margin-right: 4px;
-    }
-
-    .target-category {
-      position: relative;
-      left: 10px;
-      margin-top: 8px;
-
-      .target-category-label {
-        margin-left: 5px;
-      }
-
-      &:first-of-type {
-        margin-top: 5px;
-      }
-    }
-
-    &.hidden-element {
-      b,
-      code,
-      span,
-      .card-text,
-      .badge {
-        color: #ccc;
-      }
-    }
-  }
 }
