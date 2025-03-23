@@ -8,64 +8,6 @@ $dark-red: #881600;
 $light-sage: lighten($sage, 10%);
 $border-radius: 2rem;
 $input-border-radius: 0.25rem;
-$default-border-color: #dee2e6;
-$focused-border-color: #9bacc7;
-
-multi-language-text-field {
-  position: relative;
-  left: 1px;
-
-  input,
-  textarea {
-    margin-left: -1px !important;
-    &.with-tabs {
-      border-top: 0 !important;
-    }
-
-    &.focused {
-      border-color: $focused-border-color;
-    }
-  }
-
-  .nav-tabs {
-    position: relative;
-    right: 1px;
-    border-bottom-color: $default-border-color;
-    transition: border-color 0.15s ease-in-out;
-
-    a {
-      position: relative;
-      left: 1px;
-      height: 34px;
-      font-size: 14px;
-      border-top-left-radius: 14px !important;
-      border-top-right-radius: 14px !important;
-      border-bottom: none !important;
-      border-color: transparent !important;
-      padding: 6px 12px !important;
-      margin-left: -1px;
-      color: grey !important;
-      user-select: none;
-      transition: none;
-
-      &.active {
-        transition: border-top-color 0.15s ease-in-out,
-                    border-left-color 0.15s ease-in-out,
-                    border-right-color 0.15s ease-in-out;
-        border-color: $default-border-color !important;
-      }
-
-      &.filled-in {
-        color: #37588e !important;
-      }
-
-      &:hover {
-        background-color: #fff;
-        border-color: $default-border-color !important;
-      }
-    }
-  }
-}
 
 multi-language-text-field {
     display: block;
