@@ -23,7 +23,6 @@ export class PopoverMenuComponent {
 
     @Output() onDocumentInfoHeaderRightClicked: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
-
     constructor(private resourcesComponent: ResourcesComponent,
                 private viewFacade: ViewFacade,
                 private routingService: Routing,
