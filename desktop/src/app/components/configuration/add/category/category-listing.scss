@@ -1,52 +1,56 @@
-@use 'sass:color';
+@use "sass:color";
 
 category-listing {
-  display: block;
-  width: 100%;
-  height: calc(100vh - 287px);
+    display: block;
+    width: 100%;
+    height: calc(100vh - 287px);
 
-  .listing {
-    li {
-      height: 45px;
-      
-      &.category-header {
-        padding: 5px;
-      }
+    .listing {
+        li {
+            height: 45px;
 
-      &:hover:not(.category-header):not(.new-entry-button) {
-        background-color: color.adjust($list-item-hover-color, $lightness: -5%);
-        transition: background-color .5s ease;
-      }
+            &.category-header {
+                padding: 5px;
+            }
 
-      category-icon {
-        position: relative;
-        top: 2px;
-        margin-left: 4px;
-        margin-right: 10px;
-      }
+            &:hover:not(.category-header):not(.new-entry-button) {
+                background-color: color.adjust(
+                    $list-item-hover-color,
+                    $lightness: -5%
+                );
+                transition: background-color 0.5s ease;
+            }
 
-      .mdi-script-text-outline {
-        position: relative;
-        bottom: 1px;
-        color: #414952;
-      }
+            category-icon {
+                position: relative;
+                top: 2px;
+                margin-left: 4px;
+                margin-right: 10px;
+            }
 
-      .badge {
-        position: relative;
-        top: 1px;
-        right: 7px;
-        float: right;
-        background-color: #37588e;
-      }
+            .mdi-script-text-outline {
+                position: relative;
+                bottom: 1px;
+                color: #414952;
+            }
+
+            .badge {
+                position: relative;
+                top: 1px;
+                right: 7px;
+                float: right;
+                background-color: #37588e;
+            }
+        }
+
+        .item-label,
+        .search-result-label {
+            bottom: 0;
+        }
+
+        code {
+            bottom: 2px;
+            color: #a67a3c;
+        }
     }
-
-    .item-label,
-    .search-result-label {
-      bottom: 0;
-    }
-
-    code {
-      bottom: 2px;
-    }
-  }
 }

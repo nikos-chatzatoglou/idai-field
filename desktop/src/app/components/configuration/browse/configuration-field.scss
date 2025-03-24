@@ -110,7 +110,8 @@ configuration-field {
         }
 
         .card-body {
-            padding: 0;
+            padding: 12px;
+            background-color: $new-background;
 
             .field-info {
                 border-top: 1px solid rgba($arch-light-olive, 0.5);

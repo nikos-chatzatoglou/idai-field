@@ -1,38 +1,43 @@
 form-field-date {
-  position: relative;
-  
-  .remove-date-button {
-    height: 33px;
-    padding-top: 4px;
-    font-size: 15px;
-    color: #212529;
+    position: relative;
 
-    .mdi-close {
-      position: relative;
-      left: 4px;
+    .remove-date-button {
+        height: 33px;
+        padding-top: 4px;
+        font-size: 15px;
+        color: #212529;
+
+        .mdi-close {
+            position: relative;
+            left: 4px;
+        }
     }
-  }
 }
 
 ngb-datepicker {
-  user-select: none;
+    user-select: none;
+    background-color: #f4f0e6 !important;
 
-  select {
-    box-shadow: none !important;
-  }
-
-  .ngb-dp-day {
-    cursor: default !important;
-  
-    .btn-light.active {
-      background-color: initial !important;
-      border-color: initial !important;
-      color: #37588e !important;
-      box-shadow: initial !important;
+    select {
+        box-shadow: none !important;
     }
-  }
-  
-  .ngb-dp-arrow-btn:focus {
-    outline-width: 0 !important; 
-  }
+
+    .ngb-dp-day {
+        cursor: default !important;
+
+        .btn-light.active {
+            background-color: initial !important;
+            border-color: initial !important;
+            color: #212529 !important;
+            box-shadow: initial !important;
+        }
+    }
+
+    .ngb-dp-arrow-btn:focus {
+        outline-width: 0 !important;
+    }
+
+    .ngb-dp-weekday {
+        color: #000000 !important;
+    }
 }

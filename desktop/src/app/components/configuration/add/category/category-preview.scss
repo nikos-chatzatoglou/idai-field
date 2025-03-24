@@ -1,57 +1,58 @@
 .preview {
-  #preview-header {
-    category-icon {
-      position: relative;
-      top: 2px;
-      margin-left: 4px;
-      margin-right: 3px;
-    }
-
-    .badge {
-      margin-top: 8px;
-      margin-right: 19px;
-      float: right;
-      color: #fff;
-      background-color: #37588e;
-    }
-
-    #creation-date {
-      font-size: 12px;
-    }
-  }
-
-  #preview-body {
-    #category-description {
-      padding: 12px;
-      font-size: 14px;
-    }
-
-    #groups-list {
-      li {
-        margin: 4px 6px 18px 6px;
-      }
-
-      ul li {
-        margin: 3px 6px;
-      }
-
-      code {
-        margin-left: 6px;
-      }
-
-      .field-title {
-        .field-label {
-          font-size: 14px;
+    #preview-header {
+        category-icon {
+            position: relative;
+            top: 2px;
+            margin-left: 4px;
+            margin-right: 3px;
         }
 
-        code {
-          font-size: 12px;
+        .badge {
+            margin-top: 8px;
+            margin-right: 19px;
+            float: right;
+            color: #fff;
+            background-color: #37588e;
         }
-      }
+
+        #creation-date {
+            font-size: 12px;
+        }
     }
 
-    b {
-      font-weight: 500;
+    #preview-body {
+        #category-description {
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        #groups-list {
+            li {
+                margin: 4px 6px 18px 6px;
+            }
+
+            ul li {
+                margin: 3px 6px;
+            }
+
+            code {
+                margin-left: 6px;
+                color: #a67a3c;
+            }
+
+            .field-title {
+                .field-label {
+                    font-size: 14px;
+                }
+
+                code {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        b {
+            font-weight: 500;
+        }
     }
-  }
 }

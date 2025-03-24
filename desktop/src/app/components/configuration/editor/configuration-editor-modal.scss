@@ -1,88 +1,90 @@
 .configuration-editor-modal-header {
-  height: 54px;
-  padding: 7px;
-  border-bottom: 1px solid #ccc;
-  user-select: none;
-  background-color: $modal-header-background-color;
+    height: 54px;
+    padding: 7px;
+    border-bottom: 1px solid #ccc;
+    user-select: none;
+    background-color: $modal-header-background-color;
 
-  .modal-title {
-    position: relative;
-    left: 9px;
-    max-width: calc(100% - 120px);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  #confirm-button,
-  #confirm-valuelist-button {
-    position: absolute;
-    right: 52px;
-    height: 39px;
-    
-    .button-label {
-      margin-left: 0;
+    .modal-title {
+        position: relative;
+        left: 9px;
+        max-width: calc(100% - 120px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-  }
 
-  #cancel-button,
-  #cancel-valuelist-button {
-    position: absolute;
-    right: 7px;
-  }
+    #confirm-button,
+    #confirm-valuelist-button {
+        position: absolute;
+        right: 52px;
+        height: 39px;
+
+        .button-label {
+            margin-left: 0;
+        }
+    }
+
+    #cancel-button,
+    #cancel-valuelist-button {
+        position: absolute;
+        right: 7px;
+    }
 }
 
 .configuration-editor-modal-body {
-  @extend .bg-light;
-  height: calc(100vh - 137px);
-  overflow-y: auto;
+    background-color: #eeeadb !important;
+    height: calc(100vh - 137px);
+    overflow-y: auto;
 
-  .configuration-editor-section-title {
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    user-select: none;
-  }
-
-  .configuration-editor-section:not(:last-child) {
-    margin-bottom: 25px;
-  }
-
-  .configuration-editor-section.configuration-editor-switch-section:not(:last-child) {
-    margin-bottom: 5px;
-  }
-
-  input {
-    height: 33.5px;
-    font-size: 13px;
-  }
-
-  select {
-    height: 33.5px;
-    line-height: 19px;
-    font-size: 15px;
-  }
-
-  .basic-settings-label {
-    width: 330px;
-    float: left;
-    font-size: 15px;
-    user-select: none;
-  }
-  
-  .configuration-editor-switch {
-    width: 370px;
-    
-    div span {
-      user-select: none;
-  
-      &.disabled {
-        color: grey;
-      }
+    .configuration-editor-section-title {
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        user-select: none;
     }
-  }
 
-  label.disabled {
-    color: grey;
-  }
+    .configuration-editor-section:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .configuration-editor-section.configuration-editor-switch-section:not(
+            :last-child
+        ) {
+        margin-bottom: 5px;
+    }
+
+    input {
+        height: 33.5px;
+        font-size: 13px;
+    }
+
+    select {
+        height: 33.5px;
+        line-height: 19px;
+        font-size: 15px;
+    }
+
+    .basic-settings-label {
+        width: 330px;
+        float: left;
+        font-size: 15px;
+        user-select: none;
+    }
+
+    .configuration-editor-switch {
+        width: 370px;
+
+        div span {
+            user-select: none;
+
+            &.disabled {
+                color: grey;
+            }
+        }
+    }
+
+    label.disabled {
+        color: grey;
+    }
 }

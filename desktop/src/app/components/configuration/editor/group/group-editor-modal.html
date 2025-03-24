@@ -1,9 +1,9 @@
 <div class="modal-header configuration-editor-modal-header">
     <h5 *ngIf="new" class="modal-title" i18n="@@configuration.createSpecificGroup">
-        Gruppe <code>{{group.name}}</code> erstellen
+        Gruppe <code style="color: #a67a3c;">{{group.name}}</code> erstellen
     </h5>
     <h5 *ngIf="!new" class="modal-title" i18n="@@configuration.editSpecificGroup">
-        Gruppe <code>{{group.name}}</code> bearbeiten
+        Gruppe <code style="color: #a67a3c;">{{group.name}}</code> bearbeiten
     </h5>
     <button id="confirm-button" class="btn btn-primary"
             [ngClass]="{ 'disabled': applyingChanges || !isChanged() }"

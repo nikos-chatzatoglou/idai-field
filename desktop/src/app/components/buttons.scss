@@ -159,9 +159,9 @@ category-switcher-button {
 
 .btn-outline-primary:active,
 .btn-outline-primary:focus {
-    color: #5572a1 !important;
+    color: $sage !important;
     background-color: #fff !important;
-    border-color: #5572a1 !important;
+    border-color: $sage !important;
 }
 
 .btn-outline-primary:active {
@@ -170,7 +170,7 @@ category-switcher-button {
 
 .show > .btn-outline-primary.dropdown-toggle {
     @extend :active;
-    border-color: $primary-button-color;
+    border-color: $sage;
 }
 
 .dropdown {
@@ -207,12 +207,12 @@ category-switcher-button {
 
 .btn-info {
     color: white !important;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+    background-color: $sage;
+    border-color: $sage;
 
     &:hover,
     &:active {
-        background-color: #138496 !important;
-        border-color: #138496 !important;
+        background-color: color.adjust($sage, $lightness: -10%) !important;
+        border-color: color.adjust($sage, $lightness: -10%) !important;
     }
 }

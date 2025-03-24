@@ -3,183 +3,324 @@
  */
 resources-search-constraints,
 image-overview-search-constraints {
+    #constraints-menu-button {
+        right: 0;
+        width: 39px;
+        border-radius: 0;
+        text-align: left;
+        border-left-width: 0 !important;
+        border-right: 0;
+        border-color: #dee2e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-  #constraints-menu-button {
-    right: 0;
-    width: 39px;
-    border-radius: 0;
-    text-align: left;
-    border-left-width: 0 !important;
-    border-right: 0;
-    border-color: #dee2e6;
+        &.focused {
+            border-color: rgb(155, 171.5, 198.5) !important;
+        }
 
-    &.focused {
-      border-color: rgb(155, 171.5, 198.5) !important;
+        &:active {
+            border-color: #dee2e6 !important;
+        }
+
+        .badge {
+            color: #212529;
+            background-color: #f8f9fa;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            font-size: 0.75rem;
+            min-width: 18px;
+            height: 18px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+        }
+
+        .mdi-filter-variant {
+            font-size: 1.1rem;
+        }
     }
 
-    &:active {
-      border-color: #dee2e6 !important;
-    }
-
-    .badge {
-      color: black;
-      right: 4px;
-    }
-  }
-
-  #constraints-menu {
-    display: inline;
-    position: absolute;
-    top: 38px;
-    left: 0;
-    width: calc(100% - 50px);
-    background-color: #f7f7f7;
-    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.3);
-    border-bottom-left-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-    overflow: hidden;
-    cursor: default;
-    user-select: none;
-
-    h6,
-    #constraints-type-filter-info,
-    .constraint-list-item,
-    .flex-row {
-      padding: 10px;
-    }
-
-    #constraints-type-filter-info {
-      background-color: white;
-    }
-
-    h6 {
-      background-color: #f7f7f7;
-      margin-bottom: 0;
-      cursor: default;
-    }
-
-    .constraint-list-item {
-      position: relative;
-      background-color: white;
-      margin-bottom: 1px;
-      transition: background-color .25s ease;
-
-      &:hover {
-        background-color: $list-item-hover-color;
-        transition: background-color .5s ease;
-      }
-
-      .constraint-list-item-text {
-        width: calc(100% - 36px);
-        overflow: hidden;
-        word-wrap: break-word;
-        font-size: 13px;
-      }
-
-      .mdi-close-circle {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 10px;
-        color: #dc3545;
-      }
-    }
-
-    .flex-row {
-      background-color: white;
-      margin-top: 1px;
-
-      select.form-control,
-      input.form-control {
-        height: 39px;
-        font-size: 13px;
-      }
-
-      input.form-control {
-        width: calc(50% - 57px);
-        padding: 10px;
+    // Custom select styling
+    select.form-control.form-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 16px;
+        padding-right: 30px !important;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
 
         &:focus {
-          z-index: 1;
-        }
-      }
-
-      select.form-control,
-      searchable-select {
-        width: calc(50% - 31px);
-      }
-
-      searchable-select {
-        .ng-select {
-          .ng-select-container {
-            height: 39px !important;
-            min-height: 39px;
-
-            .ng-input {
-              top: initial;
-            }
-
-            .ng-placeholder {
-              color: #666;
-            }
-          }
-        }
-      }
-
-      #constraint-field-select,
-      #constraint-search-term-select,
-      #constraint-search-term-boolean-select,
-      #constraint-search-term-exists-select,
-      #constraint-search-search-term-input-dropdown {
-        margin-right: 10px;
-      }
-
-      #constraint-search-search-term-input-dropdown {
-        button {
-          height: 39px;
-          color: #6c757d;
-          border-color: #ced4da;
-          border-radius: 0;
-          border-left: none;
-          font-size: 13px;
-          cursor: default;
+            border-color: #ced4da;
+            outline: 0;
+            box-shadow: none;
         }
 
-        &.show button,
-        button:focus, button:active {
-          position: relative;
-          left: -1px;
-          border-left: 1px solid;
-          margin-right: -1px;
-          border-color: #7998cb !important;
+        option {
+            padding: 8px;
         }
-      }
 
-      #add-constraint-button {
-        height: 39px;
-
-        span {
-          position: relative;
-          top: 6px;
+        /* Ensure dropdown arrow doesn't appear in Firefox */
+        &::-ms-expand {
+            display: none;
         }
-      }
+
+        /* Ensure dropdown arrow doesn't appear in IE */
+        &::-webkit-details-marker {
+            display: none;
+        }
     }
-  }
+
+    #constraints-menu {
+        display: inline;
+        position: absolute;
+        top: 38px;
+        left: 0;
+        width: calc(100% - 50px);
+        background-color: #f7f7f7;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        border-bottom-left-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+        overflow: hidden;
+        cursor: default;
+        user-select: none;
+        z-index: 1050;
+
+        h6,
+        #constraints-type-filter-info,
+        .constraint-list-item,
+        .flex-row {
+            padding: 12px 15px;
+        }
+
+        #constraints-type-filter-info {
+            background-color: white;
+        }
+
+        h6 {
+            background-color: #f7f7f7;
+            margin-bottom: 0;
+            cursor: default;
+            font-weight: 600;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .constraint-list-item {
+            position: relative;
+            background-color: white;
+            margin-bottom: 1px;
+            transition: background-color 0.25s ease;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: $list-item-hover-color;
+                transition: background-color 0.5s ease;
+            }
+
+            .constraint-list-item-text {
+                width: calc(100% - 36px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-wrap: break-word;
+                font-size: 13px;
+
+                strong {
+                    font-weight: 600;
+                    margin-right: 4px;
+                }
+
+                span {
+                    color: #495057;
+                }
+            }
+
+            .mdi-close-circle {
+                margin-left: 10px;
+                color: #dc3545;
+                font-size: 1.1rem;
+            }
+        }
+
+        .flex-row {
+            background-color: white;
+            margin-top: 1px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            select.form-control,
+            input.form-control {
+                height: 39px;
+                font-size: 13px;
+            }
+
+            input.form-control {
+                flex: 1;
+                min-width: 150px;
+                max-width: 300px;
+                padding: 10px;
+
+                &:focus {
+                    z-index: 1;
+                }
+            }
+
+            select.form-control {
+                min-width: 140px;
+                max-width: 220px;
+                flex: 0 0 auto;
+            }
+
+            searchable-select {
+                flex: 1;
+                min-width: 150px;
+                max-width: 300px;
+
+                .ng-select {
+                    .ng-select-container {
+                        height: 39px !important;
+                        min-height: 39px;
+                        border-radius: 0.25rem;
+
+                        &:focus,
+                        &:active,
+                        &.ng-select-focused {
+                            border-color: #ced4da !important;
+                            box-shadow: none !important;
+                            outline: none !important;
+                        }
+
+                        .ng-input {
+                            top: initial;
+                        }
+
+                        .ng-placeholder {
+                            color: #666;
+                        }
+
+                        .ng-value-container {
+                            padding-top: 5px;
+                        }
+                    }
+
+                    &.ng-select-focused,
+                    &.ng-select-opened {
+                        .ng-select-container {
+                            border-color: #ced4da !important;
+                            box-shadow: none !important;
+                            outline: none !important;
+                        }
+                    }
+
+                    .ng-dropdown-panel {
+                        .ng-dropdown-panel-items {
+                            .ng-option {
+                                padding: 8px 10px;
+
+                                &.ng-option-marked {
+                                    background-color: rgba(0, 0, 0, 0.04);
+                                }
+
+                                &.ng-option-selected {
+                                    background-color: rgba(0, 0, 0, 0.08);
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #constraint-field-select,
+            #constraint-search-term-select,
+            #constraint-search-term-boolean-select,
+            #constraint-search-term-exists-select,
+            #constraint-search-search-term-input-dropdown {
+                margin-right: 0;
+            }
+
+            #constraint-search-search-term-input-dropdown {
+                button {
+                    height: 39px;
+                    color: #6c757d;
+                    border-color: #ced4da;
+                    border-radius: 0;
+                    border-left: none;
+                    font-size: 13px;
+                    cursor: pointer;
+                    background-color: white;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
+
+                &.show button,
+                button:focus,
+                button:active {
+                    position: relative;
+                    left: -1px;
+                    border-left: 1px solid;
+                    margin-right: -1px;
+                    border-color: #ced4da !important;
+                    background-color: white !important;
+                    color: #6c757d !important;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
+            }
+
+            #add-constraint-button {
+                height: 39px;
+                width: 39px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                border-radius: 4px;
+
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
 }
 
 image-overview-search-constraints {
-  #constraints-menu-button {
-    .mdi {
-      position: relative;
-      left: 1px;
-     }
-  }
+    #constraints-menu-button {
+        .mdi {
+            position: relative;
+            left: 1px;
+        }
+    }
 }
 
 #constraints-menu-input-dropdown-menu {
-  .dropdown-item {
-    height: 30px;
-    font-size: 13px;
-    color: black;
-  }
+    .dropdown-item {
+        height: auto;
+        padding: 8px 15px;
+        font-size: 13px;
+        color: #212529;
+
+        &:hover {
+            background-color: #f8f9fa;
+        }
+
+        span {
+            display: block;
+            white-space: nowrap;
+        }
+    }
+
+    .dropdown-header {
+        padding: 8px 15px;
+        font-size: 12px;
+        color: #6c757d;
+    }
 }

@@ -46,6 +46,7 @@ $arch-bronze: #a67a3c;
 $arch-light-sage: #caccb8;
 $arch-terracotta: #881600;
 $arch-light-gray: #eeeeee;
+$new-background: #eeeadb;
 
 #configuration-loading-icon-container {
     width: 100%;
@@ -59,7 +60,7 @@ $arch-light-gray: #eeeeee;
 }
 
 .project-configuration {
-    background-color: lighten($arch-light-sage, 8%) !important;
+    background-color: $new-background !important;
 
     &.dragging {
         cursor: grabbing !important;
@@ -75,10 +76,11 @@ $arch-light-gray: #eeeeee;
 
     #project-configuration-content {
         font-size: 15px;
-        background-color: lighten($arch-light-sage, 8%);
+        background-color: $new-background;
+        position: relative;
 
         &.no-selected-category {
-            background-color: lighten($arch-light-sage, 8%);
+            background-color: $new-background;
         }
     }
 
@@ -90,7 +92,7 @@ $arch-light-gray: #eeeeee;
 
     #configuration-toolbar {
         height: $toolbar-height;
-        background-color: $arch-dark-olive;
+        background-color: $new-background;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         #categories-filter {
@@ -104,11 +106,19 @@ $arch-light-gray: #eeeeee;
             #categories-filter-button {
                 position: relative;
                 top: 1px;
-                border-color: $arch-light-sage;
-                color: $arch-light-sage;
+                background-color: #d6aa6e;
+                border-color: #d6aa6e;
+                color: white;
 
-                &:hover {
-                    background-color: rgba($arch-light-sage, 0.1);
+                &:hover,
+                &:active,
+                &:focus,
+                &.active,
+                &.show {
+                    background-color: darken(#d6aa6e, 5%) !important;
+                    border-color: darken(#d6aa6e, 5%) !important;
+                    color: white !important;
+                    box-shadow: none !important;
                 }
             }
 
@@ -126,7 +136,7 @@ $arch-light-gray: #eeeeee;
             #categories-filter-selection-menu {
                 padding: 0;
                 border-color: $arch-light-olive;
-                background-color: lighten($arch-light-sage, 8%);
+                background-color: $new-background;
 
                 #categories-filter-selection-buttons {
                     max-height: calc(100vh - 350px);
@@ -134,7 +144,7 @@ $arch-light-gray: #eeeeee;
 
                     button {
                         color: $arch-dark-olive;
-                        background-color: lighten($arch-light-sage, 8%);
+                        background-color: $new-background;
 
                         &:hover {
                             background-color: $arch-light-olive;
@@ -161,17 +171,17 @@ $arch-light-gray: #eeeeee;
             top: 6px;
             left: 6px;
             float: right;
-            background-color: $arch-bronze;
-            border-color: $arch-bronze;
+            background-color: #d6aa6e;
+            border-color: #d6aa6e;
 
             &:hover {
-                background-color: darken($arch-bronze, 5%);
-                border-color: darken($arch-bronze, 5%);
+                background-color: darken(#d6aa6e, 5%);
+                border-color: darken(#d6aa6e, 5%);
             }
 
             &.disabled {
-                background-color: rgba($arch-bronze, 0.7);
-                border-color: rgba($arch-bronze, 0.7);
+                background-color: rgba(214, 170, 110, 0.7);
+                border-color: rgba(214, 170, 110, 0.7);
             }
         }
     }
@@ -180,7 +190,7 @@ $arch-light-gray: #eeeeee;
         height: calc(100vh - #{$navbar-height + $toolbar-height});
         padding: 0;
         margin: 0;
-        background-color: $arch-light-sage;
+        background-color: $new-background;
         border-right: 1px solid $arch-light-olive;
         position: relative;
 
@@ -188,13 +198,13 @@ $arch-light-gray: #eeeeee;
             height: 100%;
             overflow-y: auto;
             overflow-x: hidden;
-            padding-bottom: 50px;
+            padding-bottom: 70px;
 
             category-picker {
                 .category-picker.dragging {
                     .list-group-item:not(.selected-category)
                         .category-item:hover {
-                        background-color: $arch-light-sage !important;
+                        background-color: $new-background !important;
                     }
 
                     .custom-category:not(.selected-category) {
@@ -206,14 +216,11 @@ $arch-light-gray: #eeeeee;
 
                 .category-picker {
                     border-radius: 0;
-                    background-color: $arch-light-sage;
+                    background-color: $new-background;
 
                     &:not(.dragging) {
                         .category-item:hover {
-                            background-color: darken(
-                                $arch-light-sage,
-                                5%
-                            ) !important;
+                            background-color: #f4f0e6 !important; /* Much lighter tone for better readability */
                             transition: background-color 0.3s ease;
                         }
 
@@ -231,10 +238,11 @@ $arch-light-gray: #eeeeee;
                 .category-item {
                     transition: background-color 0.25s ease;
                     padding: 12px 0 12px 20px;
+                    background-color: $new-background;
                 }
 
                 .selected-category .category-item {
-                    background-color: $arch-light-olive !important;
+                    background-color: #f4f0e6 !important; /* Much lighter tone for better readability */
                     border-left: 3px solid $arch-dark-olive;
                     transition: background-color 0.3s ease;
                 }
@@ -252,7 +260,7 @@ $arch-light-gray: #eeeeee;
                     height: 50px;
                     border-top: 1px solid rgba($arch-dark-olive, 0.1) !important;
                     border-left: 3px solid transparent;
-                    background-color: $arch-light-sage;
+                    background-color: $new-background !important;
 
                     &:hover {
                         border-left: 3px solid $arch-dark-olive;
@@ -290,7 +298,12 @@ $arch-light-gray: #eeeeee;
 
                 .category-drag-placeholder {
                     height: 50px;
-                    background-color: rgba($arch-light-olive, 0.5);
+                    background-color: rgba(
+                        244,
+                        240,
+                        230,
+                        0.7
+                    ); /* Lighter, more visible placeholder */
                     border: dashed 1px $arch-dark-olive;
                     border-radius: 0;
                 }
@@ -298,15 +311,16 @@ $arch-light-gray: #eeeeee;
         }
 
         #add-supercategory-button {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 0;
-            width: 100%;
+            width: 17%; /* col-2 width */
             background-color: $arch-dark-olive;
             color: white;
             border: none;
             border-radius: 0;
-            padding: 10px 16px;
+            padding: 10px 0;
+            margin: 0;
             font-size: 14px;
             font-weight: 500;
             display: flex;
@@ -316,9 +330,10 @@ $arch-light-gray: #eeeeee;
             box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             height: 50px;
+            z-index: 100;
 
             &:hover {
-                background-color: $arch-terracotta;
+                background-color: $arch-light-olive;
             }
 
             .mdi {
@@ -335,12 +350,12 @@ $arch-light-gray: #eeeeee;
     &:hover,
     &:active,
     &:focus {
-        background-color: $arch-light-olive !important;
+        background-color: #f4f0e6 !important; /* Much lighter tone for better readability */
         color: $arch-dark-olive !important;
     }
 }
 
 // Additional style to ensure the background is consistent
 body .dropdown-menu {
-    background-color: lighten($arch-light-sage, 8%) !important;
+    background-color: $new-background !important;
 }

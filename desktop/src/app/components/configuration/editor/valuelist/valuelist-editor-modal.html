@@ -1,10 +1,10 @@
 <div class="modal-header configuration-editor-modal-header valuelist-editor-modal-body"
      [class.dragging]="dragging">
     <h5 *ngIf="new" class="modal-title" i18n="@@configuration.createSpecificValuelist">
-        Werteliste <code>{{valuelist.id}}</code> erstellen
+        Werteliste <code style="color: #a67a3c;">{{valuelist.id}}</code> erstellen
     </h5>
     <h5 *ngIf="!new" class="modal-title" i18n="@@configuration.editSpecificValuelist">
-        Werteliste <code>{{valuelist.id}}</code> bearbeiten
+        Werteliste <code style="color: #a67a3c;">{{valuelist.id}}</code> bearbeiten
     </h5>
     <button id="confirm-valuelist-button" class="btn btn-primary"
             [ngClass]="{ 'disabled': applyingChanges || !isChanged() }"

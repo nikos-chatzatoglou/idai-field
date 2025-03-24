@@ -5,6 +5,7 @@ $arch-bronze: #a67a3c;
 $arch-light-sage: #caccb8;
 $arch-terracotta: #881600;
 $arch-light-gray: #eeeeee;
+$new-background: #eeeadb;
 
 configuration-category {
     user-select: none;
@@ -17,6 +18,7 @@ configuration-category {
         border-radius: 0;
         overflow: hidden;
         height: 45px;
+        padding: 0 12px;
 
         &.with-description {
             height: 101px;
@@ -107,7 +109,7 @@ configuration-category {
             height: 56px;
             padding: 1rem;
             overflow-y: auto;
-            background-color: lighten($arch-light-sage, 5%);
+            background-color: $new-background;
             border-bottom: 1px solid $arch-light-olive;
             color: $arch-dark-olive;
             font-size: 0.9em;
@@ -128,13 +130,13 @@ configuration-category {
         padding: 0;
         height: calc(100vh - 140px);
         border-right: 1px solid $arch-light-olive;
-        background-color: $arch-light-sage;
+        background-color: $new-background;
         position: relative;
 
         ul {
             width: 100%;
             height: calc(100% - 50px);
-            padding: 0;
+            padding: 0 0 70px 0;
             list-style: none;
             overflow: auto;
 
@@ -145,20 +147,20 @@ configuration-category {
                 border: dotted 3px transparent;
                 border-radius: 0;
                 color: $arch-dark-olive;
-                background-color: lighten($arch-light-sage, 5%);
+                background-color: $new-background;
                 transition: all 0.25s ease;
                 display: flex;
                 align-items: center;
 
                 &:hover,
                 &.active {
-                    background-color: $arch-light-olive;
+                    background-color: #f4f0e6;
                     border-left: 3px solid $arch-dark-olive;
                     font-weight: 500;
                 }
 
                 &.drop-target {
-                    background-color: rgba($arch-bronze, 0.2);
+                    background-color: rgba(244, 240, 230, 0.7);
                     border: dotted 3px $arch-bronze;
                 }
 
@@ -189,7 +191,7 @@ configuration-category {
                 height: 45px;
                 padding: 7px 12px;
                 opacity: 0.9;
-                background-color: $arch-light-olive;
+                background-color: #f4f0e6;
                 border-radius: 4px;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
                 color: $arch-dark-olive;
@@ -205,21 +207,24 @@ configuration-category {
 
             .group-drag-placeholder {
                 height: 45px;
-                background-color: rgba($arch-light-olive, 0.5);
+                background-color: rgba(244, 240, 230, 0.7);
                 border: dashed 1px $arch-dark-olive;
                 transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
             }
         }
 
         .add-button-container {
-            position: absolute;
+            position: fixed;
             bottom: 0;
-            left: 0;
-            width: 100%;
+            left: 16.66666667%; /* Position after the sidebar */
+            width: 16.66666667%; /* col-2 width equivalent */
             height: 50px;
+            margin: 0;
+            padding: 0;
             background-color: $arch-dark-olive;
             display: flex;
             justify-content: center;
+            z-index: 100;
         }
     }
 
@@ -228,7 +233,7 @@ configuration-category {
         padding: 0;
         overflow-y: auto;
         position: relative;
-        background-color: lighten($arch-light-sage, 8%);
+        background-color: $new-background;
 
         &.shortened {
             height: calc(100vh - 196px);
@@ -236,25 +241,28 @@ configuration-category {
 
         .fields-container {
             min-height: 100%;
-            padding: 8px 8px 58px 8px;
-            background-color: lighten($arch-light-sage, 8%);
+            padding: 8px 8px 70px 8px;
+            background-color: $new-background;
         }
 
         .add-button-container {
-            position: absolute;
+            position: fixed;
             bottom: 0;
-            left: 0;
-            width: 100%;
+            left: 33.33333334%; /* Position after sidebar (16.67%) and groups (16.67%) */
+            width: 66.66666666%; /* col-8 width equivalent */
             height: 50px;
+            margin: 0;
+            padding: 0;
             background-color: $arch-dark-olive;
             display: flex;
             justify-content: center;
+            z-index: 100;
         }
 
         .field-drag-placeholder {
             margin-top: 1px;
             margin-bottom: 1px;
-            background-color: rgba($arch-light-olive, 0.5);
+            background-color: rgba(244, 240, 230, 0.7);
             border: dashed 1px $arch-dark-olive;
             border-radius: 4px;
             height: 55px;
@@ -267,7 +275,6 @@ configuration-category {
         color: white;
         border: none;
         border-radius: 0;
-        padding: 0 16px;
         font-size: 14px;
         font-weight: 500;
         display: flex;
@@ -277,9 +284,10 @@ configuration-category {
         cursor: pointer;
         height: 50px;
         width: 100%;
+        margin: 0;
 
         &:hover {
-            background-color: $arch-terracotta;
+            background-color: $arch-light-olive;
         }
 
         .mdi {
@@ -293,12 +301,25 @@ configuration-category {
         }
     }
 
-    #add-group-button,
-    #add-field-button {
+    #add-group-button {
         width: 100%;
+        margin-right: 45px;
+    }
+
+    #add-field-button {
+        width: 105%;
+        margin-left: -4.25%;
     }
 }
 
 .row.configuration-category {
     position: relative;
+}
+
+.sidebar #add-supercategory-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 16.66666667%; /* col-2 width */
+    z-index: 100;
 }

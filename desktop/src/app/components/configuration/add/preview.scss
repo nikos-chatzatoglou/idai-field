@@ -5,43 +5,43 @@
     background-color: white;
     border-radius: 10px;
     user-select: none;
-  
+
     #preview-header {
-      position: relative;
-      top: 5px;
-      height: 40px;
-      padding: 0 5px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      
-      .preview-item-title {
         position: relative;
-        top: 2px;
-        
-        b {
-          margin: 6px;
+        top: 5px;
+        height: 40px;
+        padding: 0 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .preview-item-title {
+            position: relative;
+            top: 2px;
+
+            b {
+                margin: 6px;
+            }
+
+            b,
+            code {
+                position: relative;
+                color: #a67a3c;
+                bottom: 2px;
+            }
         }
-  
-        b,
-        code {
-          position: relative;
-          bottom: 2px;
-        }
-      }
     }
-  
+
     ul {
-      list-style: none;
-      padding: 0;
+        list-style: none;
+        padding: 0;
     }
-  
+
     #preview-body {
-      height: calc(100% - 45px);
-      margin: 5px;
-      overflow: hidden;
-      overflow-y: scroll;
-      background-color: white;
+        height: calc(100% - 45px);
+        margin: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: white;
     }
-  }
-  
+}

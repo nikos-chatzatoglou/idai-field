@@ -28,6 +28,11 @@ $mdi-font-path: "fonts" !default;
 @import "app/components/project/project";
 @import "app/components/backup/backup";
 
+// Global styling for code tags
+code {
+    color: #a67a3c;
+}
+
 .search-help-tooltip {
     .tooltip-inner {
         width: 400px;

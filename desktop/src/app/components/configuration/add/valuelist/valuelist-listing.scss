@@ -1,65 +1,69 @@
-@use 'sass:color';
+@use "sass:color";
 
 valuelist-listing {
-  display: block;
-  width: 100%;
-
-  #valuelist-listing-viewport {
-    height: 100%;
+    display: block;
     width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
 
-    .cdk-virtual-scroll-content-wrapper {
-      width: 100%;
-
-      .listing {
+    #valuelist-listing-viewport {
+        height: 100%;
         width: 100%;
-  
-        li {
-          height: 40px;
-          width: 100%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-          code {
-            font-size: 14px;
-          }
-        }
-    
-        li:not(.btn):hover {
-            background-color: $list-item-hover-color;
-            transition: background-color .5s ease;
-        }
-    
-        li:not(.new-entry-button) {
-          padding: 8px 5px 5px 45px;
+        .cdk-virtual-scroll-content-wrapper {
+            width: 100%;
 
-          code {
-            top: 0;
-          }
+            .listing {
+                width: 100%;
+
+                li {
+                    height: 40px;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    code {
+                        color: #a67a3c;
+                        font-size: 14px;
+                    }
+                }
+
+                li:not(.btn):hover {
+                    background-color: $list-item-hover-color;
+                    transition: background-color 0.5s ease;
+                }
+
+                li:not(.new-entry-button) {
+                    padding: 8px 5px 5px 45px;
+
+                    code {
+                        top: 0;
+                    }
+                }
+
+                .in-use {
+                    font-weight: bold;
+                }
+
+                .search-result-label {
+                    font-weight: normal;
+                    top: 0;
+                }
+
+                .custom {
+                    background-color: $custom-highlight-color;
+
+                    &.selected,
+                    &:not(.btn):hover {
+                        background-color: color.adjust(
+                            $custom-highlight-color,
+                            $lightness: -5%
+                        );
+                        transition: background-color 0.5s ease;
+                    }
+                }
+            }
         }
-    
-        .in-use {
-          font-weight: bold; 
-        }
-    
-        .search-result-label {
-          font-weight: normal;
-          top: 0;
-        }
-        
-        .custom {
-          background-color: $custom-highlight-color;
-    
-          &.selected,
-          &:not(.btn):hover {
-            background-color: color.adjust($custom-highlight-color, $lightness: -5%);
-            transition: background-color .5s ease;
-          }
-        }
-      }
     }
-  }
 }

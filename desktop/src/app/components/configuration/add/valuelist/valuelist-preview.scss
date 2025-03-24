@@ -1,56 +1,57 @@
 valuelist-preview {
-  display: block;
+    display: block;
 
-  #preview-header code {
-    font-size: 14px;
-  }
-
-  #preview-header.extending-valuelist {
-    height: 64px;
-  }
-
-  #preview-body.extending-valuelist {
-    height: calc(100% - 69px);
-  }
-
-  #preview-body {
-    b {
-      font-weight: 500;
+    #preview-header code {
+        font-size: 14px;
+        color: #a67a3c;
     }
 
-    .valuelist-preview-label {
-      position: relative;
-      top: 2px;
-      left: 4px;
+    #preview-header.extending-valuelist {
+        height: 64px;
     }
-  }
 
-  #extension-info {
-    width: fit-content;
-    font-size: 13px;
-  }
-
-  .valuelist-preview-text {
-    font-size: 14px;
-  }
-
-  .valuelist-preview-section {
-    padding-bottom: 12px;
-  }
-
-  category-icon {
-    position: relative;
-    top: 2px;
-    margin-right: 1px;
-  }
-
-  .fields-in-use {
-    position: relative;
-    top: 2px;
-
-    .field-in-use {
-      margin-left: 28px;
-      font-size: 13px;  
+    #preview-body.extending-valuelist {
+        height: calc(100% - 69px);
     }
-  }
+
+    #preview-body {
+        b {
+            font-weight: 500;
+        }
+
+        .valuelist-preview-label {
+            position: relative;
+            top: 2px;
+            left: 4px;
+        }
+    }
+
+    #extension-info {
+        width: fit-content;
+        font-size: 13px;
+    }
+
+    .valuelist-preview-text {
+        font-size: 14px;
+    }
+
+    .valuelist-preview-section {
+        padding-bottom: 12px;
+    }
+
+    category-icon {
+        position: relative;
+        top: 2px;
+        margin-right: 1px;
+    }
+
+    .fields-in-use {
+        position: relative;
+        top: 2px;
+
+        .field-in-use {
+            margin-left: 28px;
+            font-size: 13px;
+        }
+    }
 }

@@ -1,197 +1,233 @@
-@import 'relations';
-@import 'tabs/docedit-conflicts-tab';
-@import 'widgets/category-switcher-button';
-@import 'widgets/image-picker';
-@import 'widgets/relationpicker/relation-picker';
-@import 'widgets/relationpicker/relation-picker-group';
-@import 'core/edit-form';
-@import 'core/edit-form-group';
-@import 'core/forms/forms';
-@import 'core/forms/geometry';
-@import 'core/forms/date';
-@import 'core/forms/dropdown';
-@import 'core/forms/dropdown-range';
-@import 'core/forms/input';
-@import 'core/forms/multi-input';
-@import 'core/forms/valuelist-multi-input';
-@import 'core/forms/identifier';
-@import 'core/forms/type-relation/type-row';
-@import 'core/forms/type-relation/type-relation-picker';
-@import 'core/forms/array-field/object-array-entry-modal';
-@import 'core/forms/array-field/dating-entry-modal';
-@import 'core/forms/array-field/dimension-entry-modal';
-@import 'core/forms/array-field/literature-entry-modal';
-@import 'core/forms/array-field/composite/composite-entry-modal';
-@import 'core/forms/array-field/composite/composite';
-@import 'core/forms/widgets/outliers';
-@import 'core/forms/widgets/empty-valuelist-info';
-@import 'core/forms/widgets/invalid-field-data';
-@import 'core/forms/widgets/multi-language-text-field';
-@import 'dialog/duplicate-modal';
+@import "relations";
+@import "tabs/docedit-conflicts-tab";
+@import "widgets/category-switcher-button";
+@import "widgets/image-picker";
+@import "widgets/relationpicker/relation-picker";
+@import "widgets/relationpicker/relation-picker-group";
+@import "core/edit-form";
+@import "core/edit-form-group";
+@import "core/forms/forms";
+@import "core/forms/geometry";
+@import "core/forms/date";
+@import "core/forms/dropdown";
+@import "core/forms/dropdown-range";
+@import "core/forms/input";
+@import "core/forms/multi-input";
+@import "core/forms/valuelist-multi-input";
+@import "core/forms/identifier";
+@import "core/forms/type-relation/type-row";
+@import "core/forms/type-relation/type-relation-picker";
+@import "core/forms/array-field/object-array-entry-modal";
+@import "core/forms/array-field/dating-entry-modal";
+@import "core/forms/array-field/dimension-entry-modal";
+@import "core/forms/array-field/literature-entry-modal";
+@import "core/forms/array-field/composite/composite-entry-modal";
+@import "core/forms/array-field/composite/composite";
+@import "core/forms/widgets/outliers";
+@import "core/forms/widgets/empty-valuelist-info";
+@import "core/forms/widgets/invalid-field-data";
+@import "core/forms/widgets/multi-language-text-field";
+@import "dialog/duplicate-modal";
 
 #document-edit-wrapper {
-  height: calc(100vh - 84px);
-  overflow-y: hidden;
+    height: calc(100vh - 84px);
+    overflow-y: hidden;
 
-  .document-info .card-block {
-    overflow: auto;
-  }
-
-  textarea {
-    width: 100%;
-    min-height: 112px;
-    resize: vertical;
-  }
-
-  header {
-    padding: 7px 7px 6px 7px;
-    border-bottom: 1px solid #ccc;
-    user-select: none;
-    background-color: $modal-header-background-color;
-
-    #category-switcher-button-container {
-      position: relative;
-      top: 2px;
-      min-width: 55px;
-      padding: 4px;
+    .document-info .card-block {
+        overflow: auto;
     }
 
-    .docedit-header-label {
-      font-size: 25px;
-      line-height: 24px;
-      margin: 0;
-      padding-left: 1px;
-      padding-right: 15px;
-      flex: 1;
-      min-height: 55px;
-      color: $modal-header-font-color;
+    textarea {
+        width: 100%;
+        min-height: 112px;
+        resize: vertical;
     }
 
-    .sub-label {
-      margin-left: 10px;
+    header {
+        padding: 7px 7px 6px 7px;
+        border-bottom: 1px solid #ccc;
+        user-select: none;
+        background-color: $modal-header-background-color;
+
+        #category-switcher-button-container {
+            position: relative;
+            top: 2px;
+            min-width: 55px;
+            padding: 4px;
+        }
+
+        .docedit-header-label {
+            font-size: 25px;
+            line-height: 24px;
+            margin: 0;
+            padding-left: 1px;
+            padding-right: 15px;
+            flex: 1;
+            min-height: 55px;
+            color: $modal-header-font-color;
+        }
+
+        .sub-label {
+            margin-left: 10px;
+        }
     }
-  }
 
-  .mdi-arrow-left {
-    margin-left: -5px;
-    margin-right: -3px;
-  }
-
-  #loading-icon-container {
-    position: relative;
-    top: 18px;
-    width: calc(100% - 50px);
-    height: calc(100vh - 150px);
-    margin: auto;
-
-    loading-icon {
-      position: relative;
-      top: 110px;
+    .mdi-arrow-left {
+        margin-left: -5px;
+        margin-right: -3px;
     }
 
-    #operation-in-progress-info {
-      user-select: none;
-      cursor: default;
+    #loading-icon-container {
+        position: relative;
+        top: 18px;
+        width: calc(100% - 50px);
+        height: calc(100vh - 150px);
+        margin: auto;
+
+        loading-icon {
+            position: relative;
+            top: 110px;
+        }
+
+        #operation-in-progress-info {
+            user-select: none;
+            cursor: default;
+        }
     }
-  }
 
-  #document-edit-button-save-document:active,
-  #document-edit-button-save-document:focus,
-  #document-edit-button-goto-view:active,
-  #document-edit-button-goto-view:focus,
-  #document-edit-button-dropdown:active,
-  #document-edit-button-dropdown:focus,
-  #document-view-button-edit-document:active,
-  #document-view-button-edit-document:focus,
-  #document-view-button-back-to-map:active,
-  #document-view-button-back-to-map:focus {
-    outline: none;
-  }
-
-  #document-edit-button-save-document,
-  #document-edit-button-goto-view,
-  #document-edit-button-dropdown {
-    position: relative;
-    top: 8px;
-    height: 39px;
-    border: 0;
-    color: #fff;
-  }
-
-  #document-edit-button-goto-view {
-    margin-left: 7px;
-  }
-
-  #document-edit-button-dropdown {
-    margin-left: 1px;
-    border-left: 1px solid #e7e7e7;
-    border-top-right-radius: 32px;
-    border-bottom-right-radius: 32px;
-
-    &:focus {
-      box-shadow: none;
+    #document-edit-button-save-document:active,
+    #document-edit-button-save-document:focus,
+    #document-edit-button-goto-view:active,
+    #document-edit-button-goto-view:focus,
+    #document-edit-button-dropdown:active,
+    #document-edit-button-dropdown:focus,
+    #document-view-button-edit-document:active,
+    #document-view-button-edit-document:focus,
+    #document-view-button-back-to-map:active,
+    #document-view-button-back-to-map:focus {
+        outline: none;
     }
-  }
 
-  main {
-    height: 86%;
-    padding: 0;
-    position: relative;
-  }
+    #document-edit-button-save-document,
+    #document-edit-button-goto-view,
+    #document-edit-button-dropdown {
+        position: relative;
+        top: 8px;
+        height: 39px;
+        border: 0;
+        color: #fff;
+    }
+
+    #document-edit-button-goto-view {
+        margin-left: 7px;
+    }
+
+    #document-edit-button-dropdown {
+        margin-left: 1px;
+        border-left: 1px solid #e7e7e7;
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 32px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    main {
+        height: 86%;
+        padding: 0;
+        position: relative;
+    }
 }
 
 #document-edit-wrapper,
 .object-array-entry-modal {
-  searchable-select {
-    .ng-select {
-      .ng-select-container {
-        height: 33px !important;
-        min-height: 33px;
-      }
+    searchable-select {
+        .ng-select {
+            .ng-select-container {
+                height: 33px !important;
+                min-height: 33px;
+                border-radius: 0.25rem;
 
-      .ng-value {
-        width: calc(100% - 55px);
-      }
-  
-      &.ng-select-opened,
-      &.ng-select-focused,
-      &.ng-touched,
-      &.ng-dirty {
-        .ng-input {
-          margin-top: -1px !important;
-        }
-  
-        .ng-value {
-          position: absolute;
-          top: 11px;
-        }
-  
-        .ng-clear-wrapper {
-          position: absolute;
-          top: 11.5px;
-          right: 25px;
-        }
-  
-        .ng-arrow-wrapper {
-          position: absolute;
-          right: 0;
-          top: 11px;
-        }
-      }
+                &:focus,
+                &:active,
+                &.ng-select-focused {
+                    border-color: #ced4da !important;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
+            }
 
-      &.ng-select-opened .ng-arrow-wrapper {
-        top: 10px !important;
-      }
+            .ng-value {
+                width: calc(100% - 55px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &.ng-select-opened,
+            &.ng-select-focused,
+            &.ng-touched,
+            &.ng-dirty {
+                .ng-input {
+                    margin-top: -1px !important;
+                }
+
+                .ng-value {
+                    position: absolute;
+                    top: 11px;
+                }
+
+                .ng-clear-wrapper {
+                    position: absolute;
+                    top: 11.5px;
+                    right: 25px;
+                }
+
+                .ng-arrow-wrapper {
+                    position: absolute;
+                    right: 0;
+                    top: 11px;
+                }
+
+                .ng-select-container {
+                    border-color: #ced4da !important;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
+            }
+
+            &.ng-select-opened .ng-arrow-wrapper {
+                top: 10px !important;
+            }
+
+            .ng-dropdown-panel {
+                border-radius: 0.25rem;
+
+                .ng-dropdown-panel-items {
+                    .ng-option {
+                        padding: 8px 10px;
+
+                        &.ng-option-marked {
+                            background-color: rgba(0, 0, 0, 0.04);
+                        }
+
+                        &.ng-option-selected {
+                            background-color: rgba(0, 0, 0, 0.08);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }
 
 #document-edit-dropdown-menu {
-  .dropdown-entry-label {
-    margin-left: 5px;
-  }
+    .dropdown-entry-label {
+        margin-left: 5px;
+    }
 
-  .mdi-expand-all {
-    color: $green-button-color;
-  }
+    .mdi-expand-all {
+        color: $green-button-color;
+    }
 }
