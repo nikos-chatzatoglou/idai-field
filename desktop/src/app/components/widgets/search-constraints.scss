@@ -6,6 +6,7 @@ image-overview-search-constraints {
     #constraints-menu-button {
         right: 0;
         width: 39px;
+        height: 39px;
         border-radius: 0;
         text-align: left;
         border-left-width: 0 !important;
@@ -26,9 +27,9 @@ image-overview-search-constraints {
         .badge {
             color: #212529;
             background-color: #f8f9fa;
-            position: absolute;
-            top: -6px;
-            right: -6px;
+            position: relative;
+            top: auto;
+            right: auto;
             font-size: 0.75rem;
             min-width: 18px;
             height: 18px;
