@@ -24,7 +24,15 @@
                     [class.selected]="selectedDocument?.resource.id === document.resource.id"
                     [class.additional-selected]="resourcesComponent.additionalSelectedDocuments?.includes(document)"
                     [id]="'resource-' + document.resource.identifier">
-                    <span>{{ document.resource.identifier }}</span>
+                    <!-- Check if ancientcorinth:title is an object -->
+                    <span *ngIf="document.resource['ancientcorinth:title']?.en; else displayAsString">
+                        {{ document.resource['ancientcorinth:title'].en }}
+                    </span>
+
+                    <!-- Fallback if ancientcorinth:title is a string -->
+                    <ng-template #displayAsString>
+                        <span>{{ document.resource['ancientcorinth:title'] }}</span>
+                    </ng-template>
                     <span class="mdi mdi-information-outline mdi-24px"></span>
                 </li>
             </ul>
