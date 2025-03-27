@@ -38,7 +38,7 @@ const setUp = async (mainWindow) => {
         modal.webContents.on('did-finish-load', async () => {
             await modal.webContents.executeJavaScript(
                 'document.getElementById("heading").textContent = "' + messages.get('autoUpdate.available.info') + '"; ' +
-                'document.getElementById("release-notes").innerHTML = "' + '<h2>Field Desktop ' + updateVersion + '</h2>' + updateInfo.releaseNotes.replace(/"/g, '\\"').replace(/\n/g, '') + '"; ' +
+                'document.getElementById("release-notes").innerHTML = "' + '<h2>iSkavo ' + updateVersion + '</h2>' + updateInfo.releaseNotes.replace(/"/g, '\\"').replace(/\n/g, '') + '"; ' +
                 'document.getElementById("yes-button").textContent = "' + messages.get('autoUpdate.available.yes') + '"; ' +
                 'document.getElementById("no-button").textContent = "' + messages.get('autoUpdate.available.no') + '"; ' +
                 'document.getElementById("update-warning").textContent = "' + messages.get('autoUpdate.available.warning') + '";' +

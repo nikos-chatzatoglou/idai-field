@@ -4,7 +4,7 @@
   "restart": "Yeniden başlat",
   "loadTestProject": "Test projesini başlat",
   "phase/processingImages": "Görüntüler ön izleme için optimize ediliyor.\nBu adım bir kez gerçekleştirilir ve birkaç dakika sürebilir.",
-  "alreadyOpenError": "Uygulama başlatılamadı. Lütfen Field Desktop'ın başka bir pencerede açık olup olmadığını kontrol edin.",
+  "alreadyOpenError": "Uygulama başlatılamadı. Lütfen iSkavo'ın başka bir pencerede açık olup olmadığını kontrol edin.",
   "databaseError": "Bir hata oluştu: Proje veritabanı yüklenemedi.",
   "configurationError": "Bir hata oluştu: Proje konfigürasyonu yüklenemedi.",
   "fetchDocumentsError": "Bir hata oluştu: Proje konfigürasyonu veritabanından okunamadı.",

@@ -1469,7 +1469,7 @@
       </trans-unit>
       <trans-unit id="configuration.saveInfo.synchronization" datatype="html">
         <source>Andere Benutzerinnen und Benutzer, die über eine Synchronisationsverbindung am gleichen Projekt arbeiten, werden die Field-Desktopanwendung neustarten müssen, um die Konfigurationsänderungen zu übernehmen.</source>
-        <target state="translated">Aynı proje üzerinde bir senkronizasyon bağlantısı üzerinden çalışan diğer kullanıcıların, konfigürasyon değişikliklerini uygulamak için Field Desktop uygulamasını yeniden başlatmaları gerekecektir.</target>
+        <target state="translated">Aynı proje üzerinde bir senkronizasyon bağlantısı üzerinden çalışan diğer kullanıcıların, konfigürasyon değişikliklerini uygulamak için iSkavo uygulamasını yeniden başlatmaları gerekecektir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/configuration/save/save-modal.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -1993,7 +1993,7 @@
       </trans-unit>
       <trans-unit id="project.download.address.info" datatype="html">
         <source>Als Adresse kann sowohl die URL eines Field-Servers als auch die Netzwerkadresse einer anderen Field-Desktop-Installation angegeben werden.</source>
-        <target state="translated">Adres olarak bir Field sunucusunun URL'si veya başka bir Field Desktop kurulumunun ağ adresi girilebilir.</target>
+        <target state="translated">Adres olarak bir Field sunucusunun URL'si veya başka bir iSkavo kurulumunun ağ adresi girilebilir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/project/download-project.component.ts</context>
           <context context-type="linenumber">98</context>
@@ -3919,7 +3919,7 @@
       </trans-unit>
       <trans-unit id="settings.synchronization.info" datatype="html">
         <source>Diese Adresse und dieses Passwort müssen in anderen Field-Desktop-Installationen eingetragen werden, damit dieser Computer als Synchronisationsziel eingerichtet werden kann.</source>
-        <target state="translated">Bu bilgisayarın senkronizasyon hedefi olarak ayarlanabilmesi için bu adres ve parolanın diğer Field Desktop kurulumlarına girilmesi gerekir.</target>
+        <target state="translated">Bu bilgisayarın senkronizasyon hedefi olarak ayarlanabilmesi için bu adres ve parolanın diğer iSkavo kurulumlarına girilmesi gerekir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/settings/settings.html</context>
           <context context-type="linenumber">105</context>
@@ -3943,7 +3943,7 @@
       </trans-unit>
       <trans-unit id="settings.images.path.info" datatype="html">
         <source>Dieser Pfad kann normalerweise auf seiner Grundeinstellung belassen werden. Es kann nötig sein, ihn zu verändern, wenn das von Field genutzte Bilderverzeichnis auf einem Netzwerk-Gerät (NAS) liegt, das von verschiedenen Nutzern bzw. Nutzerinnen geteilt wird. Die Anwendung legt unterhalb dieses Pfades für jedes Projekt ein Unterverzeichnis an. Die in diesen Verzeichnissen abgelegten Bilddateien werden vollständig durch Field verwaltet. Bilddateien sollten nicht per Hand dort abgelegt werden, sondern in der Bilderübersicht oder dem Bilder-Tab der Ressourcenansicht importiert werden.</source>
-        <target state="translated">Bu yol genellikle varsayılan ayarında bırakılabilir. Field Desktop tarafından kullanılan görüntü dizini farklı kullanıcılar tarafından paylaşılan bir ağ cihazında (NAS) bulunuyorsa bunu değiştirmek gerekebilir. Uygulama bu dizinin altındaki her proje için bir alt dizin oluşturur. Bu dizinlerde saklanan görüntü dosyaları tamamen Field Desktop tarafından yönetilir. Görüntü dosyaları oraya elle yerleştirilmemelidir, Görsel Yönetimi menüsüne veya girdinin görseller sekmesine aktarılmalıdır.</target>
+        <target state="translated">Bu yol genellikle varsayılan ayarında bırakılabilir. iSkavo tarafından kullanılan görüntü dizini farklı kullanıcılar tarafından paylaşılan bir ağ cihazında (NAS) bulunuyorsa bunu değiştirmek gerekebilir. Uygulama bu dizinin altındaki her proje için bir alt dizin oluşturur. Bu dizinlerde saklanan görüntü dosyaları tamamen iSkavo tarafından yönetilir. Görüntü dosyaları oraya elle yerleştirilmemelidir, Görsel Yönetimi menüsüne veya girdinin görseller sekmesine aktarılmalıdır.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/settings/settings.html</context>
           <context context-type="linenumber">165</context>
@@ -4663,7 +4663,7 @@
       </trans-unit>
       <trans-unit id="messages.backup.read.warning.unsimilarProjectIdentifier" datatype="html">
         <source>Die von Ihnen gewählte Projektkennung unterscheidet sich stark von der Kennung des Originalprojekts. Bitte prüfen Sie, ob Sie die korrekte Backup-Datei ausgewählt haben, bevor Sie Daten aus dem wiederhergestellten Projekt mit anderen Field-Desktop-Instanzen oder Field-Servern synchronisieren.</source>
-        <target state="translated">Girdiğiniz proje tanımlayıcısı orijinal projenin tanımlayıcısından büyük ölçüde farklı. Geri yüklenen projedeki verileri diğer Field Desktop örnekleri veya Field Server sunucularıyla senkronize etmeden önce lütfen doğru yedekleme dosyasını seçip seçmediğinizi kontrol edin.</target>
+        <target state="translated">Girdiğiniz proje tanımlayıcısı orijinal projenin tanımlayıcısından büyük ölçüde farklı. Geri yüklenen projedeki verileri diğer iSkavo örnekleri veya Field Server sunucularıyla senkronize etmeden önce lütfen doğru yedekleme dosyasını seçip seçmediğinizi kontrol edin.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/messages/m.ts</context>
           <context context-type="linenumber">1</context>
@@ -4719,7 +4719,7 @@
       </trans-unit>
       <trans-unit id="messages.initialSync.targetDbNotEmpty" datatype="html">
         <source>Download fehlgeschlagen: Das angegebene Projekt existiert bereits auf dieser Field-Desktop-Installation.</source>
-        <target state="translated">İndirme başarısız oldu: Belirtilen proje bu Field Desktop kurulumunda zaten mevcut.</target>
+        <target state="translated">İndirme başarısız oldu: Belirtilen proje bu iSkavo kurulumunda zaten mevcut.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/messages/m.ts</context>
           <context context-type="linenumber">1</context>
@@ -6982,8 +6982,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="settings.updateUserNameModal.body.welcome" datatype="html">
-        <source>Herzlich Willkommen bei <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Field Desktop<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>! </source>
-        <target state="translated"><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Field Desktop'a<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> hoş geldiniz! </target>
+        <source>Herzlich Willkommen bei <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>iSkavo<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>! </source>
+        <target state="translated"><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>iSkavo'a<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> hoş geldiniz! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/settings/update-username-modal.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -8610,8 +8610,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="messages.configuration.error.unsupportedVersion" datatype="html">
-        <source>Die Konfigurationsdatei wurde mit einer aktuelleren Version von Field Desktop (Version [0]) erstellt und kann daher nicht geladen werden. Bitte aktualisieren Sie die Anwendung und starten Sie den Importvorgang anschließend erneut.</source>
-        <target state="translated">Konfigürasyon dosyası, Field Desktop'ın daha yeni bir sürümüyle (sürüm [0]) oluşturuldu ve bu nedenle yüklenemiyor. Lütfen uygulamayı güncelleyin ve ardından içe aktarma işlemini yeniden başlatın.</target>
+        <source>Die Konfigurationsdatei wurde mit einer aktuelleren Version von iSkavo (Version [0]) erstellt und kann daher nicht geladen werden. Bitte aktualisieren Sie die Anwendung und starten Sie den Importvorgang anschließend erneut.</source>
+        <target state="translated">Konfigürasyon dosyası, iSkavo'ın daha yeni bir sürümüyle (sürüm [0]) oluşturuldu ve bu nedenle yüklenemiyor. Lütfen uygulamayı güncelleyin ve ardından içe aktarma işlemini yeniden başlatın.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/messages/m.ts</context>
           <context context-type="linenumber">1</context>

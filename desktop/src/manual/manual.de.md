@@ -4,7 +4,7 @@ Beim ersten Start der Anwendung werden Sie dazu aufgefordert, Ihren Namen einzug
 
 Sie befinden sich zunächst im Testprojekt, das es Ihnen ermöglicht, die Funktionen des Programms anhand einiger Beispieldaten auszuprobieren. Bitte beachten Sie, dass neu angelegte Datensätze nach einem Neustart der Anwendung gelöscht und alle Änderungen zurückgesetzt werden, solange das Testprojekt ausgewählt ist. Aus diesem Grund findet im Testprojekt grundsätzlich keine Synchronisation mit anderen Field-Desktop-Installationen oder Field-Servern statt.
 
-Um mit Field Desktop produktiv zu arbeiten und ein eigenes Projekt anzulegen, sollten Sie zunächst die folgenden Schritte durchführen:
+Um mit iSkavo produktiv zu arbeiten und ein eigenes Projekt anzulegen, sollten Sie zunächst die folgenden Schritte durchführen:
 
 1. Rufen Sie im Menü "Projekt" den Menüpunkt **Neu...** auf, um ein eigenes Projekt anzulegen. Sie haben die Wahl zwischen mehreren Voreinstellungen für die Projektkonfiguration: Wählen Sie "Standard" für die umfangreiche Field-Standardkonfiguration oder eine der "Basis"-Optionen, wenn Sie lediglich mit einem Grundgerüst an voreingestellten Kategorien und Feldern starten möchten. Legen Sie außerdem die Sprachen fest, in denen innerhalb des Projekts Daten eingegeben werden sollen. Geben Sie zuletzt die gewünschte Projektkennung sowie optional einen Projektnamen für jede der ausgewählten Sprachen ein.
 
@@ -357,14 +357,14 @@ Suchkriterien auch nachträglich wieder entfernen, indem Sie das Menü durch ein
 
 # Synchronisation
 
-Um mit mehreren Computern an einem Projekt zu arbeiten, können Daten zwischen verschiedenen Field-Desktop-Installationen synchronisiert werden. Das bedeutet, dass Änderungen (neue Ressourcen, gelöschte Ressourcen oder Editierungen bestehender Ressourcen sowie hinzugefügte oder gelöschte Bilder), die auf einem anderen Rechner in Field Desktop vorgenommen werden, automatisch auch in die eigene Datenbank übertragen werden und umgekehrt. So wird erreicht, dass alle Mitarbeitenden zu jeder Zeit mit dem aktuellen Stand des Projekts arbeiten können. Die Synchronisation kann dabei über das Internet oder über ein lokales Netzwerk stattfinden. Sie können weiterhin auch bei konfigurierter Synchronisation offline mit dem Projekt arbeiten – die Datenbanken werden dann synchronisiert, sobald Sie wieder mit dem Netzwerk verbunden sind.
+Um mit mehreren Computern an einem Projekt zu arbeiten, können Daten zwischen verschiedenen Field-Desktop-Installationen synchronisiert werden. Das bedeutet, dass Änderungen (neue Ressourcen, gelöschte Ressourcen oder Editierungen bestehender Ressourcen sowie hinzugefügte oder gelöschte Bilder), die auf einem anderen Rechner in iSkavo vorgenommen werden, automatisch auch in die eigene Datenbank übertragen werden und umgekehrt. So wird erreicht, dass alle Mitarbeitenden zu jeder Zeit mit dem aktuellen Stand des Projekts arbeiten können. Die Synchronisation kann dabei über das Internet oder über ein lokales Netzwerk stattfinden. Sie können weiterhin auch bei konfigurierter Synchronisation offline mit dem Projekt arbeiten – die Datenbanken werden dann synchronisiert, sobald Sie wieder mit dem Netzwerk verbunden sind.
 
 
 ## Projekt herunterladen
 
 Um mit einem bestehenden Projekt zu arbeiten, das bei einer anderen Field-Desktop-Installation oder auf einem Field-Server vorliegt, laden Sie das Projekt zunächst herunter. Wählen Sie dazu den Menüpunkt "Projekt" ➝ "Herunterladen..." aus und geben Sie die Zugangsdaten ein:
 
-* *Adresse*: Tragen Sie hier die Adresse des Projekts ein, das Sie herunterladen möchten. Das kann die Netzwerkadresse eines anderen Computers sein, auf dem Field Desktop gerade geöffnet ist (diese Adresse kann in den Einstellungen unter *Eigene Adresse* eingesehen werden), oder die Adresse eines Field-Servers, der über das Internet oder ein lokales Netzwerk erreichbar ist (z. B. *https://server.field.idai.world* für den Server des DAI).
+* *Adresse*: Tragen Sie hier die Adresse des Projekts ein, das Sie herunterladen möchten. Das kann die Netzwerkadresse eines anderen Computers sein, auf dem iSkavo gerade geöffnet ist (diese Adresse kann in den Einstellungen unter *Eigene Adresse* eingesehen werden), oder die Adresse eines Field-Servers, der über das Internet oder ein lokales Netzwerk erreichbar ist (z. B. *https://server.field.idai.world* für den Server des DAI).
 * *Projektname*: Der Name des Projekts, das Sie herunterladen möchten.
 * *Passwort*: Das Passwort des Projekts bzw. der Field-Desktop-Installation, von der Sie das Projekt herunterladen möchten.
 * *Vorschaubilder herunterladen*: Diese Option ist standardmäßig aktiviert. Wenn Sie über eine schwache Internetverbindung verfügen und möglichst wenige Daten herunterladen möchten, können Sie sie deaktivieren.
@@ -380,7 +380,7 @@ Der Download kann bei größeren Projekten unter Umständen eine längere Zeit d
 
 Sowohl heruntergeladene als auch neu angelegte Projekte können jederzeit mit anderen Datenbanken synchronisiert werden. Die Synchronisation kann über den Menüpunkt "Projekt" ➝ "Synchronisieren..." konfiguriert werden.
 
-* *Adresse*: Tragen Sie hier die Adresse der Datenbank ein, mit der Sie eine Synchronisationsverbindung herstellen möchten. Das kann die Netzwerkadresse eines anderen Computers sein, auf dem Field Desktop gerade geöffnet ist (diese Adresse kann in den Einstellungen unter *Eigene Adresse* eingesehen werden), oder die Adresse eines Field-Hub-Servers, die über das Internet oder ein lokales Netzwerk erreichbar ist (z. B. *https://server.field.idai.world* für den Field-Hub-Server des DAI).
+* *Adresse*: Tragen Sie hier die Adresse der Datenbank ein, mit der Sie eine Synchronisationsverbindung herstellen möchten. Das kann die Netzwerkadresse eines anderen Computers sein, auf dem iSkavo gerade geöffnet ist (diese Adresse kann in den Einstellungen unter *Eigene Adresse* eingesehen werden), oder die Adresse eines Field-Hub-Servers, die über das Internet oder ein lokales Netzwerk erreichbar ist (z. B. *https://server.field.idai.world* für den Field-Hub-Server des DAI).
 * *Passwort*: Das Passwort des Projekts bzw. der Field-Desktop-Installation, mit der Sie die Synchronisationsverbindung herstellen möchten.
 * *Vorschaubilder synchronisieren*: Diese Option ist standardmäßig aktiviert. Wenn Sie über eine schwache Internetverbindung verfügen und möglichst wenige Daten hoch- bzw. herunterladen möchten, können Sie sie deaktivieren.
 * *Synchronisation aktivieren*: Über diesen Schalter können Sie die Verbindung starten bzw. unterbrechen.
@@ -424,7 +424,7 @@ Sie können anderen erlauben, eine Synchronisationsverbindung mit Ihrem Projekt 
 
 # Projektkonfiguration
 
-Eine mit Field Desktop verwaltete Datenbank enthält eine Reihe von Ressourcen, die immer einer bestimmten **Kategorie** angehören, beispielsweise "Ort", "Fund" oder "Abbildung". Dabei wird unterschieden zwischen **Oberkategorien** (z. B. "Fund") und **Unterkategorien** (z. B. "Ziegel" oder "Keramik"). Eine Ressource der Unterkategorie gehört dabei immer auch der Oberkategorie an (ein Ziegel ist gleichzeitig ein Fund).
+Eine mit iSkavo verwaltete Datenbank enthält eine Reihe von Ressourcen, die immer einer bestimmten **Kategorie** angehören, beispielsweise "Ort", "Fund" oder "Abbildung". Dabei wird unterschieden zwischen **Oberkategorien** (z. B. "Fund") und **Unterkategorien** (z. B. "Ziegel" oder "Keramik"). Eine Ressource der Unterkategorie gehört dabei immer auch der Oberkategorie an (ein Ziegel ist gleichzeitig ein Fund).
 
 Jede Kategorie stellt eine Reihe von **Feldern** bereit, durch die Merkmale und Metadaten der Ressource beschrieben werden können (z. B. "Gewicht", "Farbe", "Bearbeiter/Bearbeiterin" usw.). Felder wiederum besitzen jeweils einen bestimmten Eingabetyp, der bestimmt, welche Daten für das Feld auf welche Weise eingetragen werden können (z. B.: Textfeld, Zahleneingabe, Datierungsangabe). Für Felder einiger Eingabetypen kann eine **Werteliste** angegeben werden, die eine Reihe von Textwerten als vorgegebene Auswahlmöglichkeiten definiert.
 
@@ -962,7 +962,7 @@ Unterstützte Export-Formate sind:
 
 ### CSV
 
-CSV (Dateiendung *csv*) ist das hauptsächliche Dateiformat zum Import und Export von Ressourcendaten im Kontext von Field Desktop. CSV-Dateien können von allen gängigen Tabellenkalkulationsprogrammen gelesen und bearbeitet werden.
+CSV (Dateiendung *csv*) ist das hauptsächliche Dateiformat zum Import und Export von Ressourcendaten im Kontext von iSkavo. CSV-Dateien können von allen gängigen Tabellenkalkulationsprogrammen gelesen und bearbeitet werden.
 
 CSV-Dateien enthalten **keine Geodaten**. Verwenden Sie eines der beiden Formate *GeoJSON* oder *Shapefile*, um Geodaten zu exportieren oder per Import zu existierenden Ressourcen hinzuzufügen.
 
@@ -989,7 +989,7 @@ Für Felder des Eingabetyps "Ja / Nein" können die Werte *true* (Ja) und *false
 
 Können in ein Feld Werte in verschiedenen Sprachen eingetragen werden, so wird in der CSV-Datei für jede Sprache eine eigene Spalte angelegt. Der Spaltenkopf enthält (durch einen Punkt vom Feldbezeichner getrennt) jeweils das Sprachkürzel, wie es im Menü "Einstellungen" für jede Sprache in magentafarbener Schrift angezeigt wird (z. B. *shortDescription.en* für den englischen Text der Kurzbeschreibung).
 
-In Projekten, die mit älteren Versionen von Field Desktop erstellt wurden, sowie durch Änderungen an der Projektkonfiguration kann es vorkommen, dass in einem mehrsprachigen Feld ein Wert ohne Sprachangabe eingetragen ist. In diesen Fällen wird im Spaltenkopf anstelle des Sprachkürzels der Text *unspecifiedLanguage* angefügt.
+In Projekten, die mit älteren Versionen von iSkavo erstellt wurden, sowie durch Änderungen an der Projektkonfiguration kann es vorkommen, dass in einem mehrsprachigen Feld ein Wert ohne Sprachangabe eingetragen ist. In diesen Fällen wird im Spaltenkopf anstelle des Sprachkürzels der Text *unspecifiedLanguage* angefügt.
 
 *Beispiel:*
 
@@ -1364,7 +1364,7 @@ Darüber hinaus stehen die folgenden Optionen zur Auswahl:
 * *Nicht konfigurierte Felder ignorieren*: Ist diese Option aktiviert, so werden Felder in der Importdatei, die nicht Teil der Projektkonfiguration sind, beim Import ignoriert. Andernfalls wird der Import abgebrochen, sobald nicht konfigurierte Felder in der Datei gefunden werden.
 * *Kategorie auswählen*: Falls der Bezeichner der Kategorie im Dateinamen steht (durch einen Punkt vom Rest des Dateinamens abgetrennt), wird die Kategorie automatisch erkannt (z. B. "example.find.csv" für eine CSV-Datei, die Ressourcen der Kategorie "Fund" enthält). Enthält der Dateiname keinen Kategoriebezeichner, muss die Kategorie manuell über dieses Dropdown-Menü ausgewählt werden. Bitte beachten Sie, dass die Kategorie "Bild" und ihre Unterkategorien nicht zur Auswahl stehen, wenn die Option *Neue Ressourcen importieren* gewählt wurde.
 * *Daten einer Maßnahme zuordnen*: Wählen Sie eine der im Projekt angelegten Maßnahmen aus, der alle neu angelegten Ressourcen untergeordnet werden sollen. Die Angabe einer Maßnahme ist nicht erforderlich, wenn in der CSV-Datei für alle Datensätze bereits der jeweilige Bezeichner einer übergeordneten Ressource in der Spalte *relations.isChildOf* angegeben wurde, oder wenn Ressourcen der Kategorie nicht innerhalb einer Maßnahme angelegt werden müssen (beispielsweise bei den Kategorien "Ort", "Maßnahme" oder "Bild"). Diese Option ist nur bei Auswahl der Option *Neue Ressourcen importieren* verfügbar.
-* *Feldtrennzeichen*: Tragen Sie das Zeichen ein, das in der CSV-Datei als Feldtrennzeichen verwendet wird (die Standardeinstellung ist das Komma). Geben Sie das gleiche Zeichen an, das Sie beim Erstellen der CSV-Datei (z. B. in Field Desktop über das Menü "Export" oder in einem Tabellenkalkulationsprogramm) gewählt haben. In der Regel wird als Feldtrennzeichen für CSV-Dateien entweder das Komma oder das Semikolon verwendet. Wenn es beim Import zu Fehlern kommt, prüfen Sie bitte zunächst, ob Sie das richtige Feldtrennzeichen eingetragen haben, da die Datei andernfalls nicht korrekt gelesen werden kann.
+* *Feldtrennzeichen*: Tragen Sie das Zeichen ein, das in der CSV-Datei als Feldtrennzeichen verwendet wird (die Standardeinstellung ist das Komma). Geben Sie das gleiche Zeichen an, das Sie beim Erstellen der CSV-Datei (z. B. in iSkavo über das Menü "Export" oder in einem Tabellenkalkulationsprogramm) gewählt haben. In der Regel wird als Feldtrennzeichen für CSV-Dateien entweder das Komma oder das Semikolon verwendet. Wenn es beim Import zu Fehlern kommt, prüfen Sie bitte zunächst, ob Sie das richtige Feldtrennzeichen eingetragen haben, da die Datei andernfalls nicht korrekt gelesen werden kann.
 
 
 #### Export-Optionen
@@ -1382,14 +1382,14 @@ Darüber hinaus stehen die folgenden Optionen zur Auswahl:
 
 ### GeoJSON
 
-GeoJSON (Dateiendungen *geojson* und *json*) ist ein offenes Format zum Austausch von Vektor-Geodaten, basierend auf dem Format JSON. In Field Desktop kann es zum Import und Export von Geometrien eingesetzt werden.
+GeoJSON (Dateiendungen *geojson* und *json*) ist ein offenes Format zum Austausch von Vektor-Geodaten, basierend auf dem Format JSON. In iSkavo kann es zum Import und Export von Geometrien eingesetzt werden.
 
 Beim GeoJSON-Import werden **keine neuen Ressourcen** angelegt, sondern existierenden Ressourcen **Geometrien hinzugefügt**. Verwenden Sie zum Import neuer Ressourcen eines der beiden Formate *CSV* oder *JSON Lines* und fügen Sie den auf diese Weise importierten Ressourcen anschließend per GeoJSON-Import Geometrien hinzu.
 
 
 #### Aufbau
 
-Der Aufbau einer GeoJSON-Datei richtet sich nach der <a href="https://geojson.org" target="_blank">GeoJSON-Spezifikation</a>. Für den Import oder Export im Kontext von Field Desktop gelten zusätzlich die folgenden Regeln:
+Der Aufbau einer GeoJSON-Datei richtet sich nach der <a href="https://geojson.org" target="_blank">GeoJSON-Spezifikation</a>. Für den Import oder Export im Kontext von iSkavo gelten zusätzlich die folgenden Regeln:
 
 Eine GeoJSON-Datei muss immer auf der obersten Ebene ein Objekt vom Typ *FeatureCollection* enthalten. Dieses Objekt beinhaltet wiederum einzelne Objekte vom Typ *Feature*.
 
@@ -1470,14 +1470,14 @@ Dieses Beispiel zeigt den Inhalt einer GeoJSON-Exportdatei für eine Ressource m
 
 ### Shapefile
 
-Shapefile ist ein weit verbreitetes Format zum Austausch von Vektor-Geodaten und kann im Kontext von Field Desktop alternativ zum Format GeoJSON eingesetzt werden.
+Shapefile ist ein weit verbreitetes Format zum Austausch von Vektor-Geodaten und kann im Kontext von iSkavo alternativ zum Format GeoJSON eingesetzt werden.
 
 Wie beim GeoJSON-Import werden auch beim Shapefile-Import **keine neuen Ressourcen** angelegt, sondern existierenden Ressourcen **Geometrien hinzugefügt**. Verwenden Sie zum Import neuer Ressourcen eines der beiden Formate *CSV* oder *JSON Lines* und fügen Sie den auf diese Weise importierten Ressourcen anschließend per Shapefile-Import Geometrien hinzu.
 
 
 #### Aufbau
 
-Ein Shapefile besteht jeweils aus einer Gruppe mehrerer Dateien, von denen einige optional sind. Beim Export in Field Desktop werden Dateien mit den folgenden Endungen angelegt:
+Ein Shapefile besteht jeweils aus einer Gruppe mehrerer Dateien, von denen einige optional sind. Beim Export in iSkavo werden Dateien mit den folgenden Endungen angelegt:
 
 * *shp*: Enthält die eigentlichen Geodaten.
 * *dbf*: Enthält die Daten der Attributtabelle, d. h. Sachdaten der zugehörigen Ressource (siehe Unterkapitel *Attributtabelle*).
@@ -1485,7 +1485,7 @@ Ein Shapefile besteht jeweils aus einer Gruppe mehrerer Dateien, von denen einig
 * *cpg*: Gibt den Zeichensatz an, der in der *dbf*-Datei verwendet wird.
 * *prj*: Gibt die Projektion an. Diese Datei wird nur dann exportiert, wenn in den Projekteigenschaften eine Auswahl im Feld *Koordinatenbezugssystem* getroffen wurde.
 
-Da ein Shapefile immer nur Geometrien eines einzigen Typs enthalten kann, werden beim Export in Field Desktop insgesamt drei Shapefiles (bestehend jeweils aus den vier bzw. fünf oben angegebenen Dateien) für die einzelnen Geometrietypen erstellt. Einfachtypen werden dabei im Shapefile als Mehrfachtypen gespeichert:
+Da ein Shapefile immer nur Geometrien eines einzigen Typs enthalten kann, werden beim Export in iSkavo insgesamt drei Shapefiles (bestehend jeweils aus den vier bzw. fünf oben angegebenen Dateien) für die einzelnen Geometrietypen erstellt. Einfachtypen werden dabei im Shapefile als Mehrfachtypen gespeichert:
 
   * Dateiname "multipoints.\*", enthält Geometrien der Typen *Punkt* und *Multipunkt*.
   * Dateiname "multipolylines.\*", enthält Geometrien der Typen *Polyline* und *Multipolyline*.
@@ -1493,7 +1493,7 @@ Da ein Shapefile immer nur Geometrien eines einzigen Typs enthalten kann, werden
 
 Alle Dateien werden in einem Zip-Archiv gebündelt ausgegeben.
 
-Beim Import müssen alle dem Shapefile zugehörigen Dateien gemeinsam in einem Verzeichnis liegen. Wählen Sie im Dateiauswahldialog des Import-Menüs die Datei mit der Endung *shp* aus; alle übrigen Dateien werden automatisch erkannt. Bitte beachten Sie, dass Zip-Archive beim Import **nicht** unterstützt werden. Um eine in Field Desktop exportierte Shapedatei in ein anderes Projekt zu importieren, muss die entsprechende Zip-Datei also zunächst entpackt werden.
+Beim Import müssen alle dem Shapefile zugehörigen Dateien gemeinsam in einem Verzeichnis liegen. Wählen Sie im Dateiauswahldialog des Import-Menüs die Datei mit der Endung *shp* aus; alle übrigen Dateien werden automatisch erkannt. Bitte beachten Sie, dass Zip-Archive beim Import **nicht** unterstützt werden. Um eine in iSkavo exportierte Shapedatei in ein anderes Projekt zu importieren, muss die entsprechende Zip-Datei also zunächst entpackt werden.
 
 
 ##### Attributtabelle
@@ -1512,7 +1512,7 @@ Beim Import findet die Zuordnung von Datensätzen über den Bezeichner statt. Da
 
 ### JSON Lines
 
-JSON Lines (Dateiendung *jsonl*) ist ein auf JSON basierendes Textformat, bei dem jede Zeile der Datei einem JSON-Objekt entspricht. Es kann in Field Desktop zum Anlegen und Bearbeiten von Ressourcen (inklusive Geometrien) verwendet werden.
+JSON Lines (Dateiendung *jsonl*) ist ein auf JSON basierendes Textformat, bei dem jede Zeile der Datei einem JSON-Objekt entspricht. Es kann in iSkavo zum Anlegen und Bearbeiten von Ressourcen (inklusive Geometrien) verwendet werden.
 
 Das Format JSON Lines steht beim Export **nicht** zur Verfügung. Bitte beachten Sie, dass über das Menü "Projekt" ➝ "Backup erstellen..." angelegte Backup-Dateien zwar ebenfalls das Format JSON Lines und die Dateiendung *jsonl* verwenden, allerdings **nicht** über das Menü "Import" eingelesen werden können. Backups können ausschließlich über das Menü "Projekt" ➝ "Backup einlesen..." wiederhergestellt werden.
 
@@ -1758,7 +1758,7 @@ Darüber hinaus stehen die folgenden Optionen zur Auswahl:
 
 ### Katalog
 
-Das ausschließlich von Field Desktop verwendete Katalog-Format (Dateiendung *catalog*) kann dazu verwendet werden, Typenkataloge, die über das Menü "Werkzeuge" ➝ "Typenverwaltung" angelegt wurden, zwischen verschiedenen Projekten zu teilen.
+Das ausschließlich von iSkavo verwendete Katalog-Format (Dateiendung *catalog*) kann dazu verwendet werden, Typenkataloge, die über das Menü "Werkzeuge" ➝ "Typenverwaltung" angelegt wurden, zwischen verschiedenen Projekten zu teilen.
 
 Exportiert wird jeweils ein Typenkatalog mitsamt aller darin enthaltenen Typen sowie verknüpfter Bilder. Verknüpfte Funde werden **nicht** exportiert.
 
@@ -1875,7 +1875,7 @@ Die Ressource besitzt keine gültige übergeordnete Ressource. Dies kann entwede
 
 #### Mögliche Ursachen
 * Ein Synchronisationsvorgang wurde nicht vollständig abgeschlossen.
-* Die Ressource wurde mit einer veralteten Version von Field Desktop angelegt.
+* Die Ressource wurde mit einer veralteten Version von iSkavo angelegt.
 
 #### Mögliche Lösungen
 * Stellen Sie sicher, dass die Daten aller mit dem Field-Projekt arbeitenden Teammitglieder synchronisiert sind.

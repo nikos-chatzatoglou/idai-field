@@ -1087,7 +1087,7 @@ export class M extends MD { // = Messages Dictionary. For reasons of brevity of 
             level: 'danger'
         };
         this.msgs[M.CONFIGURATION_ERROR_IMPORT_UNSUPPORTED_VERSION] = {
-            content: $localize `:@@messages.configuration.error.unsupportedVersion:Die Konfigurationsdatei wurde mit einer aktuelleren Version von Field Desktop (Version [0]) erstellt und kann daher nicht geladen werden. Bitte aktualisieren Sie die Anwendung und starten Sie den Importvorgang anschließend erneut.`,
+            content: $localize `:@@messages.configuration.error.unsupportedVersion:Die Konfigurationsdatei wurde mit einer aktuelleren Version von iSkavo (Version [0]) erstellt und kann daher nicht geladen werden. Bitte aktualisieren Sie die Anwendung und starten Sie den Importvorgang anschließend erneut.`,
             level: 'danger'
         };
         this.msgs[M.CONFIGURATION_ERROR_NO_PROJECT_LANGUAGES] = {

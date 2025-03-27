@@ -2,9 +2,9 @@
 
 Uygulamayı ilk başlattığınızda adınızı girmeniz istenecektir. Adınızı ve soyadınızı girmeniz önerilir. Girdiğiniz ad, yaptığınız tüm değişiklikler için veritabanında saklanır ve veri senkronizasyonu sırasında değişikliklerin kimin yaptığını belirterek proje veri kayıtlarında ortak çalışmayı kolaylaştırır. Daha sonra, gezinme çubuğunun sağ üst köşesindeki adınıza tıklayarak veya "Field" (MacOS) veya "Araçlar" (Windows) menüsü üzerinden erişebileceğiniz **Ayarlar** alt menüsü aracılığıyla kullanıcı adını değiştirebilirsiniz.
 
-Başlangıçta, test projesi etkin olacak ve bir dizi örnek veri kullanarak uygulamanın işlevselliğini denemenize olanak tanıyacaktır. Lütfen unutmayın; test projesi seçili olduğu sürece, yeni oluşturulan tüm veri kümelerinin silinecek ve uygulama yeniden başlatıldığında tüm değişikliklerin sıfırlanacaktır. Bu nedenle, test projesi için diğer Field Desktop projeleri veya veritabanlarıyla senkronizasyon gerçekleştirilmez.
+Başlangıçta, test projesi etkin olacak ve bir dizi örnek veri kullanarak uygulamanın işlevselliğini denemenize olanak tanıyacaktır. Lütfen unutmayın; test projesi seçili olduğu sürece, yeni oluşturulan tüm veri kümelerinin silinecek ve uygulama yeniden başlatıldığında tüm değişikliklerin sıfırlanacaktır. Bu nedenle, test projesi için diğer iSkavo projeleri veya veritabanlarıyla senkronizasyon gerçekleştirilmez.
 
-Field Desktop ile üretken bir şekilde çalışabilmek ve kendi projenizi oluşturabilmek için öncelikle şu adımları izlemelisiniz:
+iSkavo ile üretken bir şekilde çalışabilmek ve kendi projenizi oluşturabilmek için öncelikle şu adımları izlemelisiniz:
 
 1. "Proje" menüsünde, kendi projenizi oluşturmak için **Yeni...** menü öğesini seçin. Proje yapılandırması için çeşitli ön ayarlar arasından seçim yapabilirsiniz: Kapsamlı arazi araştırmalarına yönelik varsayılan konfigürasyon için "Standart"ı veya yalnızca ön ayar kategorileri ve alanlarından oluşan temel ayarlarla başlamak istiyorsanız "Temel" seçeneklerinden birini seçin. Ayrıca, proje içinde verilerin girileceği dilleri belirtin. Son olarak, istenen proje tanımlayıcısını ve isteğe bağlı olarak seçilen dillerin her biri için bir proje adı girin.
 
@@ -348,16 +348,16 @@ Bu işlem, menüyü tekrar açar ve kaldırılacak arama kriterini seçebilirsin
 
 # Senkronizasyon
 
-Veriler farklı bilgisayarlardaki birden fazla Field Desktop kurulumu arasında, tek bir proje üzerinde ortak çalışabilmek için senkronize edilebilir. Bu, başka bir makinede çalışan bir Field Desktop uygulamasından gelen değişikliklerin (yeni girdiler, silinen girdiler, mevcut girdilerin düzenlenmesi, eklenen veya silinen resimler...) otomatik olarak yerel veritabanına aktarılacağını veya kaldırılacağı anlamına gelir. Bu, tüm kullanıcıların projenin en son kayıtlı haliyle aynı anda çalışmasını sağlar. Senkronizasyon hem internet üzerinden hem de yerel ağ üzerinden çalışır. Çevrimdışıyken bir proje üzerinde çalışmaya devam edebilirsiniz - bu durumda veritabanları ağ bağlantısı tekrar kurulduğunda senkronize edilecektir.
+Veriler farklı bilgisayarlardaki birden fazla iSkavo kurulumu arasında, tek bir proje üzerinde ortak çalışabilmek için senkronize edilebilir. Bu, başka bir makinede çalışan bir iSkavo uygulamasından gelen değişikliklerin (yeni girdiler, silinen girdiler, mevcut girdilerin düzenlenmesi, eklenen veya silinen resimler...) otomatik olarak yerel veritabanına aktarılacağını veya kaldırılacağı anlamına gelir. Bu, tüm kullanıcıların projenin en son kayıtlı haliyle aynı anda çalışmasını sağlar. Senkronizasyon hem internet üzerinden hem de yerel ağ üzerinden çalışır. Çevrimdışıyken bir proje üzerinde çalışmaya devam edebilirsiniz - bu durumda veritabanları ağ bağlantısı tekrar kurulduğunda senkronize edilecektir.
 
 
 ## Projeyi indir
 
-Başka bir Field Desktop kurulumunda veya bir Field sunucusunda bulunan mevcut bir projeyle çalışmak için önce proje indirilmelidir. Bunu yapmak için "Proje" ➝ "İndir..." menü öğesini seçin ve erişim bilgilerini girin:
+Başka bir iSkavo kurulumunda veya bir Field sunucusunda bulunan mevcut bir projeyle çalışmak için önce proje indirilmelidir. Bunu yapmak için "Proje" ➝ "İndir..." menü öğesini seçin ve erişim bilgilerini girin:
 
-* *Adres*: Projeyi indirmek istediğiniz bilgisayarın adresini girin. Bu, Field Desktop'ın şu anda açık olduğu başka bir bilgisayarın ağ adresi olabilir (bu adres ayarlar bölümünde *Adresiniz* kısmında görülebilir). İnternet veya yerel ağ üzerinden erişilebilen bir Field sunucusunun adresi olabilir (örneğin DAI sunucusu için *https://server.field.idai.world*).
+* *Adres*: Projeyi indirmek istediğiniz bilgisayarın adresini girin. Bu, iSkavo'ın şu anda açık olduğu başka bir bilgisayarın ağ adresi olabilir (bu adres ayarlar bölümünde *Adresiniz* kısmında görülebilir). İnternet veya yerel ağ üzerinden erişilebilen bir Field sunucusunun adresi olabilir (örneğin DAI sunucusu için *https://server.field.idai.world*).
 * *Proje adı*: İndirmek istediğiniz projenin adı.
-* *Şifre*: Projeyi indirmek istediğiniz projenin veya Field Desktop kurulumunun şifresi.
+* *Şifre*: Projeyi indirmek istediğiniz projenin veya iSkavo kurulumunun şifresi.
 * *Küçük resimleri indir*: Bu seçenek varsayılan olarak etkindir. Zayıf bir internet bağlantınız varsa ve mümkün olduğunca az veri indirmek istiyorsanız, bunu devre dışı bırakmak isteyebilirsiniz.
 * *Orijinal görselleri indir*: Görüntüleri orijinal görüntü çözünürlüklerinde indirmek istiyorsanız bu seçeneği etkinleştirin. Projede yönetilen görüntü sayısına ve boyutuna bağlı olarak, birkaç gigabayt verinin indirilmesi gerekebilir. Bu seçeneği etkinleştirmeden önce yeterli bir internet bağlantınız ve sabit disk alanınız olduğundan emin olun.
 * *Aynı tanımlayıcıda mevcut projenin üzerine yaz*: Bu seçenek etkinleştirilirse, bilgisayarda aynı adlı bir proje zaten mevcut olsa bile proje indirilir. Mevcut proje bu işlem sırasında silinir.
@@ -371,8 +371,8 @@ Lütfen unutmayın; daha büyük projelerin indirmesi daha uzun sürebilir. İnd
 
 Hem indirilen hem de yeni oluşturulan projeler her zaman diğer veritabanlarıyla senkronize edilebilir. Senkronizasyon "Proje" ➝ "Senkronize et..." menüsü üzerinden yapılandırılabilir.
 
-* *Adres*: Eşitleme bağlantısı kurmak istediğiniz veritabanının adresi. Bu, Field Desktop'ın şu anda açık olduğu başka bir bilgisayarın ağ adresi olabilir (bu adres ayarlar bölümünde *Adresiniz* olarak görüntülenebilir) veya internet veya yerel ağ üzerinden erişilebilen bir Field Hub sunucusunun adresi olabilir (örneğin DAI'nin Field Hub sunucusu için *https://server.field.idai.world*).
-* *Şifre*: Senkronizasyon bağlantısını kurmak istediğiniz projenin veya Field Desktop kurulumunun şifresi.
+* *Adres*: Eşitleme bağlantısı kurmak istediğiniz veritabanının adresi. Bu, iSkavo'ın şu anda açık olduğu başka bir bilgisayarın ağ adresi olabilir (bu adres ayarlar bölümünde *Adresiniz* olarak görüntülenebilir) veya internet veya yerel ağ üzerinden erişilebilen bir Field Hub sunucusunun adresi olabilir (örneğin DAI'nin Field Hub sunucusu için *https://server.field.idai.world*).
+* *Şifre*: Senkronizasyon bağlantısını kurmak istediğiniz projenin veya iSkavo kurulumunun şifresi.
 * *Senkronizasyonu etkinleştir*: Bağlantıyı başlatmak veya kesmek için bu anahtarı kullanın.
 * *Küçük resimleri senkronize et*: Bu seçenek varsayılan olarak etkindir. Zayıf bir internet bağlantınız varsa ve mümkün olduğunca az veri yüklemek/indirmek istiyorsanız, bunu devre dışı bırakmak isteyebilirsiniz.
 * *Orijinal görselleri yükleyin*: Görüntüleri orijinal çözünürlüklerinde yüklemek istiyorsanız bu seçeneği etkinleştirin.
@@ -398,11 +398,11 @@ Bağlantı başarıyla kurulmuşsa, simge bir onay işareti gösterir. Veriler y
 
 Çakışmaları çözmek için, farklı değerlere sahip her alan için hangi sürümün geçerli olduğuna karar verilmelidir. Alternatif olarak, *geçerli sürümü* veya *rekabet eden sürümü* bir bütün olarak seçebilirsiniz. **Çakışmayı çöz**'e tıklayarak kararı onaylayın. Tek bir girdide birden fazla çakışma olması durumunda, tüm çakışmalar çözülene kadar bu işlem tekrarlanmalıdır. Düzenleyici açıkken diğer düzenleyici gruplarında da değişiklik yapmak mümkündür. Değişiklikleri uygulamak için, girdi son olarak **Kaydet** butonuyla kaydedilmelidir.
 
-## Kendi Field Desktop kurulumunuza senkronizasyon bağlantılarına izin verme
+## Kendi iSkavo kurulumunuza senkronizasyon bağlantılarına izin verme
 
 Başkalarının projenizle senkronizasyon bağlantısı kurmasına izin vermek için, **Ayarlar** menüsündeki **Senkronizasyon** bölümünde bulunan kimlik bilgilerini onlara sağlayabilirsiniz:
 
-* *Adresiniz*: Başkalarının kendi Field Desktop kurulumlarından veri tabanınıza bağlanmak için kullanabileceği ağ adresinizdir. Bu adresi, başkalarının proje verilerini sizinle senkronize etmelerine izin vermek için şifrenizle birlikte paylaşabilirsiniz.
+* *Adresiniz*: Başkalarının kendi iSkavo kurulumlarından veri tabanınıza bağlanmak için kullanabileceği ağ adresinizdir. Bu adresi, başkalarının proje verilerini sizinle senkronize etmelerine izin vermek için şifrenizle birlikte paylaşabilirsiniz.
 * *Şifreniz*: Veri tabanı yetkisiz erişime karşı rastgele oluşturulmuş varsayılan bir şifreyle korunur. Dilerseniz şifreyi değiştirebilirsiniz.
 * *Orijinal görüntüleri al*: Bu seçenek etkinleştirilirse, başkaları tarafından gönderilen görüntü dosyaları orijinal görüntü çözünürlüklerinde kabul edilir ve görüntü dizininde saklanır. Görüntü dosyaları birkaç gigabayt veri içerebileceğinden, görüntü dizininde yeterli depolama alanı olduğundan emin olmalısınız. Varsayılan olarak bu seçenek devre dışıdır, bu nedenle orijinal görüntüler kabul edilmez. Seçenek yalnızca diğer bilgisayarlarda ayarlanmış olan senkronizasyon bağlantılarını etkiler; kendi kendine yapılandırılmış bir senkronizasyon bağlantısı bu ayardan etkilenmez.
 
@@ -412,7 +412,7 @@ Başkalarının projenizle senkronizasyon bağlantısı kurmasına izin vermek i
 
 # Proje konfigürasyonu
 
-Field Desktop ile yönetilen bir veri tabanı, her zaman belirli bir **kategoriye** ait olan bir dizi girdi içerir, örneğin "Yer", "Buluntu" veya "Görüntü". **Üst kategorilerde** (örneğin "Buluntu") ve **alt kategorilerde** (örneğin "Tuğla" veya "Pişmiş Toprak") arasında bir ayrım yapılır. Alt kategorinin bir girdisi her zaman üst kategoriye de aittir (bir tuğla da bir buluntudur).
+iSkavo ile yönetilen bir veri tabanı, her zaman belirli bir **kategoriye** ait olan bir dizi girdi içerir, örneğin "Yer", "Buluntu" veya "Görüntü". **Üst kategorilerde** (örneğin "Buluntu") ve **alt kategorilerde** (örneğin "Tuğla" veya "Pişmiş Toprak") arasında bir ayrım yapılır. Alt kategorinin bir girdisi her zaman üst kategoriye de aittir (bir tuğla da bir buluntudur).
 
 Her kategoride, girdinin özelliklerini ve meta verilerini tanımlamak için kullanılabilen (örneğin "ağırlık", "renk", "sorumlu" vb.) bir dizi **alan** bulunur. Alanların her biri, hangi verilerin hangi şekilde girilebileceğini belirleyen (örneğin: metin alanı, sayı girişi, tarihleme girişi gibi) belirli bir tiptedir. Bazı giriş türlerindeki alanlarda, bir dizi metin değeri önceden tanımlanmış seçenekler halinde veren bir **değer listesi** belirebilir.
 
@@ -441,7 +441,7 @@ Listede bir kategoriyi seçtiğinizde, o kategori için yapılandırılmış for
 
 ### Üst kategoriler ekleme
 
-Listenin altındaki yeşil artı düğmesini kullanarak projeye yeni bir üst kategori ekleyebilirsiniz. Proje için henüz yapılandırılmamış olan Field Desktop kategori listesinden, tüm üst kategoriler arasından seçim yapabileceğiniz yeni bir pencere açılır. Listenin üstündeki metin alanını kullanarak görüntülenen kategorileri ve formları filtreleyebilirsiniz. Her kategori için kullanılabilir formlar listelenir; formlardan birini seçtiğinizde, sağ tarafta karşılık gelen alan gruplarını ve alanları göreceksiniz. "Kategori ekle" düğmesine tıklayarak seçiminizi onaylayın.
+Listenin altındaki yeşil artı düğmesini kullanarak projeye yeni bir üst kategori ekleyebilirsiniz. Proje için henüz yapılandırılmamış olan iSkavo kategori listesinden, tüm üst kategoriler arasından seçim yapabileceğiniz yeni bir pencere açılır. Listenin üstündeki metin alanını kullanarak görüntülenen kategorileri ve formları filtreleyebilirsiniz. Her kategori için kullanılabilir formlar listelenir; formlardan birini seçtiğinizde, sağ tarafta karşılık gelen alan gruplarını ve alanları göreceksiniz. "Kategori ekle" düğmesine tıklayarak seçiminizi onaylayın.
 
 Lütfen unutmayın; konfigürasyon düzenleyicisi üzerinden yeni üst kategoriler eklenemeyecektir.
 
@@ -552,7 +552,7 @@ Bir alana sağ tıklandığında aşağıdaki seçenekleri sağlayan bir içerik
 
 ### Giriş türünü değiştir
 
-Alan düzenleyicisindeki *Giriş türü* onay kutusu, alanın giriş türünü değiştirmenize olanak tanır. Field Desktop ile gelen alanlar için yalnızca veri biçimi varsayılan giriş türüyle uyumlu olan giriş türlerini seçebileceğinizi lütfen unutmayın (örneğin, tek satırlık bir metin alanından çok satırlık bir metin alanına geçmek mümkündür, ancak bir tarihleme alanından bir onay kutusu seçim alanına geçmek mümkün değildir). Projeye özgü alanlar için, giriş türünü istediğiniz zaman özgürce değiştirebilirsiniz.
+Alan düzenleyicisindeki *Giriş türü* onay kutusu, alanın giriş türünü değiştirmenize olanak tanır. iSkavo ile gelen alanlar için yalnızca veri biçimi varsayılan giriş türüyle uyumlu olan giriş türlerini seçebileceğinizi lütfen unutmayın (örneğin, tek satırlık bir metin alanından çok satırlık bir metin alanına geçmek mümkündür, ancak bir tarihleme alanından bir onay kutusu seçim alanına geçmek mümkün değildir). Projeye özgü alanlar için, giriş türünü istediğiniz zaman özgürce değiştirebilirsiniz.
 
 Zaten girilmiş olan alan verileri, giriş türü değiştirilse bile görüntülenmeye devam edecektir. Ancak girdi düzenleyicide, geçerli giriş türüyle uyumsuz olan veriler buna göre işaretlenir ve artık orada düzenlenemez, yalnızca silinebilir.
 
@@ -941,7 +941,7 @@ Desteklenen dışa aktarma biçimleri şunlardır:
 
 ### CSV
 
-CSV (dosya uzantısı *csv*), Field Desktop bağlamında girdi verilerini içe ve dışa aktarmak için kullanılan ana dosya biçimidir. CSV dosyaları tüm yaygın elektronik tablo uygulamaları tarafından okunabilir ve düzenlenebilir.
+CSV (dosya uzantısı *csv*), iSkavo bağlamında girdi verilerini içe ve dışa aktarmak için kullanılan ana dosya biçimidir. CSV dosyaları tüm yaygın elektronik tablo uygulamaları tarafından okunabilir ve düzenlenebilir.
 
 CSV dosyaları **coğrafi veri içermez**. Coğrafi verileri dışa aktarmak veya içe aktarma yoluyla mevcut girdilere eklemek için iki formattan birini kullanın: *GeoJSON* veya *Shapefile*.
 
@@ -969,7 +969,7 @@ Bir değer listesinden seçim yapılmasına izin veren alanlar için, karşılı
 
 Bir alana farklı dillerde değerler girilebiliyorsa, CSV dosyasında her dil için ayrı bir sütun oluşturulur. Sütun başlığı, her dil için "Ayarlar" menüsünde fuşya renginde gösterilen (bir nokta ile alan tanımlayıcısından ayrılmış) dil kodunu içerir (örneğin, kısa açıklamanın İngilizce metni için "shortDescription.en").
 
-Field Desktop'ın eski sürümleriyle oluşturulan projelerde ve proje yapılandırmasındaki değişiklikler nedeniyle, çok dilli bir alanda, dil belirtimi olmayan bir değer bulunabilir. Bu durumlarda, sütun başlığına dil kodu yerine "unspecifiedLanguage" metni eklenir.
+iSkavo'ın eski sürümleriyle oluşturulan projelerde ve proje yapılandırmasındaki değişiklikler nedeniyle, çok dilli bir alanda, dil belirtimi olmayan bir değer bulunabilir. Bu durumlarda, sütun başlığına dil kodu yerine "unspecifiedLanguage" metni eklenir.
 
 *Örnek:*
 
@@ -1348,7 +1348,7 @@ Aşağıdaki ek seçenekler kullanılabilir:
 * *Konfigüre edilmemiş alanları yoksay*: Bu seçenek etkinleştirilirse içe aktarma dosyasındaki proje konfigürasyonunun parçası olmayan alanlar içe aktarma sırasında yok sayılır. Aksi takdirde, dosyada konfigüre edilmemiş alanlar bulunur bulunmaz içe aktarma işlemi iptal edilir.
 * *Kategori seç*: Kategorinin tanımlayıcısı, dosya adının bir parçasıysa (dosya adının geri kalanından noktalarla ayrılmışsa), kategori otomatik olarak tanınır (ör. "Buluntu" kategorisinin girdilerini içeren bir CSV dosyası için "example.find.csv"). Dosya adı bir kategori tanımlayıcısı içermiyorsa, kategori bu açılır menü kullanılarak manuel olarak seçilmelidir.
 * *Bir işleme veri atayın*: Projede oluşturulan ve tüm yeni oluşturulan girdilerin atanacağı işlemlerden birini seçin. CSV dosyasının *relations.isChildOf* sütununda tüm kayıtlar için bir üst girdi zaten belirtilmişse veya kategorinin girdilerinin bir işlem içinde oluşturulması gerekmiyorsa (örneğin "Yer", "İşlem" ve "Görüntü" kategorileri için geçerlidir) bir işlem belirtmeniz gerekmez. Bu seçenek yalnızca *Yeni girdileri içe aktar* seçeneği seçiliyse kullanılabilir.
-* *Alan ayırıcı*: CSV dosyasında alan ayırıcı olarak kullanılan karakteri girin (varsayılan ayar virgüldür). CSV dosyasını oluştururken (örneğin Field Desktop'ta "Dışa Aktar" menüsü aracılığıyla veya bir elektronik tablo uygulamasında) seçtiğiniz karakteri girin. Çoğu durumda, CSV dosyaları için alan ayırıcı olarak virgül veya noktalı virgül kullanılır. Eğer içe aktarma sırasında hata oluşursa, lütfen öncelikle doğru alan ayırıcısını doğru girip girmediğinizi kontrol edin, aksi takdirde dosya doğru okunamaz.
+* *Alan ayırıcı*: CSV dosyasında alan ayırıcı olarak kullanılan karakteri girin (varsayılan ayar virgüldür). CSV dosyasını oluştururken (örneğin iSkavo'ta "Dışa Aktar" menüsü aracılığıyla veya bir elektronik tablo uygulamasında) seçtiğiniz karakteri girin. Çoğu durumda, CSV dosyaları için alan ayırıcı olarak virgül veya noktalı virgül kullanılır. Eğer içe aktarma sırasında hata oluşursa, lütfen öncelikle doğru alan ayırıcısını doğru girip girmediğinizi kontrol edin, aksi takdirde dosya doğru okunamaz.
 
 
 #### Dışa aktarma seçenekleri
@@ -1368,14 +1368,14 @@ Aşağıdaki ek seçenekler kullanılabilir::
 
 ### GeoJSON
 
-GeoJSON (dosya uzantıları *geojson* ve *json*), JSON formatına dayalı vektör coğrafi verilerini değiştirmek için açık bir formattır. Field Desktop'ta geometrileri içe ve dışa aktarmak için kullanılabilir.
+GeoJSON (dosya uzantıları *geojson* ve *json*), JSON formatına dayalı vektör coğrafi verilerini değiştirmek için açık bir formattır. iSkavo'ta geometrileri içe ve dışa aktarmak için kullanılabilir.
 
 GeoJSON dosyalarını içe aktarırken, **yeni girdi** oluşturulmaz. Bunun yerine, mevcut girdilere **geometriler eklenir**. Yeni girdileri içe aktarmak için, *CSV* veya *JSON Lines* formatlarından birini kullanın ve ardından GeoJSON içe aktarmayı kullanarak yeni oluşturulan girdilere geometriler ekleyin.
 
 
 #### Yapısı
 
-Bir GeoJSON dosyasının yapısı <a href="https://geojson.org" target="_blank">GeoJSON Specification</a> şartnamesine dayanır. Field Desktop bağlamında içe veya dışa aktarım için aşağıdaki ek kurallar geçerlidir:
+Bir GeoJSON dosyasının yapısı <a href="https://geojson.org" target="_blank">GeoJSON Specification</a> şartnamesine dayanır. iSkavo bağlamında içe veya dışa aktarım için aşağıdaki ek kurallar geçerlidir:
 
 Bir GeoJSON dosyası her zaman en üst düzeyde "FeatureCollection" türünde bir nesne içermelidir. Bu nesne de sırayla "Feature" türünde tekil nesneler içerir.
 
@@ -1458,14 +1458,14 @@ Bu örnek, nokta geometrisi olan bir girdiden bir GeoJSON dışa aktarma dosyas�
 
 ### Shapefile
 
-Shapefile, vektör coğrafi verilerini değiştirmek için yaygın olarak kullanılan bir formattır ve Field Desktop bağlamında GeoJSON formatına alternatif olarak kullanılabilir.
+Shapefile, vektör coğrafi verilerini değiştirmek için yaygın olarak kullanılan bir formattır ve iSkavo bağlamında GeoJSON formatına alternatif olarak kullanılabilir.
 
 GeoJSON içe aktarımında olduğu gibi, Shapefile verileri içe aktarılırken **yeni girdi** oluşturulmaz. Bunun yerine, mevcut girdilere **geometriler** eklenir. Yeni girdileri içe aktarmak için, *CSV* veya *JSON Lines* biçiminden birini kullanın ve ardından Shapefile içe aktarımını kullanarak yeni oluşturulan girdilere geometriler ekleyin.
 
 
 #### Yapısı
 
-Bir Shapefile, bazıları isteğe bağlı olan birkaç dosyadan oluşan bir gruptan oluşur. Field Desktop'tan dışa aktarırken, aşağıdaki uzantılara sahip dosyalar oluşturulur:
+Bir Shapefile, bazıları isteğe bağlı olan birkaç dosyadan oluşan bir gruptan oluşur. iSkavo'tan dışa aktarırken, aşağıdaki uzantılara sahip dosyalar oluşturulur:
 
 * *shp*: Esas coğrafi verileri içerir
 * *dbf*: Öznitelik tablosu verilerini, yani ilişkili girdinin verilerini içerir (bkz. *Öznitelik tablosu* bölümü).
@@ -1473,7 +1473,7 @@ Bir Shapefile, bazıları isteğe bağlı olan birkaç dosyadan oluşan bir grup
 * *cpg*: *dbf* dosyasında kullanılan kodlamayı belirtir.
 * *prj*: Projeksiyonu belirtir. Bu dosya yalnızca proje özelliklerinin *Koordinat referans sistemi* alanında bir seçim yapılmışsa dışa aktarılır.
 
-Bir Shapefile yalnızca tek bir türdeki geometrileri içerebildiğinden, Field Desktop'tan dışa aktarırken her bir geometri türü için toplam üç Shapefile (her biri yukarıda belirtilen dört veya beş dosyadan oluşur) oluşturulur. Tekil türler, Shapefile'da birden fazla tür olarak kaydedilir ve aşağıdaki türden dosyalar üretilir:
+Bir Shapefile yalnızca tek bir türdeki geometrileri içerebildiğinden, iSkavo'tan dışa aktarırken her bir geometri türü için toplam üç Shapefile (her biri yukarıda belirtilen dört veya beş dosyadan oluşur) oluşturulur. Tekil türler, Shapefile'da birden fazla tür olarak kaydedilir ve aşağıdaki türden dosyalar üretilir:
 
   * Dosya adı "multipoints.\*", *Nokta* ve *Çoklu nokta* tiplerinde geometriler içerir
   * Dosya adı "multipolylines.\*", *Çizgi* ve *Çoklu çizgi* tiplerinde geometriler içerir
@@ -1481,7 +1481,7 @@ Bir Shapefile yalnızca tek bir türdeki geometrileri içerebildiğinden, Field 
 
 Tüm dosyalar bir zip arşivinde toplanmaktadır.
 
-İçe aktarırken, Shapefile'a ait tüm dosyalar aynı dizinde olmalıdır. İçe aktarma menüsünün dosya seçimi iletişim kutusunda, *shp* uzantılı dosyayı seçin; diğer tüm dosyalar otomatik olarak tanınacaktır. Lütfen unutmayın; zip arşivleri içe aktarma sırasında **desteklenmez**. Field Desktop'tan dışa aktarılan bir Shapefile'ı başka bir projeye içe aktarmak için, önce ilgili zip dosyasının paketinden çıkarılması gerekir.
+İçe aktarırken, Shapefile'a ait tüm dosyalar aynı dizinde olmalıdır. İçe aktarma menüsünün dosya seçimi iletişim kutusunda, *shp* uzantılı dosyayı seçin; diğer tüm dosyalar otomatik olarak tanınacaktır. Lütfen unutmayın; zip arşivleri içe aktarma sırasında **desteklenmez**. iSkavo'tan dışa aktarılan bir Shapefile'ı başka bir projeye içe aktarmak için, önce ilgili zip dosyasının paketinden çıkarılması gerekir.
 
 
 ##### Öznitelik tablosu
@@ -1500,7 +1500,7 @@ Aşağıdaki alanlar, dışa aktarma sırasında Shapefile'ın öznitelik tablos
 
 ### JSON Lines
 
-JSON Lines (dosya uzantısı *jsonl*), dosyanın her satırının bir JSON nesnesine karşılık geldiği JSON tabanlı bir metin biçimidir. Field Desktop'ta (geometriler dahil) girdileri oluşturmak ve düzenlemek için kullanılabilir.
+JSON Lines (dosya uzantısı *jsonl*), dosyanın her satırının bir JSON nesnesine karşılık geldiği JSON tabanlı bir metin biçimidir. iSkavo'ta (geometriler dahil) girdileri oluşturmak ve düzenlemek için kullanılabilir.
 
 JSON Lines formatı, doğrudan dışa aktarmada **kullanılamaz**. Lütfen unutmayın; "Proje" ➝ "Yedek oluştur..." menüsü aracılığıyla oluşturulan yedekleme dosyaları da JSON Lines biçimini ve *jsonl* dosya uzantısını kullanmaktadır. Ancak "İçe Aktar" menüsü aracılığıyla içe aktarılamaz. Yedeklemeler yalnızca "Proje" ➝ "Yedeği geri yükle..." menüsüyle geri yüklenebilir.
 
@@ -1747,7 +1747,7 @@ Aşağıdaki ek seçenekler kullanılabilir:
 
 ### Catalog
 
-Yalnızca Field Desktop tarafından kullanılan Katalog formatı (dosya uzantısı *catalog*), "Araçlar" ➝ "Tip yönetimi" menüsü aracılığıyla oluşturulan tip kataloglarını farklı projeler arasında paylaşmak için kullanılabilir.
+Yalnızca iSkavo tarafından kullanılan Katalog formatı (dosya uzantısı *catalog*), "Araçlar" ➝ "Tip yönetimi" menüsü aracılığıyla oluşturulan tip kataloglarını farklı projeler arasında paylaşmak için kullanılabilir.
 
 Bir tip kataloğu, tüm türleriyle ve bağlantılı görselleriyle birlikte dışa aktarılır. Bağlantılı buluntular **dışa aktarılmaz**.
 
@@ -1866,7 +1866,7 @@ Girdinin geçerli bir üst girdisi yok. Bu, girdi için hiçbir üst girdinin ay
 
 #### Olası nedenler
 * Bir senkronizasyon işlemi tam olarak tamamlanmamış olabilir.
-* Girdi, Field Desktop'ın eski bir sürümüyle oluşturulmuş olabilir.
+* Girdi, iSkavo'ın eski bir sürümüyle oluşturulmuş olabilir.
 
 #### Olası çözümler
 * Field projesiyle çalışan tüm ekip üyelerinin verilerinin senkronize edildiğinden emin olun.

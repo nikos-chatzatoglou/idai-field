@@ -1,6 +1,6 @@
 {
   "name": "idai-field-client",
-  "description": "Field Desktop",
+  "description": "iSkavo",
   "version": "3.6.0",
   "main": "electron/main.js",
   "license": "Apache-2.0",
@@ -42,7 +42,7 @@
   },
   "build": {
     "appId": "org.dainst.field",
-    "productName": "Field Desktop",
+    "productName": "iSkavo",
     "directories": {
       "output": "release"
     },

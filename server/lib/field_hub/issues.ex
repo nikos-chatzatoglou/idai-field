@@ -310,7 +310,7 @@ defmodule FieldHub.Issues do
   Checks for unresolveable relations between documents.
 
   Historically, unresolveable relations were created by accident while directly manipulating the database (basically: deleting documents
-  not through the Field Desktop application, but directly in CouchDB/PouchDB).
+  not through the iSkavo application, but directly in CouchDB/PouchDB).
 
   Unresolveable relations can also be created by incomplete synchronisation.
 

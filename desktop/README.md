@@ -1,6 +1,6 @@
-# Field Desktop
+# iSkavo
 
-Field Desktop is a modern take on flexible field and find recording for archaeological excavations. It is developed as a cooperation between the German Archaeological Institute ([DAI](https://www.dainst.org)) and the Head Office of the GBV Common Library Network ([GBV](https://en.gbv.de/)). Field Desktop is completely Open Source and free to use!
+iSkavo is a modern take on flexible field and find recording for archaeological excavations. It is developed as a cooperation between the German Archaeological Institute ([DAI](https://www.dainst.org)) and the Head Office of the GBV Common Library Network ([GBV](https://en.gbv.de/)). iSkavo is completely Open Source and free to use!
 
 ## Usage
 
@@ -8,7 +8,7 @@ Please refer to the [wiki](https://github.com/dainst/idai-field/wiki).
    
 ## Development
 
-Development of Field Desktop works under **MacOS**, **Windows** and **Linux**. In any case, before you start, make sure you have [NodeJS](https://nodejs.org/en/) 20.18 as well as Node Package Manager ([NPM](https://www.npmjs.com/)) installed.  
+Development of iSkavo works under **MacOS**, **Windows** and **Linux**. In any case, before you start, make sure you have [NodeJS](https://nodejs.org/en/) 20.18 as well as Node Package Manager ([NPM](https://www.npmjs.com/)) installed.  
 
 Then clone this repository locally and run the following commands (in the repository root):
 
