@@ -9,7 +9,7 @@
 <cdk-virtual-scroll-viewport [itemSize]="itemSize" id="sidebar-viewport">
     <!-- Render Categorized List if in Extended Search Mode -->
     <ng-container *ngIf="isInExtendedSearchMode(); else flatList">
-        <div *ngFor="let category of viewFacade.getGroupedDocuments()" class="category-group">
+        <div *ngFor="let category of getSortedGroupedDocuments()" class="category-group">
             <div class="category-header" (click)="viewFacade.toggleCategoryExpansion(category.name)">
                 <span [class]="'mdi mdi-24px ' + (category.isExpanded ? 'mdi-chevron-down' : 'mdi-chevron-right')"></span>
                 {{ getCategoryName(category.name) }} ({{ category.documents.length }})

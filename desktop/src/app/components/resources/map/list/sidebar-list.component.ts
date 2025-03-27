@@ -85,10 +85,26 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
         const titleKey = resourceKeys.find(key => key.endsWith(':title'));
         const idKey = resourceKeys.find(key => key.endsWith(':id'));
 
-        const titleValue = titleKey ? document.resource[titleKey] : '';
-        const idValue = idKey ? document.resource[idKey] : '';
+        let titleValue = '';
+        let idValue = '';
 
-        if(!titleValue || !idValue){
+        if (titleKey) {
+            const titleResource = document.resource[titleKey];
+            // Check if titleResource is an object and fallback to `en` or `unspecifiedLanguage`
+            titleValue = typeof titleResource === 'object'
+                ? titleResource?.en || titleResource?.unspecifiedLanguage || ''
+                : titleResource;
+        }
+
+        if (idKey) {
+            const idResource = document.resource[idKey];
+            // Check if idResource is an object and fallback to `en` or `unspecifiedLanguage`
+            idValue = typeof idResource === 'object'
+                ? idResource?.en || idResource?.unspecifiedLanguage || ''
+                : idResource;
+        }
+
+        if (!titleValue || !idValue) {
             return document.resource.identifier;
         }
 
@@ -289,5 +305,25 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
         const numberOfDisplayedItems: number = Math.floor(this.scrollViewport.getViewportSize() / this.itemSize);
 
         return indexDifference > 0 && indexDifference <= numberOfDisplayedItems;
+    }
+
+    public sortDocumentsById(documents: any[]): any[] {
+        return documents.sort((a, b) => {
+            const aIdKey = Object.keys(a.resource).find(key => key.endsWith(':id'));
+            const bIdKey = Object.keys(b.resource).find(key => key.endsWith(':id'));
+
+            const aId = aIdKey ? parseInt(a.resource[aIdKey], 10) : 0;
+            const bId = bIdKey ? parseInt(b.resource[bIdKey], 10) : 0;
+
+            return aId - bId; // Sort in ascending order
+        });
+    }
+
+    public getSortedGroupedDocuments(): any[] {
+        const groupedDocuments = this.viewFacade.getGroupedDocuments();
+        return groupedDocuments.map(group => ({
+            ...group,
+            documents: this.sortDocumentsById(group.documents)
+        }));
     }
 }

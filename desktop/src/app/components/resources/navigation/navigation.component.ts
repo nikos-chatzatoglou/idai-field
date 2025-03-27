@@ -44,10 +44,26 @@ export class NavigationComponent {
         const titleKey = resourceKeys.find(key => key.endsWith(':title'));
         const idKey = resourceKeys.find(key => key.endsWith(':id'));
 
-        const titleValue = titleKey ? document.resource[titleKey] : '';
-        const idValue = idKey ? document.resource[idKey] : '';
+        let titleValue = '';
+        let idValue = '';
 
-        if(!titleValue || !idValue){
+        if (titleKey) {
+            const titleResource = document.resource[titleKey];
+            // Check if titleResource is an object and fallback to `en` or `unspecifiedLanguage`
+            titleValue = typeof titleResource === 'object'
+                ? titleResource?.en || titleResource?.unspecifiedLanguage || ''
+                : titleResource;
+        }
+
+        if (idKey) {
+            const idResource = document.resource[idKey];
+            // Check if idResource is an object and fallback to `en` or `unspecifiedLanguage`
+            idValue = typeof idResource === 'object'
+                ? idResource?.en || idResource?.unspecifiedLanguage || ''
+                : idResource;
+        }
+
+        if (!titleValue || !idValue) {
             return document.resource.identifier;
         }
 
