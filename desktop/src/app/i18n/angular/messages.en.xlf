@@ -6666,7 +6666,7 @@
       </trans-unit>
       <trans-unit id="resources.navigation.tooltips.deactivateExtendedSearchMode" datatype="html">
         <source>Erweiterten Suchmodus deaktivieren</source>
-        <target state="translated">Deactivate extended search mode</target>
+        <target state="translated">Category view mode</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resources/navigation/navigation.component.ts</context>
           <context context-type="linenumber">1</context>
@@ -6674,7 +6674,7 @@
       </trans-unit>
       <trans-unit id="resources.navigation.tooltips.activateExtendedSearchMode" datatype="html">
         <source>Erweiterten Suchmodus aktivieren</source>
-        <target state="translated">Activate extended search mode</target>
+        <target state="translated">Data Entry</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resources/navigation/navigation.component.ts</context>
           <context context-type="linenumber">1</context>
