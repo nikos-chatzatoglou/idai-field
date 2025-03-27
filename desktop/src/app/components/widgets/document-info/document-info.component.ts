@@ -61,7 +61,7 @@ export class DocumentInfoComponent implements OnChanges {
         const idKey = resourceKeys.find(key => key.endsWith(':id'));
 
         const titleValue = titleKey ? document.resource[titleKey] : '';
-        const idValue = idKey ? document.resource[idKey].en : '';
+        const idValue = idKey ? document.resource[idKey] : '';
 
         return `${idValue} - ${titleValue}`.trim();
     }
