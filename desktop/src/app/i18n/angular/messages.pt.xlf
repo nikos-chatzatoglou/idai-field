@@ -1136,7 +1136,7 @@
       </trans-unit>
       <trans-unit id="configuration.saveInfo.synchronization" datatype="html">
         <source>Andere Benutzerinnen und Benutzer, die über eine Synchronisationsverbindung am gleichen Projekt arbeiten, werden die Field-Desktopanwendung neustarten müssen, um die Konfigurationsänderungen zu übernehmen.</source>
-        <target state="translated">Outros utilizadores a trabalhar no mesmo projeto através de sincronização terão de reiniciar a aplicação Field Desktop para conseguir aplicar as alterações na configuração.</target>
+        <target state="translated">Outros utilizadores a trabalhar no mesmo projeto através de sincronização terão de reiniciar a aplicação iSkavo para conseguir aplicar as alterações na configuração.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/configuration/save/save-modal.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -1480,7 +1480,7 @@
       </trans-unit>
       <trans-unit id="project.download.address.info" datatype="html">
         <source>Als Adresse kann sowohl die URL eines Field-Servers als auch die Netzwerkadresse einer anderen Field-Desktop-Installation angegeben werden.</source>
-        <target state="translated">Tanto o URL de um servidor Field como o endereço de rede de outra instalação Field Desktop podem ser introduzidos neste endereço.</target>
+        <target state="translated">Tanto o URL de um servidor Field como o endereço de rede de outra instalação iSkavo podem ser introduzidos neste endereço.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/project/download-project.component.ts</context>
           <context context-type="linenumber">97</context>
@@ -4682,8 +4682,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="settings.updateUserNameModal.body.welcome" datatype="html">
-        <source>Herzlich Willkommen bei <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Field Desktop<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>! </source>
-        <target state="translated">Bem-vindo ao <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Field Desktop<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>! </target>
+        <source>Herzlich Willkommen bei <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>iSkavo<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>! </source>
+        <target state="translated">Bem-vindo ao <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>iSkavo<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/settings/update-username-modal.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -5495,7 +5495,7 @@
       </trans-unit>
       <trans-unit id="settings.synchronization.info" datatype="html">
         <source>Diese Adresse und dieses Passwort müssen in anderen Field-Desktop-Installationen eingetragen werden, damit dieser Computer als Synchronisationsziel eingerichtet werden kann.</source>
-        <target state="translated">Este endereço e palavra-passe devem ser inseridas em outras aplicações de Field Desktop para que este computador seja instalado como destinação de sincronização.</target>
+        <target state="translated">Este endereço e palavra-passe devem ser inseridas em outras aplicações de iSkavo para que este computador seja instalado como destinação de sincronização.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/settings/settings.component.ts</context>
           <context context-type="linenumber">148</context>
@@ -6123,7 +6123,7 @@
       </trans-unit>
       <trans-unit id="messages.backup.read.warning.unsimilarProjectIdentifier" datatype="html">
         <source>Die von Ihnen gewählte Projektkennung unterscheidet sich stark von der Kennung des Originalprojekts. Bitte prüfen Sie, ob Sie die korrekte Backup-Datei ausgewählt haben, bevor Sie Daten aus dem wiederhergestellten Projekt mit anderen Field-Desktop-Instanzen oder Field-Servern synchronisieren.</source>
-        <target state="translated">O identificador de projeto difere muito do identificador do projeto original. Por favor verifique se escolheu o ficheiro da cópia de segurança correto antes de sincronizar dados do projeto recuperado com outras instâncias de Field Desktop ou servidores de Field.</target>
+        <target state="translated">O identificador de projeto difere muito do identificador do projeto original. Por favor verifique se escolheu o ficheiro da cópia de segurança correto antes de sincronizar dados do projeto recuperado com outras instâncias de iSkavo ou servidores de Field.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/messages/m.ts</context>
           <context context-type="linenumber">1</context>
@@ -6163,7 +6163,7 @@
       </trans-unit>
       <trans-unit id="messages.initialSync.targetDbNotEmpty" datatype="html">
         <source>Download fehlgeschlagen: Das angegebene Projekt existiert bereits auf dieser Field-Desktop-Installation.</source>
-        <target state="translated">Falha de descarregamento: O projeto indicado já existe nesta instalação de Field Desktop.</target>
+        <target state="translated">Falha de descarregamento: O projeto indicado já existe nesta instalação de iSkavo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/messages/m.ts</context>
           <context context-type="linenumber">1</context>
@@ -8514,8 +8514,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="messages.configuration.error.unsupportedVersion" datatype="html">
-        <source>Die Konfigurationsdatei wurde mit einer aktuelleren Version von Field Desktop (Version [0]) erstellt und kann daher nicht geladen werden. Bitte aktualisieren Sie die Anwendung und starten Sie den Importvorgang anschließend erneut.</source>
-        <target state="translated">O ficheiro de configuração foi criada com a atual versão de Field Desktop (versão [0]) e por isso não pode ser carregada. Por favor atualize a aplicação e reinicie o processo de importação de novo.</target>
+        <source>Die Konfigurationsdatei wurde mit einer aktuelleren Version von iSkavo (Version [0]) erstellt und kann daher nicht geladen werden. Bitte aktualisieren Sie die Anwendung und starten Sie den Importvorgang anschließend erneut.</source>
+        <target state="translated">O ficheiro de configuração foi criada com a atual versão de iSkavo (versão [0]) e por isso não pode ser carregada. Por favor atualize a aplicação e reinicie o processo de importação de novo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/messages/m.ts</context>
           <context context-type="linenumber">1</context>

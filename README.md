@@ -26,7 +26,7 @@ We are always happy to hear about your Field projects! If you are using Field in
 
 This is a monorepo containing five packages:
 
-* [Field Desktop](desktop): The Field Desktop application based on Angular and Electron
+* [iSkavo](desktop): The iSkavo application based on Angular and Electron
 * [Field Mobile](mobile): The Field Mobile application based on React Native (early development, no release yet)
 * [Field Hub](server): The (optional) synchronisation server application.
 * [Field Core](core): Shared TypeScript modules

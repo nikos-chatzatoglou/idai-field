@@ -270,7 +270,7 @@ defmodule FieldPublication.Replication.CouchReplication do
   end
 
   defp legacy_remove_attachment(%{"_attachments" => _} = doc) do
-    # In older Field Desktop versions the image thumbnails were saved as attachments, this is deprecated and not used
+    # In older iSkavo versions the image thumbnails were saved as attachments, this is deprecated and not used
     # in the desktop application nor FieldPublication
     Map.delete(doc, "_attachments")
   end

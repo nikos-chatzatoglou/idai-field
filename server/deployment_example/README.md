@@ -63,11 +63,11 @@ Open http://localhost and login with the CouchDB admin credentials as defined in
 
 After project creation, your `FILE_DIRECTORY` you should now have a directory with the name `my_first_project`, itself containing two directories `original_image` and `thumbnail_image`. In the CouchDB webinterface you should see a new database called `my_first_project`. Both the database and the file directories are empty at this point.
 
-You can now create a `my_first_project` project in your Field Desktop application and should then be able to sync a Field Client with the server given the correct credentials and the servers domain or IP. Of course, if you already have a Field Desktop project you can instead repeat the steps above but replace `my_first_project` with the project key of your Field Desktop project.
+You can now create a `my_first_project` project in your iSkavo application and should then be able to sync a Field Client with the server given the correct credentials and the servers domain or IP. Of course, if you already have a iSkavo project you can instead repeat the steps above but replace `my_first_project` with the project key of your iSkavo project.
 
 ### Collaborating
 
-After you have created and setup `my_first_project` in your Field Desktop application and synced it to your Field Hub instance on a server, others can use the "Download project" option in Field Desktop to get the project and start collaborating. They __must__ use "Download project", __not__ create a new project `my_first_project` on their own, because the latter will cause data conflicts.
+After you have created and setup `my_first_project` in your iSkavo application and synced it to your Field Hub instance on a server, others can use the "Download project" option in iSkavo to get the project and start collaborating. They __must__ use "Download project", __not__ create a new project `my_first_project` on their own, because the latter will cause data conflicts.
 
 ## Using the application in production
 

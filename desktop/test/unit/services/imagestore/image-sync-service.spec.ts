@@ -12,7 +12,7 @@ const request = require('supertest');
 
 
 /**
- * Test the image syncing interactions between two instances of Field Desktop.
+ * Test the image syncing interactions between two instances of iSkavo.
  */
 describe('ImageSyncService', () => {
 

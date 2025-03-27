@@ -1,6 +1,6 @@
 # Field Hub
 
-Field Hub serves as a central synchronisation server for [Field Desktop](../desktop) clients.
+Field Hub serves as a central synchronisation server for [iSkavo](../desktop) clients.
 
 ## Usage
 
@@ -59,7 +59,7 @@ Start the server:
 mix phx.server
 ``` 
 
-Field Hub is now running at http://localhost:4000 as a sync target for Field Desktop. If you want to access the CouchDB directly, you can do so at http://localhost:5984/_utils.
+Field Hub is now running at http://localhost:4000 as a sync target for iSkavo. If you want to access the CouchDB directly, you can do so at http://localhost:5984/_utils.
 
 Run unit tests with:
 

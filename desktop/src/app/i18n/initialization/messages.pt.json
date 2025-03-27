@@ -26,6 +26,6 @@
   "configuration/buildProjectCategories/noValuelistProvided": "Não foi especificada nenhuma lista de valores para o campo \"[1]\" da categoria \"[0]\".",
   "configuration/buildProjectCategories/triedToOverwriteParentField": "O campo \"[0]\" definido na categoria \"[1]\" não pode ser redefinido na categoria inferior \"[2]\".",
   "restart": "Reiniciar",
-  "alreadyOpenError": "Não é possível abrir a aplicação. Por favor controle se Field Desktop está já aberto noutra janela.",
+  "alreadyOpenError": "Não é possível abrir a aplicação. Por favor controle se iSkavo está já aberto noutra janela.",
   "phase/processingImages": "As imagens estão a ser optimizadas para a visualização.\nEste passo é feito uma vez e pode demorar alguns minutos."
 }

@@ -251,7 +251,7 @@ const createWindow = () => {
             backgroundThrottling: false
         },
         titleBarStyle: 'hiddenInset',
-        title: 'Field Desktop'
+        title: 'iSkavo'
     });
 
     remoteMain.enable(mainWindow.webContents);
@@ -269,7 +269,7 @@ const createWindow = () => {
     }, 100);
 
     let closed = false;
-    
+
     mainWindow.on('close', (event) => {
         if (closed) return;
         event.preventDefault();

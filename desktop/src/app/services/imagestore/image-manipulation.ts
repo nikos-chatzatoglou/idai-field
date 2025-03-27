@@ -20,12 +20,12 @@ export module ImageManipulation {
 
     /**
      * Create a sharp image instance based on raw buffer data.
-     * 
+     *
      * See also https://sharp.pixelplumbing.com.
-     * 
+     *
      * @param buffer, the raw image data.
-     * @returns A sharp instance or Error for invalid buffer parameters (for example 
-     * if the absolute number of pixels exceeds Field Desktop's maximum)
+     * @returns A sharp instance or Error for invalid buffer parameters (for example
+     * if the absolute number of pixels exceeds iSkavo's maximum)
      */
     export function getSharpImage(buffer: Buffer): any {
 
@@ -54,13 +54,13 @@ export module ImageManipulation {
         return stats.isOpaque;
     }
 
-    
+
     export async function createDisplayImage(image: any, convertToJpeg: boolean,
                                              resize: boolean): Promise<Buffer> {
 
         if (convertToJpeg) image = image.jpeg();
         if (resize) image = image.resize(MAX_DISPLAY_WIDTH, MAX_DISPLAY_HEIGHT, { fit: 'inside' });
-        
+
         return image.toBuffer();
     }
 }
