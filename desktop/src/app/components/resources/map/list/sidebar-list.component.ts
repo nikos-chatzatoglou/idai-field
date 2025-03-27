@@ -74,8 +74,30 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
         this.sidebarElement.nativeElement.focus();
     }
 
-    ngOnChanges() {
+    public getCategoryName(name: string): string {
+        const parts = name.split(':');
+        return parts.length > 1 ? parts[1].trim() : name;
+    }
 
+    public getDynamicProperty(document: any): string {
+        const resourceKeys = Object.keys(document.resource);
+
+        const titleKey = resourceKeys.find(key => key.endsWith(':title'));
+        const idKey = resourceKeys.find(key => key.endsWith(':id'));
+
+        const titleValue = titleKey ? document.resource[titleKey] : '';
+        const idValue = idKey ? document.resource[idKey] : '';
+
+        if(!titleValue || !idValue){
+            return document.resource.identifier;
+        }
+
+        return `${idValue} - ${titleValue}`.trim();
+    }
+
+
+    ngOnChanges() {
+        console.log(this.selectedDocument)
         this.resourcesComponent.additionalSelectedDocuments = [];
         this.scrollTo(this.selectedDocument, this.isScrolledToBottomElement());
         this.lastSelectedDocument = this.selectedDocument;

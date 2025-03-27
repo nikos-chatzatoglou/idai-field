@@ -46,7 +46,7 @@
         </div>
 
         <div *ngFor="let document of getSegments()"
-            id="navigation-button-{{document.resource.identifier}}"
+            id="navigation-button-{{getDynamicProperty(document)}}"
             class="btn btn-outline-primary navigation-button"
             [class.root-document]="isSelectedSegment(document.resource.id)"
             [class.shortened-label]="getNavigationButtonLabel(document.resource.id).shortened"
@@ -59,7 +59,7 @@
             (mouseleave)="tooltip.close()"
             (mousedown)="tooltip.close()"
             (click)="moveInto(document)">
-            {{getNavigationButtonLabel(document.resource.id).text}}
+            {{getDynamicProperty(document)}}
         </div>
     </div>
 </div>
