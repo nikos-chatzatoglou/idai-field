@@ -38,6 +38,22 @@ export class NavigationComponent {
         });
     }
 
+    public getDynamicProperty(document: any): string {
+        const resourceKeys = Object.keys(document.resource);
+
+        const titleKey = resourceKeys.find(key => key.endsWith(':title'));
+        const idKey = resourceKeys.find(key => key.endsWith(':id'));
+
+        const titleValue = titleKey ? document.resource[titleKey] : '';
+        const idValue = idKey ? document.resource[idKey] : '';
+
+        if(!titleValue || !idValue){
+            return document.resource.identifier;
+        }
+
+        return `${idValue} - ${titleValue}`.trim();
+    }
+
 
     public getNavigationButtonLabel = (id: string) => this.labels[id];
 
