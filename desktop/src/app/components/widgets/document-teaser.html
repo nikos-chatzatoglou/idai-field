@@ -2,7 +2,7 @@
 
     <div *ngIf="document.resource.identifier || document.resource.shortDescription"
          class="teasercontent media-body ms-2">
-        <div class="title">{{document.resource.identifier}}</div>
+        <div class="title">{{ getDynamicProperty(document) }}</div>
         <div class="subtitle">{{getShortDescription()}}</div>
     </div>
 

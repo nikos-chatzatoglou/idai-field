@@ -24,7 +24,7 @@
                     [class.selected]="selectedDocument?.resource.id === document.resource.id"
                     [class.additional-selected]="resourcesComponent.additionalSelectedDocuments?.includes(document)"
                     [id]="'resource-' + document.resource.identifier">
-                    <span>{{ document.resource.identifier }}</span>
+                    <span>{{ getDynamicProperty(document) }}</span>
                     <span class="mdi mdi-information-outline mdi-24px"></span>
                 </li>
             </ul>

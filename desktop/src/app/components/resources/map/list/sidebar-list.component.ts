@@ -79,6 +79,19 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
         return parts.length > 1 ? parts[1].trim() : name;
     }
 
+    public getDynamicProperty(document: any): string {
+        const resourceKeys = Object.keys(document.resource);
+
+        const titleKey = resourceKeys.find(key => key.endsWith(':title'));
+        const idKey = resourceKeys.find(key => key.endsWith(':id'));
+
+        const titleValue = titleKey ? document.resource[titleKey] : '';
+        const idValue = idKey ? document.resource[idKey].en : '';
+
+        return `${idValue} - ${titleValue}`.trim();
+    }
+
+
     ngOnChanges() {
         console.log(this.selectedDocument)
         this.resourcesComponent.additionalSelectedDocuments = [];
