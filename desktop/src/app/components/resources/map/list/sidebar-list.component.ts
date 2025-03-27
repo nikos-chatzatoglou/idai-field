@@ -88,6 +88,10 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
         const titleValue = titleKey ? document.resource[titleKey] : '';
         const idValue = idKey ? document.resource[idKey] : '';
 
+        if(!titleValue || !idValue){
+            return document.resource.identifier;
+        }
+
         return `${idValue} - ${titleValue}`.trim();
     }
 

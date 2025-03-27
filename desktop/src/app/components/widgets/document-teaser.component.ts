@@ -29,6 +29,10 @@ export class DocumentTeaserComponent {
         const titleValue = titleKey ? document.resource[titleKey] : '';
         const idValue = idKey ? document.resource[idKey] : '';
 
+        if(!titleValue || !idValue){
+            return document.resource.identifier;
+        }
+
         return `${idValue} - ${titleValue}`.trim();
     }
 }
