@@ -76,6 +76,12 @@ export class SidebarListComponent extends BaseList implements AfterViewInit, OnC
 
     public getCategoryName(name: string): string {
         const parts = name.split(':');
+        if (name === "Profile") {
+            return "Summary";
+        }
+        if (name === "Planum") {
+            return "Topography";
+        }
         return parts.length > 1 ? parts[1].trim() : name;
     }
 

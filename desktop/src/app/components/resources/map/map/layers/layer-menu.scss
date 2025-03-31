@@ -3,9 +3,9 @@
  */
 @use "sass:color";
 
-$layer-menu-button-color: #657faa;
+$layer-menu-button-color: #a67a3c;
 $layer-menu-button-inactive-color: grey;
-$layer-menu-save-button-color: #28a745;
+$layer-menu-save-button-color: #3c4b1e;
 $layer-menu-remove-button-color: #c82333;
 
 #layer-button,
@@ -93,7 +93,7 @@ $layer-menu-remove-button-color: #c82333;
                 }
 
                 .layer-group-save-button:hover {
-                    color: color.adjust(
+                    background-color: color.adjust(
                         $layer-menu-save-button-color,
                         $lightness: 10%
                     ) !important;

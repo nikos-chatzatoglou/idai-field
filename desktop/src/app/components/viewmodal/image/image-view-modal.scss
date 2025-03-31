@@ -29,6 +29,7 @@
 
 #image-view-modal-content-container {
   height: 100%;
+  overflow-y: auto;
 
   &.shortened-container {
     height: calc(100% - 49px);
