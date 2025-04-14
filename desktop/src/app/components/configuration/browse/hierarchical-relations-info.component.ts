@@ -25,6 +25,7 @@ export class HierarchicalRelationsInfoComponent implements OnChanges {
     @ViewChild('popover', { static: false }) private popover: NgbPopover;
 
     public categories: Array<CategoryForm> = [];
+    public popoverClass: string = 'hierarchical-relations-popover';
 
 
     constructor(private labels: Labels) {}

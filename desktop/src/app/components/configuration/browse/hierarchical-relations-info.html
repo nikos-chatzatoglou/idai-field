@@ -3,8 +3,10 @@
      [class.no-categories]="categories.length === 0"
      #popover="ngbPopover"
      [ngbPopover]="infoPopover"
+     [popoverClass]="popoverClass"
      [autoClose]="false"
-     placement="bottom-right">
+     container="body"
+     placement="top">
     <span class="mdi mdi-file-tree"></span>
     <span class="mdi"
           [class.mdi-arrow-up-thin]="mode === 'liesWithin'"

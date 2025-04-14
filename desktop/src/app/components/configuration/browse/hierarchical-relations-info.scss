@@ -6,6 +6,11 @@ $arch-light-sage: #caccb8;
 $arch-terracotta: #881600;
 $arch-light-gray: #eeeeee;
 
+// Higher z-index to ensure popovers appear above other elements
+.hierarchical-relations-popover {
+    z-index: 2000 !important;
+}
+
 hierarchical-relations-info {
     display: inline-block;
     margin-left: 12px;
